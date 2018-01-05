@@ -1,0 +1,184 @@
+\chapter{Particle Detection}\label{Sec:CMS}
+While particle physics has come a long way in the last century, the basic discovery mechanism hasn't changed: to get a new particle, smash known particles together. In the early days, this was achieved by simply waiting for cosmic rays\footnote{Charged particles ejected from the sun which strike our atmosphere} to enter our detectors.
+
+For example, a positron might be accelerate by the Sun's tumultuous electromagnetic fields to very high energy and it might collide with an atom in our atmosphere. The positron might annihilate with one of the electrons in that atom (through the process in Figure \ref{Fig:Intro:Vertex1}). Even if the electron was at rest, the positron carried sufficient energy that the resulting photon could decay into something heavier than the electron: a pair of muons for example. This is exactly how muons are produced in the atmosphere, and in fact, at sea level every square meter is showered with about a hundred muons per second.
+
+Other particles should be accessible this way, but as can be seen in Figure \ref{Fig:Detect:Rates}, their rates are considerably lower than the muon. We would need to wait a very long time to have enough $W$s pass through our detector to have any hope of making a reasonable measurment.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/atmodepth}
+        \caption{Fluxes of common particles created in the atmosphere by cosmic rays. Note that muons are the most common charged particles produced in these interactions.}
+        \label{Fig:Detect:Rates}
+\end{figure}
+The muon is relatively long-lived, while the bosons and heavier quarks would decay in flight. The muon only makes it to our detectors because it is moving near the speed of light and benefits from the effects of time dilation\footnote{The faster something goes, the slower time runs for it}.
+
+Clearly then we need to force positron and electrons to collide on our terms, preferably at very high energies.
+
+The most basic collider is a long, straight tunnel which fires a beam of electrons at a beam of positrons. Most of the positron and electrons will pass by each other, with only a few actually interacting. Because of this, it makes more sense to build circular rings spinning the particles in opposite directions. This way a bunch\footnote{this is a technical term, as we'll discuss later} of electrons isn't wasted if it doesn't produce any interesting interactions with the positrons: it'll whip around the ring for a second pass, and a third, until it's depleted.
+
+The \textit{Large Electron-Positron} Collider at CERN was precisely such a machine, and was able to produce collisions with a center of mass energy of 206 GeV. More than enough energy to produce Z and W bosons (then the heaviest particles around). There are however some drawbacks to electron-positron colliders: charged particles radiate energy when they are bent by an electro-magnetic field, according to the following formula:
+\begin{equation}\label{Eq:SynchRad}
+    P = \frac{e^4}{6\pi m^4c^5}E^2B^2
+\end{equation}
+For the E (electric) and B (magnetic) fields at the LEP collider, this was equivalent to $P \approx 0.2$mW \textit{per electron}. This may not seem like much, but even before LEP was opperating at its full potential the total synchrotron radiation output measured around thirteen megawatts\footnote{For reference, a modern locomotive produced about 6MW of power}. Such losses can quickly become overwhelming, especially if we plan on detecting particles several orders of magnitude heavier than the Z boson.
+
+Fortunately, the radiated power depends not just on the E and B fields, but on the mass of the particles being accelerated: from Equation \ref{Eq:SynchRad} we can see that this dependence is $\sim 1/m^4$. If we accelerated protons instead of electrons, we decrease the radiated power by a factor of $10^{13}$.
+
+\section{The Large Hadron Collider}
+The Large Hadron Collider (LHC)\cite{lhcbrochure} is the premier proton collider in the world. It is the largest machine ever built, and has produced more particle data than all other experiments combined\footnote{To the tune of 300 gigabytes of data a second, necessitating the largest computing grid in the world to handle. During its entire lifetime, LEP produced 400 TB of data. The LHC has already produced 130 PB.}. It is where we look for new particles.
+
+The LHC is built in the same tunnel as the LEP, which it replaced, and turned on in 2007, initially colliding protons with a center of mass energy of 7 TeV. This energy was upgraded to 8 TeV in 2012, and it now operates with a center of mass energy of 13 TeV. A schematic of the LHC is shown in Figure \ref{Fig:Detect:LHC}.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.49\textwidth]{F3/LHC}
+        \includegraphics[width=0.49\textwidth]{F3/LHC2}
+        \caption{(left) Schematic of the LHC and the smaller accelerators which feed it. (right) True size of the LHC. The main ring has a circumference of 27 km. Lake Geneva can be seen in the top right of the picture.}
+        \label{Fig:Detect:LHC}
+\end{figure}
+Protons are accelerated in stages, initially in a linear accelerator and then through a series of increasingly large circular synchrotrons until they can be injected into the LHC's main rings. The two proton beams are identical other than the direction they travel in. The main rings are outfitted with 1,232 dipole magnets\footnote{a bar magnet is an example of a dipole magnet} which keep the protons moving along the beam direction (and accelerate them) and 392 quadrupole magnets (which are used to focus the beam, see Figure \ref{Fig:Detect:QuadPole}). The enormous 7 Tesla magnetic fields necessary to handle these ultra-high-energy protons can only be achieved with superconducting magnets which must be cooled to below 2 Kelvin. The LHC requires almost 100 tonnes of superfuild liquid helium to remain operational.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/quadpole}
+        \caption{Quadrupole magnetic field, with the direction of the force felt by a charged particle in the field shown in blue. Alternating the N and S faces of the magnets allows the fields to focus a particle beam in both the vertical and horizontal directions.}
+        \label{Fig:Detect:QuadPole}
+\end{figure}
+At its current collision energy, the protons reach a top speed of 99.99999999$\%$ the speed of light\footnote{which is significantly faster than a Ferrari}. The beams are not continuous, but rather are composed of \textit{bunches} of protons, each bunch containing roughly 115 billion protons.
+
+The beams are made to cross at four experiments along the ring (see Figure \ref{Fig:Detect:LHC}. The spacing between bunches leaves 25 nanoseconds between crossings, equivalent to a collision rate of 40 MHz.
+
+\subsection{A \textbf{proton-proton} Collision}
+Collision between electrons and positrons are easy to describe because both are point particles. Protons on the other hand, are composite. We usually talk about protons (and other hadrons like the neutron) as being composed of three quarks. This however is not strictly true: when we say that the proton is made up of two up and one down quarks, we are naming the \textit{valence} quarks of the proton. The proton is actually a complicated, ongoing interaction between those three quarks. The interaction is mediated by a web of gluons whose energy makes up the majority of the mass of the proton. And it's not one gluon per quark pair: the gluons interact with each other, spontaneously produce pairs of quarks from every generation, which decay back to gluons. As such, when we do smash two protons together with as much energy as the LHC provides, we aren't colliding protons, but rather, quarks or gluons (collectively called \textit{partons}).
+
+This can make measurements particularly difficult, as it's almost impossible to know what actually collided. Instead, we rely on the \textit{Parton Distribution Function} (usually abbreviated as PDF\footnote{which makes google searches for them very difficult})\cite{Bourilkov:2006cj,Ball:2014uwa} for a statistical understanding of what to expect. While we can never know, collision per collision, what actually interacted with what, we can simulate the collisions and create good models of what we expect to see.
+
+Two example PDFs at different collision energies are shown in Figure \ref{Fig:Detect:PDFset}. The 10 TeV collision PDF is representative of what we might see at the LHC\footnote{currently opperating at 13 TeV}. The plots are read as follows: each curve represents a particle parton in a proton, and tells us the probability density\footnote{a quantum mechanical quantity easily converted to a probability} of finding that parton carrying \textit{momentum fraction} $x$. The momentum fraction is the fraction of the (longitudinal) momentum of the proton carried by that parton, so at the LHC $x=1$ would mean that parton with energy 6.5 TeV, $x=0.1$ would be a parton with energy 0.65 TeV, and so forth\footnote{the beams at the LHC have combined energy of 13 TeV, so 6.5 TeV per beam.}.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/PDFset}
+        \caption{PDF for 10 GeV and 10 TeV collisions. Each curve represents a particle parton in a proton, and tells us the probability density of finding that parton carrying momentum fraction $x$.}
+        \label{Fig:Detect:PDFset}
+\end{figure}
+We are usually interested in events in which a large fraction of the total available energy is involved in the collision (At least, this is where we are most likely to find new physics). Each proton is governed by the PDFs, so in a collision between two protons we combine the probabilities. For example, from the Figure we see that at a low energy collider, if most of the energy of the protons is involved, there is a much higher chance of seeing a collision between two up quarks. This makes sense, as there are two up valence quarks in a proton. If we could somehow build a neutron-neutron collider, we would expect the down quark interactions to dominate. At higher energies, notice that the PDF for the gluon moves forward in $x$: at higher energies, we expect to see many more events with high energy that came from quark-gluon and gluon-gluon collisions.
+
+Having correct PDFs is incredibly important for predicting the size of new physics signals at the LHC since many models have new particles which are only produced in specific interactions (our $Z^\prime$ for example is not created by gluon-quark interactions). Unfortunately, the PDFs are extraordinarily difficult to compute, so partial models are combined with large number of measurements at fixed targer and collier experiments to hone in on their true values. Since these are inexact, we must assign systematic uncertainties to our simulations based on the variance between sets of ``plausible'' PDFs. This will be discussed in more detail in Section \ref{Sec:Stat}.
+
+In two protons there are all the ingredients to create any particle in the standard model, as well as enough energy to access a lot of new physics. Even if the new physics is only accessible through the collisions of two bottom quarks, we can see from the PDFs that we expect bottom-bottom collisions carrying as high as 1.2 TeV of energy, easily high enough to probe new physics models. Such events would be a small signal compared to other collisions, but with a good detector, we should be able to sort them out from the backgrounds.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/cms_0}
+        \caption{The Compact Muon Solenoid.}
+        \label{Fig:CMS:cms}
+\end{figure}
+\section{The Compact Muon Solenoid}
+The LHC collides protons at four experiments, each one-hundred meters below ground. Our analysis is performed on data collected by the Compact Muon Solenoid (CMS)\cite{Bayatian:922757}. Weighing in at 14,000 tons and run by a crew of almost 4,000 scientists, CMS may not seem compact, but it is the smaller (in volume) of the two main detectors on the LHC ring. A full description of its operation would easily fill an encyclopedia sized book, so we will just give a cursory overview: enough to understand how our analysis reconstructs collisions.
+
+A slice of the detector is sketched in Figure \ref{Fig:CMS:Slice}.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/CMSnc}
+        \includegraphics[width=\textwidth]{F3/cms_slice}
+        \caption{Schematic view of the CMS detector. Each portion is described in the text.}
+        \label{Fig:CMS:Slice}
+\end{figure}
+\section{Coordinates}
+The CMS detector is essentially a large cylinder with concentric layers of detectors. The ends of the cylinder are also covered (we call these parts of the detector \textit{the endcaps}). We define directions in the detector using two angles as in a modified spherical coordinate system: $\eta$ and $\phi$, where $\phi$ is the angle which sweeps our the circular component of the cylinder (and is therefore always perpendicular to the beam). $\eta$, the pseudorapidity is defined as:
+\begin{equation}
+    \eta = -\ln\bigg{(}\tan\frac{\theta}{2}\bigg{)}
+\end{equation}
+Where $\theta$ is the angle usually used alongside $\phi$ in spherical coordinates. $\eta = 0$ points straight out of the detector, while $\eta = \infty$ points directly along the beamline (see Figure \ref{Fig:CMS:eta}).
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.49\textwidth]{F3/Pseudorapidity2}
+        \caption{$\eta$ and it's relation to $\theta$.}
+        \label{Fig:CMS:eta}
+\end{figure}
+We use $\eta$ instead of $\theta$ because differences in rapidity are Lorenz Invariant\footnote{A Lorenz Invariant quantity is independent of the reference frame it is measured in.}, with the pseudorapidity being approximately so. This is very useful property, for while the protons in each beam have the same energy, and are therefore symmetric in the laboratory rest frame, the partons which actually collide likely do not.
+
+When we measure a particle in the CMS detector, we report three values: its radial angle, $\phi$, pseudorapidity $\eta$ and transverse momentum $p_{T}$. The transverse momentum is the momentum perpendicular to the walls of the cylinder. We rarely have cause to leave these coordinates, but we could recover Cartesian coordinates through the following transformations:
+\begin{equation}
+p_X = p_T\cos\phi, \ \ \ \ 
+p_Y = p_T\sin\phi, \ \ \ \
+p_Z = p_T\cosh\eta
+\end{equation}
+The central axis (where the protons are in flight before the collision) is referred to as \textit{the beam}.
+
+\subsection{The Subdetectors}
+\subsubsection{The Tracker}
+The innermost layer of the detector is the Silicon Tracker. This sub-detector accurately measures the paths of charged particles as they zip through it. It is composed of 13 layers (14 in the endcaps). The first four layers are composed of silicon pixels, 66 million in total, each 100$\times$150$\mu$m in area. The remaining layers are a cross-hatch of longer strips (180$\mu$m by 10 cm or 25 cm, depending on where they are). Taken all together this represents over 200 square meters of silicon sensors which enable us to measure the paths of particles by reconstructing series of ``hits'' in the pixels and strips. These \textit{tracks} are determined with accuracies around 10$\mu$m.
+
+Only charged particles interact with the silicon. The tracker is immersed in a magnetic field (described below) which causes charged particles to curve. This curvature allows us to measure the charge and energy of particles. Unlike the calorimeters, the Silicon Tracker doesn't try to stop the charged particles, but rather, simply measures their momenta as they fly through it. It is our best tool for measuring the paths taken by the particles.
+\subsubsection{The Calorimeters}
+There are two Calorimeters: the Electromagnetic Calorimeter and the Hadron Calorimeter. Each operates on the same principle. They try to stop the majority of a particular kind of radiation, and measure the energy deposited. This allows us to measure the energy of the particles.
+
+The Electromagnetic Calorimeter (ECAL) is composed of almost 80,000 lead-tungstate ($PbWO_4$) crystals. These crystals are a type of scintillator: a material which emit light when a particle deposits energy in it. Lead-Tungstate scintillates when a light charged particle (especially electrons) impact them. This light is proportional to the energy of the particle, and is  collected to get a measure of the energy deposited. While photons have no charge, they can either pair produce electron-positron pairs, or directly interact with an electron in the crystal. For both electrons and photon processes, the initital radiation from the collision is typically energetic enough to interact several times in the crystal, producing a shower of electrons and light as byproducts of the initial interaction also cause scintillation. Heavier particles punch through these crystals leaving little energy. They are instead measured by the Hadronic Calorimeter.
+
+The Hadronic Calorimeter (HCAL) (shown in Figure \ref{Fig:CMS:Hadronic}) consists of stacks of brass plates interlayed with plastic scintillator. The brass stops the hadrons, causing showers of secondary radiation which are detected by the scintillators. It is the only detector at CMS which can stop neurtral particles (such as neutrons and many types of mesons), making it crucial for reconstructing events with hadronic activity.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.66\textwidth]{F3/hcal}
+        \caption{The Hadronic Calorimeter, composed of 600 tons of brass, mostly recycled from WW2 naval shells.}
+        \label{Fig:CMS:Hadronic}
+\end{figure}
+\subsubsection{The Solenoid}
+All three of these detectors are contained within a large solenoid\footnote{basically a really big electromagnet}. This provides a field of 3.8 Tesla\footnote{this is a powerful field! A bar magnet usually has strength measured in millietesla.} This field causes charged particle tracks to bend. The degree of this effect is dependent on the particle energy, which allows us to use the silicon tracker to measure the momentum of particles. The field is powerful enough to shift the alignment of the detector, an effect which must be properly accounted for. Brass is non-magnetic, explaining the choice to use it in the HCAL. 
+\subsubsection{The Muon Chambers}
+The final detector layers are the Muon Chambers. Muons are too heavy to be stopped by the ECAL but not heavy enough to be stopped by the HCAL. Special detectors are instead used to detect them. There are three kinds of muon chambers, all of which operate on the same principle: as the muon traverses them, it knocks electrons off of gas atoms. These electrons are collected by the detector to measure the energy: the more electrons, the more energetic the muon.
+\subsection{The Particle Flow Algorithm}
+All the information from these subdetectors is collected and analyzed by the \textit{Particle Flow Algorithm} (PFAlgorithm, or just PF)\cite{CMS-PAS-PFT-09-001}, This allows us to reconstruct events with a high level of certainty. The PF Algorithm leads to a gain especially in energy resolution for compound object, as can be seen in Figure \ref{Fig:CMS:PFyay}. The PF is crucial for our ability to reconstruct \textit{jets} which are described below.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/jetERPF}
+        \caption{Energy resolution gain from combining all information in the detector using the PF algorithm compared to that achivable with just the hadronic calorimeter.}
+        \label{Fig:CMS:PFyay}
+\end{figure}
+\subsection{Jets}
+In Chapter \ref{Sec:Intro} we mentioned that colored particles cannot exist outside of a color-singlet state. When bare quarks are produced in proton-proton collisions they immediately begin the process of hadronization: creating new colored particles out of the vacuum until no color-states remain. Similarly, gluons created in proton-proton collisions must eventually decay to quarks, which in turn hadronize.
+
+As a result of this, the LHC is unable to measure individual quarks, but instead, sees a shower of hadrons in the direction the original quark (or gluon) was moving. These showers, shown in Figure \ref{Fig:CMS:Jet} are called \textit{jets}. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/Jets}
+        \caption{Typical CMS event with large number of hadrons (shown by the green lines). These hadrons are collected into \textit{jets} (shown by yellow triangles). The PF algorithm combines information from the trackers and calorimeters to properly measure the total momentum of the jet.}
+        \label{Fig:CMS:Jet}
+\end{figure}
+Jets are composed of constituents which are created by combining all the information available to the PF Algorithm mentioned above. Charged hadrons (such as $\pi^{+}$, $K^{+}$, etc) leave tracks in the silicon tracker and deposite energy in the hadronic calorimeter. Neutral hadrons (such as neutrons, $\pi^0$, etc) do not leave tracks but deposite their energy in the hadronic calorimeter. Other particles may appear from decays of the hadrons: for example charged pions decay most commonly to $\mu\nu$ pairs and neutral pions usually decay to two high energy photons. These particles are measured by the muon chambers and electromagnetic calorimeter respectively and retained as constituents of the jet. Neutrinos don't interact with anything and their energy is therefore irrevocably lost.
+
+Most events of interest at CMS produce more than one bare quark, and it is therefore not trivial to cluster the many possible consituents into the ``correct'' jets which faithfully reflect the underlying interaction. A number of algorithms exist. Four of the more common ones are shown in Figure \ref{Fig:CMS:JetAlgo}.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/JetAlgo}
+        \caption{Four different \textit{clustering} algorithms, each run on the same event. We use the \textit{Anti-$K_{T}$} algorithm, described further in the text.}
+        \label{Fig:CMS:JetAlgo}
+\end{figure}
+We exclusively use the \textit{Anti-$K_{T}$} algorithm\cite{Cacciari:2008gp}. The algorithm runs iteratively in the following fashion:
+Every \textit{PF Candidate} (individual reconstructed particles) is considered against every other candidate and the distance-like parameter:
+\begin{equation}
+   d_{ij} = \textrm{min}(p_{T,i}^{-2},p_{T,i}^{-2})\frac{(y_i-y_j)^2+(\phi_i - \phi_2)^2}{R^2}
+\end{equation}
+is measured. Here $R$ is a distance parameter which sets the size of the jet. The two closest constituents are paired together and become a new constituent. This pairing continues, adding new constituents to this and other \textit{pseudo-jets} until $d_iB$ (where $B$ is the beam) is equal to $1/p_T^2$ of a pseudo-jet. When this is the case, that pseudo-jet is classified as a jet and it is removed from consideration. The algorithm continues for remaining constituents and pseudo-jets until no constituents remain.
+
+The Anti-$K_{T}$ algorithm is notable for creating ``conical'' jets with smooth, rounded edges (see again Figure \ref{Fig:CMS:JetAlgo}) although this is not an exact statement, especially when two jets are near each other. We will refer to jets created with this algorithm as AK$R$ jets, where $R$ is the distance parameter used. We use two different kinds of jets in our analysis: AK8 and AK4, with R respectively 0.8 and 0.4. While it is impossible to reconstruct the small masses of most quarks, the energies and momentums of the jet can be used to measure their kinematic properties. More massive particles such as the Higgs or W bosons and the very heavy top quark yield jets whose mass can be measured with some degree of accuracy. We use AK8 jets to reconstruct heavier objects.
+
+\subsection{Triggers}
+The detector output for each bunch-crossing would take approximately a megabyte to store. The crossing rate is forty megahertz, a rate well above what any modern computing system can handle. Because of this, the majority of collisions at CMS are discarded. The \textit{trigger system} is responsible for pruning this output of uninteresting events.
+
+The trigger operates in two main stages: the \textit{Level 1} trigger is a hardware trigger. Detector output is stored in a buffer and analyzed by custom built FPGA circuits. This analysis looks for key markers of ``interesting'' physics such as a high energy muon, or very large deposits of energy in the HCAL or ECAL. This stage allows us to reject all but about $0.1\%$ of collisions. The buffered data is released to the next stage, at a rate of around fifty kilohertz.
+
+The \textit{High Level} trigger takes the output of the Level 1 trigger and analyzes it further, separating interesting events for further study and rejecting all others. A large number of triggers are available, and there are further sorted into \textit{Datasets} sharing a common characteristic. For example, the \textit{SingleMuon} dataset consists of a large logical \textit{or} of possible \textit{ High Level Trigger Paths}. Example of such paths include \textit{HLT\_Mu50} (an event with a 50 GeV muon), \textit{HLT\_Mu45Eta2p1} (an event with a 45 GeV muon in with $|\eta| < 2.1$) and others. Most triggers used in analysis attempt to keep all possible events, but \textit{prescale} Trigger are also kept, with only a fraction of triggering events allowed through. These triggers are used to measure the efficiency of the un-prescaled analysis triggers.
+
+The resulting rate is about one kilohertz. There are the events which Physics Analyses are performed on. Our search for $Z^\prime$ will use two triggers: the \textit{Mu45\_eta2p1} trigger which collects events with one high energy (45 GeV) muon in the barrel of the detector, and the \textit{El45\_PFJet200\_PFJet50} trigger, which collects events with one high energy electron (45 GeV) and at least two jets, one with energy at least 200 GeV and the other with energy at least 50 GeV.
+
+Modeling the trigger is a crucial component of good simulations of the detector, especially when modeling new physics signals. Uncertainties in the overall efficiency of these triggers is an important systematics uncertainty of the analysis and will be further discussed.
+
+\subsection{Pileup}
+An \textit{event} in CMS, ideally, is the outcome of a particular proton-proton collision. Most events do not yield any new physics or even ``interesting'' physics and the goal of our analysis will be to reduce the number of events in consideration to as small a set as possible.
+
+Unfortunately, this ideal picture is not representative of the actual output of the detector because in each bunch-crossing there can be multiple proton-proton interactions. An event may therefore consist of up to forty individual interactions. It is therefore necessary to define a primary vertex: a \textit{vertex} is a point along the beam from which a large number of particle flow objects originate. The primary vertex is selected as the vertex with the highest value for the sum of the square of the transverse momenta of tracks and candidates associated with it.
+
+Pileup can greatly affect the jet algorithms as particles produced in a vertex separate from the one we consider may be clustered into jets from the primary vertex. These \textit{pileup contributions} smear out the measurements of jet mass and momentum and must be accounted for in the analysis. Specialized variables described in the next section can reduce these effects and better identify the mass of a jet. The choice of the AK4 and AK8 jet clustering algorithms is in part predicated on the resistance of that algorithm to effects from \textit{soft} constituents (i.e. constituents from other vertices). This effect is shown in Figure \ref{Fig:CMS:NoPU}
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F3/NoPU}
+        \caption{Resolution of R = 1.0 jets from different algorithms. The $Anti-K_T$ Algorithm performs best.}
+        \label{Fig:CMS:NoPU}
+\end{figure}

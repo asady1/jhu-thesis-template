@@ -175,7 +175,7 @@ natbib = true
 \thispagestyle{empty}
 \begin{center}
 \vspace*{.25in}
-{\bf\LARGE{ JHU Thesis Template title }}\\ % change it accordingly!
+{\bf\LARGE{ Search for New Physics in the Two Higgs to Four b-quark Final State }}\\ % change it accordingly!
 \vspace*{.75in}
 {\bf by} \\*[18pt]
 \vspace*{.2in}
@@ -186,10 +186,10 @@ in conformity with the requirements for the degree of\\
 Doctor of Philosophy }\\
 \vspace*{.75in}
 {\bf Baltimore, Maryland} \\
-{\bf June, 2016} \\     % change it accordingly!
+{\bf June, 2017} \\     % change it accordingly!
 \vspace*{.5in}
 \begin{small}
-{\bf \copyright{ }2016 by Your Name} \\ % change the year if needed!
+{\bf \copyright{ }Alice Cocoros 2017 } \\ % change the year if needed!
 {\bf All rights reserved}
 \end{small}
 \end{center}
@@ -199,20 +199,30 @@ Doctor of Philosophy }\\
 \pagestyle{plain}
 \pagenumbering{roman}
 \setcounter{page}{2}
-\include{abstract/abstract}
-\include{committee/committee}
-\include{acknowledgments/acknowledgments}
+%\include{abstract/abstract}
+\chapter*{Abstract}
+My thesis is about bla bla
+
+\noindent Primary Reader: Petar Maksimovic
+
+\noindent Secondary Reader: Morris Swartz
+\addcontentsline{toc}{chapter}{Abstract}
+
+\chapter*{Acknowledgments}
+Thanks!
+%\include{committee/committee}
+%\include{acknowledgments/acknowledgments}
 
 %\cleardoublepage
 %\newpage 
 \pagestyle{plain}
-\baselineskip=24pt
+\addcontentsline{toc}{chapter}{Acknowledgments}
 \tableofcontents
 % for the three lines below, change the page numbers if needed!
 %\addtocontents{toc}{\contentsline{chapter}{Table of Contents}{iii}}
 %\addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{}Table of Contents}{iii}}
 %\addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{}List of Tables}{iv}}
-%\addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{}List of Figures}{v}}
+%\addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{}List of Figures}{vii}}
 \listoftables
 \listoffigures
 
@@ -230,30 +240,39 @@ Doctor of Philosophy }\\
 %% TeX files or Rnw files (see rnw_chapter as an example) and please
 %% remember to update the makefile accordingly.
 
-\begin{refsection}[intro_chapter/intro_chapter.bib]
-\include{intro_chapter/intro_chapter}
-\cleardoublepage
-\printbibliography[title={References}]
-\end{refsection}
+\include{Intro}
+\include{BSM}
+\include{CMS}
+%\bibliographystyle{IEEEtran}
+\bibliography{Bib}
+
+\begin{vita}
+Alice Cocoros is great
+\end{vita}
+%\begin{refsection}[intro_chapter/intro_chapter.bib]
+%\include{intro_chapter/intro_chapter}
+%\cleardoublepage
+%\printbibliography[title={References}]
+%\end{refsection}
 
 %% If using Overleaf, you'll have to upload the resulting tex file & figures
 %% since Overleaf does not support Rnw files right now (April 13, 2016)
-\begin{refsection}[rnw_chapter/rnw_chapter.bib]
-\include{rnw_chapter/rnw_chapter}
-\cleardoublepage
-\printbibliography[title={References}]
-\end{refsection}
+%\begin{refsection}[rnw_chapter/rnw_chapter.bib]
+%\include{rnw_chapter/rnw_chapter}
+%\cleardoublepage
+%\printbibliography[title={References}]
+%\end{refsection}
 
-\begin{refsection}[conclusion_chapter/conclusion_chapter.bib]
-\include{conclusion_chapter/conclusion_chapter}
-\cleardoublepage
-\printbibliography[title={References}]
-\end{refsection}
+%\begin{refsection}[conclusion_chapter/conclusion_chapter.bib]
+%\include{conclusion_chapter/conclusion_chapter}
+%\cleardoublepage
+%\printbibliography[title={References}]
+%\end{refsection}
 
 
 % CV PDF file downloaded from the moderncv template available at Overleaf
 % https://www.overleaf.com/latex/templates/modern-cv-and-cover-letter-2015-version/sttkgjcysttn#.Vw6PFRMrL65
-\includepdf[pages={-}]{moderncv-2015.pdf}
+%\includepdf[pages={-}]{moderncv-2015.pdf}
 
 
 \end{document}
