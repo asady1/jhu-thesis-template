@@ -26,80 +26,65 @@ The SM describes the interaction of all elementary particles with one formula, s
 \end{figure}
 
 \clearpage
-\subsection{The Leptons}
+\subsection{Leptons}
 The electron is one of the most well known elementary particles. There exist two heavier ``versions" of the electron: the muon ($\mu$) which is $\sim 200$ times as massive as the electron, and the tau ($\tau$) which is $\sim 4000$ times as massive as the electron. Each of these particles is negatively charged, where the charge is equivalent to -1 which corresponds to - 1.602 $\times$ 10$^{-19}$ Coulombs.
 
 For each of these particles, there exists a corresponding neutrino, so we have $\nu_e$, $\nu_\mu$ and $\nu_\tau$. The neutrinos as defined by the SM are chargeless and massless, although experiments have proved that at least two out of three neutrinos observed in nature have mass. 
 
 A corresponding anti-particle exists for each of these six particles: $\overline{e}$ ($e^+$), $\overline{\mu}$ ($\mu^+$,), $\overline{\tau}$ ($\tau^+$), $\overline{\nu}_e$, $\overline{\nu}_\mu$, and $\overline{\nu}_\tau$. Note that, while neutrinos are chargeless, the anti-particle for the electron, muon, and tau, all have positive (or opposite of their corresponding particle) charge.
 
-%ALICE START HERE
+In addition to charge and mass, particles also have spin, or the intrinsic angular momentum of a particle. All of the above mentioned particles, known as leptons, have spin $\frac{1}{2}$ (or $-\frac{1}{2}$), which means they are fermions. The spin of a particle allows us to define helicity, also known as handedness. This is the sign of the projectino of the particle's spin vector onto its momentum vector. A particle is said to be right-handed if the spin and momentum align, and left-handed if the spin and momentum point opposite each other. In the Standard Model, there can be difference between left-handed and right-handed particles. For example, we have observed that all neutrinos are left-handed, while all anti-neutrinos are right-handed, which is currently still inexplicable.
 
-There is another property we must mention: the \textit{spin}. Spin is the intrinsic angular momentum of the particle. The electron is a point particle, and there is therefore nothing actually revolving. Just as in the macro-world, there are two directions something can spin around an axis, which we denote as positive or negative spins. The spin is a vector quantity. The leptons all have spin $\frac{1}{2}$ (or $-\frac{1}{2}$), which means they are \textit{fermions}. 
+\subsection{Quarks}
+Many of the particles discovered in the twentieth century are composite particles called hadrons, made up of quarks. There are six quarks: t\textit{up} ($u$),\textit{down} ($d$), \textit{strange} ($s$), \textit{charm} ($c$), \textit{bottom} ($b$), and \textit{top} ($t$).
 
-The spin of a particle allows us to define one more property: the \textit{helicity} (also called \textit{handedness}). The helicity is defined as \textit{the sign of the projection of the particle's spin vector onto its momentum vector}. We usually refer to negative helicity as left-handedness and positive helicity as right-handedness. Handedness might seem like a trivial quantity but it plays an important part in the actual calculations that are part of the Standard Model: left and right handed particles can behave differently. Indeed, while the massive leptons can be either left or right handed, it appears that all neutrinos are left-handed, and all anti-neutrinos are right handed. There is currently no explanation for this strange fact.
+The $u$, $c$ and $t$ quarks have charge $+\frac{2}{3}$ and the $d$, $s$ and $b$ quarks have charge $-\frac{1}{3}$. Quarks also have each a different mass. For every quark there is an anti-quark: $\overline{u}$,$\overline{d}$,$\overline{s}$,$\overline{c}$,$\overline{b}$ and $\overline{t}$. Quarks are also fermions, and therefore have a spin of $\frac{1}{2}$ or $-\frac{1}{2}$.
 
-\subsection{The Hadrons}
-The Standard Model constructs the myriad particles found in the last century (excluding of course the leptons) out of just six particles, called the quarks. Like the leptons they exist in three separate groups (called ``generations''). They are: the \textit{up} ($u$) and \textit{down} ($d$) quarks, the \textit{strange} ($s$) and \textit{charm} ($c$) quarks, and the \textit{bottom} ($b$) and \textit{top} ($t$) quarks.
+In addition to charge (by which we mean electric charge), mass, and spin, quarks also have a second kind of charge, known as color. While electric charge allows particles to interact through the electromagnetic force, color charge allows particles to interact through a different type of force, called the strong force. Quarks can be red, green, or blue colored, and anti-quarks can be anti-red, anti-green, or anti-blue colored. In nature, we only see color neutral particles, which is why quarks are only observed as combinations forming composite particles. These composite particles made up of quarks are color neutral because they either contain one quark of each color, or a quark of a particular color and a quark of the corresponding anti-color. For example, the proton is made up of on $u$ and two $d$ quarks, so one of these must be red, one must be green, and one must be blue.
 
-The $u$, $c$ and $t$ quarks have charge $+\frac{2}{3}$ and the $d$, $s$ and $b$ quarks have charge $-\frac{1}{3}$. Each has its own mass, and like the leptons they have antiparticles ($\overline{u}$,$\overline{d}$,$\overline{s}$,$\overline{c}$,$\overline{b}$ and $\overline{t}$), and spin. Like the leptons they have spin  $\frac{1}{2}$ (or $-\frac{1}{2}$) and are therefore also fermions.
+\subsection{Representation of Interactions}
 
-Unlike the leptons however, the quarks are colored\footnote{this is just a different kind of charge, it has nothing to do with the colors we experience visually}. While there are two ``kinds'' of electric charge: positive and negative, color is a bit more complicated: quarks can be \textit{red}, \textit{green} or \textit{blue}. Anti-quarks meanwhile can be \textit{anti-red}, \textit{anti-green} or \textit{anti-blue}.
+%Consider the most basic of particle interactions: two electrons are shot towards each other. Since they are both negatively charged, they repel each other. If we consider that the system starts in some state $i$ and ends in some state $f$, the probability of the transition $i\rightarrow j$ happening is related to the infinite sum:
+%\begin{equation}
+%    S_{fi} = \sum_{n=0}^{\infty}S^n
+%\end{equation}
+%The sum is over orders of perturbation\footnote{Quantum Mechanics uses perturbation theory to move from a simple approximate solution to a more precise one.}, where the first order $n=1$ state is the case where the electrons do not interact at all. The next (and first interesting) term of S is:
+%\begin{equation}
+%    S^{\{2\}} = \pm^{\{n\}}\bar\psi(x)ie\gamma^\mu\psi(x)\bar\psi(x^\prime)ie\gamma^\nu\psi(x^\prime)\int\frac{d^4k}{(2\pi)^4}\frac{-g_{\mu\nu}}{k^2-i0}e^{-ik(x-x^\prime)}
+%\end{equation}
+%where the integral is over all the possible momenta of the incoming and outgoing electrons. This is just the first non-trivial term of the sum. Fortunately it is the dominant term. Unfortunately, a clear description of the process is hidden by the opaqueness of the mathematics. Enter the \textit{Feynman diagram}. Each term in the expression for $S^{\{2\}}$ can be encoded in as a pictoral element of a Feynman Diagram (as shown in Figure \ref{Fig:Intro:Feynman0}). 
+%\begin{figure}[h]
+ %   \centering
+%        \includegraphics[width=0.49\textwidth]{F1/Fee}
+%        \caption{$S^{\{2\}}$ represented as a Feynman Diagram. Each term in the equation corresponds to either a propagator (a line) or a verted (a ``corner''). The terms \underline{$A_\mu(x)A_\nu(x^\prime)$} is the integral term.}
+%        \label{Fig:Intro:Feynman0}
+%\end{figure}
+%Now that we are armed with the Feynman Diagram, each force can be thought of as some mediator particles with some rules governing which vertexes may be constructed. We will allow the Feynman Diagrams to obfuscate the computations, and focus on a qualitative description of these processes.
 
-The electric charge can be detected directly, color cannot. Because of the particularities of the force governing colored particles, the quarks always come bound together in color neutral combinations, either by combining all three colors (which count as neutral) or by combining a color and its anticolor. For example, the proton is the combination of two $d$ and one $u$ quarks. Each of these caries one of the distinct colors and the combination is neutral. The pion ($\pi^+$) is a combination of a $u$ and a $\overline{d}$ where the up quark would carry some color and the (anti-)down would carry that same anti-color. All the particles discovered in the 1900s were just combinations of the six quarks. The fractional charges of the quarks can never be directly detected as there are no colour neutral combinations which do not result in unit charge.
-
-\subsection{The Forces}
-Without some forces to hold all these pieces together, the universe would be a soup of quarks and leptons. In the Standard Model, forces are not ``Actions at a Distance'', but rather, the exchange of \textit{force mediating} particles.
-
-Consider the most basic of particle interactions: two electrons are shot towards each other. Since they are both negatively charged, they repel each other. If we consider that the system starts in some state $i$ and ends in some state $f$, the probability of the transition $i\rightarrow j$ happening is related to the infinite sum:
-\begin{equation}
-    S_{fi} = \sum_{n=0}^{\infty}S^n
-\end{equation}
-The sum is over orders of perturbation\footnote{Quantum Mechanics uses perturbation theory to move from a simple approximate solution to a more precise one.}, where the first order $n=1$ state is the case where the electrons do not interact at all. The next (and first interesting) term of S is:
-\begin{equation}
-    S^{\{2\}} = \pm^{\{n\}}\bar\psi(x)ie\gamma^\mu\psi(x)\bar\psi(x^\prime)ie\gamma^\nu\psi(x^\prime)\int\frac{d^4k}{(2\pi)^4}\frac{-g_{\mu\nu}}{k^2-i0}e^{-ik(x-x^\prime)}
-\end{equation}
-where the integral is over all the possible momenta of the incoming and outgoing electrons. This is just the first non-trivial term of the sum. Fortunately it is the dominant term. Unfortunately, a clear description of the process is hidden by the opaqueness of the mathematics. Enter the \textit{Feynman diagram}. Each term in the expression for $S^{\{2\}}$ can be encoded in as a pictoral element of a Feynman Diagram (as shown in Figure \ref{Fig:Intro:Feynman0}). 
+The Standard Model describes how matter particles, described above, interact with each other through the exchange of force mediating particles. Let us consider a simple scenario of electron electron interaction, which happens through the exchange of the electromagnetic mediating particle known as the photon. This process can be drawn using a vertex, as can be seen in Figure \ref{Fig:Intro:Vertex1}. 
 \begin{figure}[h]
     \centering
-        \includegraphics[width=0.49\textwidth]{F1/Fee}
-        \caption{$S^{\{2\}}$ represented as a Feynman Diagram. Each term in the equation corresponds to either a propagator (a line) or a verted (a ``corner''). The terms \underline{$A_\mu(x)A_\nu(x^\prime)$} is the integral term.}
-        \label{Fig:Intro:Feynman0}
+        \includegraphics[width=0.33\textwidth]{F1/Vertex1}
+        \caption{Visual representation of the interaction between two electrons and a photon.}
+        \label{Fig:Intro:Vertex1}
 \end{figure}
-With the Feynman Diagram, we can explicitly refer to physical processes with an (exact) visual description. There is no loss of generality or rigor!
-
-Returning to the specifics of our example; two electrons interacting: the entire (first order) interaction is encoded in the Feynman Diagram in Figure \ref{Fig:Intro:Feynman1}. The effect of the electromagnetic force is just the exchange of a photon\footnote{This model is of course, only valid on the very small scales (both in time and space) of particle physics. If we were to really shoot two electrons together in a laboratory, they would exchange a great many photons, not just one.}. 
+This vertex can be arranged and combined with other vertices in a variety of ways to represent different interactions between electrons, positrons, and photons. For example, we can consider the case where two electrons are propelled towards each other. Using two of the vertex pictured in \ref{Fig:Intro:Vertex1}, we can see that this must result in two electrons, as can be seen in Figure \ref{Fig:Intro:Feynman1}, where time propagates to the right on the x-axis, and distance is represented on the y-axis. 
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.49\textwidth]{F1/FeynDiag1}
         \caption{A Feynman Diagram depicting the interaction of two electrons. The action of the electromagnetic force is equivalent to the exchange of a photon. The vertical axis represents the distance between the electrons and the horizontal axis the passage of time.}
         \label{Fig:Intro:Feynman1}
 \end{figure}
-The Standard Model however doesn't just describe how particles interact. Indeed, the interaction we've just described could be described without any particle physics or even quantum mechanics. What the Standard Model allows us to do that previous formulations did not was account for the fact that particles can be created or destroyed. Consider for example the diagram in Figure \ref{Fig:Intro:Feynman2}. 
+Alternatively, if we were to consider the interaction between an electron an a positron, which can be represented as an electron with an arrow pointing backwards in time, we can see that the resulting process is described by Figure {Fig:Intro:Feynman2}, where an electron and a positron annihilate to a photon, which produces anelectron positron pair.
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.49\textwidth]{F1/FeynDiag2}
         \caption{A Feynman Diagram depicting the annihilation of a positron and an electron.}
         \label{Fig:Intro:Feynman2}
 \end{figure}
-Here, an electron ($e^-$) and an anti-electron ($e^+$) are shot at each other. They annihilate, which is to say: they become (or merge into) a photon. Some time later, the photon decays into a new set of positrons and electrons. During this interaction charge was conserved, since the photon is chargeless and the electron/positron pair combined has $1 + -1 = 0$ charge.
+In both of these diagrams, we notice that charge is conserved on either side of the diagram. Many more diagrams can be made with this vertex, combining it with other vertices that involve a photon as well. In understanding these diagrams, we can explain three of the four fundamental forces at a qualitative level, below, while also introducing new theories in later chapters that have motivated the search for new particles.
 
-These two processes are essentially equivalent. They are just different arrangements of the same \textit{vertex}. A vertex is a point interaction between particles. In the case of electron-positron annihilation or electron-electron repulsion, the vertex is the same, and is shown in Figure \ref{Fig:Intro:Vertex1}.
-\begin{figure}[h]
-    \centering
-        \includegraphics[width=0.33\textwidth]{F1/Vertex1}
-        \caption{Simple electromagnetic vertex describing the interaction of two electrons and a photon.}
-        \label{Fig:Intro:Vertex1}
-\end{figure}
-With just this vertex, we can construct a huge number of possible electromagnetic interactions. In the diagrams, electrons and positrons are the same: a positron moving backward in time (in the negative time direction on the axis, so to the left in our diagrams) is the same as an electron moving forward in time. In the case of the photon, similar vertexes exist for any charged particle and it's (opposite sign) anti-particle. For example, muons can be produced via the process $e^+e^-\rightarrow\gamma\rightarrow\mu^+\mu^-$, whose Feynman diagram is shown in Figure \ref{Fig:Intro:Feynman3}.
-\begin{figure}[h]
-    \centering
-        \includegraphics[width=0.33\textwidth]{F1/Feynman3}
-        \caption{Annihilation of an electron and a positron to create a muon and anti-muon. Backwards going arrows are often used in lieu of charges to denote anti-particles.}
-        \label{Fig:Intro:Feynman3}
-\end{figure}
-Now that we are armed with the Feynman Diagram, each force can be thought of as some mediator particles with some rules governing which vertexes may be constructed. We will allow the Feynman Diagrams to obfuscate the computations, and focus on a qualitative description of these processes.
-
+%ALICE START HERE
 \subsection{The Electromagnetic Force:}
 The field theory description of the Electromagnetic Force is called \textit{quantum electrodynamics}, often abbreviated as \textit{QED}. It describes how charges interact. QED with its carrier particle, the photon ($\gamma$), is the simplest of the fundamental forces described by the Standard Model. In fact, we've already described it fully, as the only vertex included is that in Figure \ref{Fig:Intro:Vertex1}. The photon is massless, and moves at the speed of light. 
 

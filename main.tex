@@ -136,20 +136,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\usepackage[
-style = authoryear, 
-sorting = none, 
-dashed = false,
-maxbibnames = 99,
-backend = bibtex,
-natbib = true
-]{biblatex}
+%\usepackage[
+%style = authoryear, 
+%sorting = none, 
+%dashed = false,
+%maxbibnames = 99,
+%%backend = bibtex,
+%natbib = true
+%]{biblatex}
 
 % If you want to exclude some portions from the bibliography
-\AtEveryBibitem{
-\clearfield{note}
-\clearfield{month}
-}
+%\AtEveryBibitem{
+%\clearfield{note}
+%\clearfield{month}
+%}
 
 
 \usepackage{enumerate}
@@ -241,14 +241,14 @@ Thanks!
 %% remember to update the makefile accordingly.
 
 \include{Intro}
-\include{BSM}
-\include{CMS}
-%\bibliographystyle{IEEEtran}
+%\include{BSM}
+%\include{CMS}
+\bibliographystyle{IEEEtran}
 \bibliography{Bib}
 
-\begin{vita}
-Alice Cocoros is great
-\end{vita}
+%\begin{vita}
+%Alice Cocoros is great
+%\end{vita}
 %\begin{refsection}[intro_chapter/intro_chapter.bib]
 %\include{intro_chapter/intro_chapter}
 %\cleardoublepage
