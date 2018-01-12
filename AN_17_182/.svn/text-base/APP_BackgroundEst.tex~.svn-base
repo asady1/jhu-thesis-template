@@ -1,0 +1,26 @@
+\section{Signal Injection Test and \texorpdfstring{$p_T$}{pT} Dependence\label{app:SigInjection}}
+
+We check that our estimate is free of bias by injecting a signal sample into the QCD MC. We inject the Bulk Graviton MC with the BG mass at 1800 GeV and the cross-section scaled to 0.1 fb. The background estimate performs well, with the addition of this signal having no significant effect on the background estimate (see Figure \ref{F:INJ}). We also check that the the double-b tagger has no $p_T$ dependence which is not covered by its dependence on mass. To test this, we compare the rate in a number of different di-jet mass bins (see Figure \ref{F:INJ}), all rates agree within the power of the fit.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.45\textwidth]{INJ.pdf}
+    \includegraphics[width=0.45\textwidth]{MaximeCheck.pdf}
+  \caption{(left) Reconstruction of QCD background in the presence of a large signal. the background estimate is not biased by the signal. (right) Conversion rate fit in different bins of di-jet mass.} \label{F:INJ}
+\end{figure}
+
+As a second test, we explicitly measure any dependence of the transfer factor on the di-jet mass. The ratio of events in the antitag region to events predicted in the signal region by the transfer factor is shown, binned in mass, in Figure \ref{F:MaximeCheckII}. The jet flavour compositions are shown in Fig.~\ref{F:JetComposition} for a region where both jets fail the \Hbbt, for the antitag region, and for the signal region. It shows that the second leading jet composition is the same for the signal and the antitag regions.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.45\textwidth]{MaximeCheckIII}
+\caption{The ratio of events in the antitag region to events predicted in the signal region by the transfer factor is shown, binned in \Mjj.} \label{F:MaximeCheckII}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.45\textwidth]{JetComposition_2AT.pdf}
+    \includegraphics[width=0.45\textwidth]{JetComposition_CR.pdf}
+    \includegraphics[width=0.45\textwidth]{JetComposition_SR.pdf}
+\caption{(left) The sub-leading jet flavor in the 2 jet antitag region. (middle) The sub-leading jet flavor in the antitag region. (right) The sub-leading jet flavor in the signal region region.} \label{F:JetComposition}
+\end{figure}

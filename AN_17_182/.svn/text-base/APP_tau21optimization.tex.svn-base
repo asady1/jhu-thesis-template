@@ -1,0 +1,24 @@
+\section{N-subjettiness Optimization\label{app:tau21}}
+
+The boosted analysis used the $\tau_{21}$ low working point, but we examined all three working points to optimize for this analysis. It was found that the low working point was better overall, when examining a priori expected mean significance using combine, as can be seen in Tab.~\ref{tab:tau21opt}. 
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+%Mass & tauL & tauM & tauT \\ \hline
+%600 &0.0868 & 0.0861 & 0.0848 \\
+%800 &0.4888 & 0.4522 & 0.4371 \\
+%1000 &0.6764 & 0.7332 & 0.7831\\
+%1200 &1.0463 & 1.0505 & 1.2554\\
+Mass & tauT & tauM & tauL \\ \hline
+750 &  0.707&  0.679& 0.751 \\
+800 &  0.618&  0.467& 0.755 \\
+900 &  0.583&  0.312& 0.741 \\
+1000 &  0.614&  0.745& 0.940\\
+1200 &  1.250&  1.280& 1.208 \\ 
+1600 &  2.461&  2.809& 2.632\\
+2000 &  1.843&  1.756& 2.437\\
+\hline
+\end{tabular}
+\caption{Significance for bulk graviton signal and QCD + ttbar background, for full selection with a cut on puppi tau21 $<$ 0.55, 0.4, 0.35 (L, M, T respectively), rejecting boosted events.}\label{tab:tau21opt}
+\end{table}

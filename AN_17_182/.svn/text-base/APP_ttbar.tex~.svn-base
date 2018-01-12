@@ -1,0 +1,32 @@
+\section{\ttbar Studies\label{app:ttbar}}
+
+In order to understand more about \ttbar, a couple studies were performed. An analyis of a portion of the cutflow, shown in Tab.~\ref{tab:ttbarcut}, shows that the AK4 mass and btag cuts are removing a lot of QCD, but not as much \ttbar.
+
+\begin{table}[h]
+\scalebox{0.55}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Sample & Xsec & Preselection/Ntotal & After dijet mass/Preselection & After AK4 btag/After dijet mass & After fatjet mass/After AK4 btag& After Double B/After fatjet mass \\ \hline
+TTBar & 831.8& 0.0064 & 0.2473 & 0.2457 & 0.1740 & 0.01067\\
+QCD300& 347700&0 & 0.1612 & 0.1 & 0 & -- \\
+QCD500&32100&0.0006 & 0.1870 & 0.1948 & 0.1927 & 0 \\
+QCD700&6831&0.0137 & 0.1982 & 0.1830 &0.1692 & 0.0149 \\
+QCD1000&1207&0.0323 & 0.1884 & 0.1724 & 0.1720 &0.0154 \\
+QCD1500&119.9&0.0469&0.1248&0.1637&0.1454&0.0188\\
+QCD2000&25.24&0.0593&0.0715&0.1742&0.1175&0.0220\\
+\hline
+\end{tabular}
+}
+\caption{Comparison of number of events in different samples - preselection is 1 AK8 jet \pt $>$ 250, $|\eta| < 2.4$, softdrop corrected mass $>$ 40, 2 AK4 jets $>$ $\Delta R$ 0.8 away from fatjet, dCSV $>$ 0.2219, \pt $>$ 30, $|\eta| < 2.4$, with highest total btag and within $\Delta R$ 1.5 of each other, lepton veto, trigger}\label{tab:ttbarcut}
+\end{table}
+
+Below, the softdrop mass of \ttbar shows that most AK8 jets are often W's, and occasionaly a top, as seen in Fig.~\ref{fig:ttbarmass}, with the same preselection as the shape plots.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/ttbarsdmass.pdf}
+\end{center}
+\caption{Softdrop mass for \ttbar.}
+\label{fig:ttbarmass}
+\end{figure} 
+

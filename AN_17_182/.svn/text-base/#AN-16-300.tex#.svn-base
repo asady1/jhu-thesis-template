@@ -1,0 +1,114 @@
+% Customizable fields and text areas start with % >> below.
+% Lines starting with the comment character (%) are normally removed before release outside the collaboration, but not those comments ending lines
+
+% svn info. These are modified by svn at checkout time.
+% The last version of these macros found before the maketitle will be the one on the front page,
+% so only the main file is tracked.
+% Do not edit by hand!
+\RCS$Revision: 395999 $
+\RCS$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/notes/AN-16-300/trunk/AN-16-300.tex $
+\RCS$Id: AN-16-300.tex 395999 2017-03-25 14:06:20Z devdatta $
+%%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
+% This allows for switching between one column and two column (cms@external) layouts
+% The widths should  be modified for your particular figures. You'll need additional copies if you have more than one standard figure size.
+\newlength\cmsFigWidth
+\ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.85\columnwidth}}{\setlength\cmsFigWidth{0.4\textwidth}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom\xspace}}{\providecommand{\cmsRight}{right\xspace}}
+
+\newcommand{\Hbb}{\ensuremath{\mathrm{H}\rightarrow\cPqb\overline{\cPqb}}\xspace}
+\newcommand{\ttjets}{\ensuremath{\cPqt\overline{\cPqt}}+jets\xspace}
+\newcommand{\wjets}{\PW+jets\xspace}
+\newcommand{\bjet}{\cPqb~jet\xspace}
+\newcommand{\bjets}{\cPqb~jets\xspace}
+\newcommand{\sm}{the standard model\xspace}
+\newcommand{\mc}{Monte Carlo\xspace}
+\newcommand{\com}{13~\TeV\xspace}
+\newcommand{\intLumi}{35.9\fbinv\xspace}
+
+\newcommand{\Hbbt}{double \cPqb\,tagger\xspace}
+\newcommand{\Sjbt}{subjet \PQb\,tagger\xspace}
+\newcommand{\GRS}{\ensuremath{\mathrm{G}_\mathrm{RS}}\xspace}
+\newcommand{\mjjs}{\ensuremath{M_{\rm jj}^{\rm red}}\xspace}
+\newcommand{\Mjjs}{\ensuremath{M_{\rm jj}^{\rm red}}\xspace}
+\newcommand{\mjj}{\ensuremath{M_{\rm jj}}\xspace}
+\newcommand{\Mjj}{\ensuremath{M_{\rm jj}}\xspace}
+\newcommand{\mH}{\ensuremath{M_{\rm \PH}}\xspace}
+\newcommand{\mx}{\ensuremath{M_{\rm X}}\xspace}
+\newcommand{\mux}{\ensuremath{\mu_{\rm X}^{\rm CB}}\xspace}
+\newcommand{\nsub}{\ensuremath{\tau_{21}}\xspace}
+\newcommand{\etaj}{\ensuremath{|\eta|}\xspace}
+\newcommand{\deta}{\ensuremath{|\Delta\eta_{\rm jj}|}\xspace}
+\newcommand{\mjp}{\ensuremath{M_{\rm jet}^{\rm pruned}}\xspace}
+\newcommand{\mjsd}{\ensuremath{M_{\rm jet}^{\rm softdrop,puppi}}\xspace}
+\newcommand{\mj}{\ensuremath{M_{\rm jet}}\xspace}
+\newcommand{\LambdaR}{\ensuremath{\Lambda_{\rm R}}\xspace}
+\newcommand{\HH}{\PH\PH}
+\newcommand{\sgx}{\ensuremath{\sigma_{\rm X}^{\rm gaus}}\xspace}
+\newcommand{\scbx}{\ensuremath{\sigma_{\rm X}^{\rm CB}}\xspace}
+\newcommand{\HbbHbb}{\ensuremath{\mathrm{\Hbb\Hbb}}\xspace} 
+\newcommand{\XHbbHbb}{\ensuremath{\mathrm{X}\rightarrow\PH\PH\rightarrow\bbbar\bbbar}\xspace}
+
+%\setcounter{section}{-1}
+
+\graphicspath{{Figures/},,{Figures/prebtag_mc_nminus1/},{Figures/HiggsJetReg/},{Figures/BiasStudies/}}
+
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+\cmsNoteHeader{AN-16-300} % This is over-written in the CMS environment: useful as preprint no. for export versions
+% >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
+\title{Search for heavy resonances decaying to a pair of Higgs bosons in the four b quark final state in proton-proton collisions at $\sqrt{s}=13$ TeV}
+
+\author[all]{Vieri~Candelise, Ching-Wei~Chen, Alice~Cocoros, Leonardo~Giannini, Maxime~Gouzevitch, Raman~Khurana, Michael~Krohn, Gregorio~de~Leon~III, Devdatta~Majumder, Petar~Maksimovic, Marc~Osherson, Andrea~Rizzi, Caterina~Vernieri, Steve~Wagner, Shin-Shan~Eiko~Yu}
+
+% >> Date
+% The date is in yyyy/mm/dd format. Today has been
+% redefined to match, but if the date needs to be fixed, please write it in this fashion.
+% For papers and PAS, \today is taken as the date the head file (this one) was last modified according to svn: see the RCS Id string above.
+% For the final version it is best to "touch" the head file to make sure it has the latest date.
+\date{\today}
+% >> Abstract
+% Abstract processing:
+% 1. **DO NOT use \include or \input** to include the abstract: our abstract extractor will not search through other files than this one.
+% 2. **DO NOT use %**                  to comment out sections of the abstract: the extractor will still grab those lines (and they won't be comments any longer!).
+% 3. For PASs: **DO NOT use tex macros**         in the abstract: CDS MathJax processor used on the abstract doesn't understand them _and_ will only look within $$. The abstracts for papers are hand formatted so macros are okay.
+\abstract{A search for heavy resonances decaying into pairs of standard model Higgs bosons is performed using data from proton-proton collisions at centre-of-mass energy of 13 TeV collected by the CMS experiment in 2016, and corresponding to an integrated luminosity of 35.9 fb$^{-1}$. The final state consists of both Higgs bosons decaying to b quark-antiquark pairs. For resonance masses above 1 TeV the Higgs bosons are Lorentz-boosted and thus each ${\rm H}\rightarrow{\rm b\overline{b}}$ can be reconstructed as one hadronic jet. The signal is characterized as a peak over the invariant mass spectrum of dijet events, which mostly consist of standard model multijet processes. The signal strength for different assumed resonance masses are estimated by a combined likelihood fit of the background and the signal shapes to the data. The results are consistent with the standard model expectations, and are interpreted as upper limits on the $s$-channel production cross sections of narrow bulk gravitons and scalar radions in warped extradimensional models.} 
+
+% >> PDF Metadata
+% Do not comment out the following hypersetup lines (metadata). They will disappear in NODRAFT mode and are needed by CDS.
+% Also: make sure that the values of the metadata items are sensible and are in plain text:
+% (1) no TeX! -- for \sqrt{s} use sqrt(s) -- this will show with extra quote marks in the draft version but is okay).
+% (2) no %.
+% (3) No curly braces {}.
+\hypersetup{%
+pdfauthor={George Alverson, Lucas Taylor, A. Cern Person},%
+pdftitle={Search for heavy resonances decaying to a pair of Higgs bosons in four b quark final state in proton-proton collisions at sqrt(s)=13 TeV},%
+pdfsubject={CMS},%
+pdfkeywords={CMS, physics, software, computing}}
+
+\maketitle 
+
+\tableofcontents
+
+\include{Introduction}
+\include{Samples}
+\include{EvtSel}
+\include{MCPrebtag}
+\include{BackgroundComposition}
+\include{BackgroundEst}
+%\include{StatAna}
+\include{Systematics}
+\include{Results}
+\include{Summary}
+
+\bibliography{auto_generated}   
+
+\appendix
+\include{TrigEffs}
+\include{APP_DeltaEta}
+\include{HiggsMassReg}
+\include{APP_BackgroundEst}
+\include{APP_FTest}
+\include{APP_BiasStudies}
+\include{DBT_optimization}
+\include{higgsmass_neutrino}
+%\include{2p1}

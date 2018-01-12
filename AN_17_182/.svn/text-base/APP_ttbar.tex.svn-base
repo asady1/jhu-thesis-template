@@ -1,0 +1,63 @@
+\section{\texorpdfstring{$\ttbar$}{ttbar} Studies\label{app:ttbar}}
+
+In order to understand more about \ttbar, a couple studies were performed. An analyis of a portion of the cutflow, shown in Tab.~\ref{tab:ttbarcut}, shows that the AK4 mass and btag cuts are removing a lot of QCD, but not as much \ttbar.
+
+\begin{table}[h]
+\scalebox{0.55}{
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Sample & Xsec & Preselection/Ntotal & After dijet mass/Preselection & After AK4 btag/After dijet mass & After fatjet mass/After AK4 btag& After Double B/After fatjet mass \\ \hline
+TTBar & 831.8& 0.0064 & 0.2473 & 0.2457 & 0.1740 & 0.01067\\
+QCD300& 347700&0 & 0.1612 & 0.1 & 0 & -- \\
+QCD500&32100&0.0006 & 0.1870 & 0.1948 & 0.1927 & 0 \\
+QCD700&6831&0.0137 & 0.1982 & 0.1830 &0.1692 & 0.0149 \\
+QCD1000&1207&0.0323 & 0.1884 & 0.1724 & 0.1720 &0.0154 \\
+QCD1500&119.9&0.0469&0.1248&0.1637&0.1454&0.0188\\
+QCD2000&25.24&0.0593&0.0715&0.1742&0.1175&0.0220\\
+\hline
+\end{tabular}
+}
+\caption{Comparison of number of events in different samples - preselection is 1 AK8 jet \pt $>$ 250, $|\eta| < 2.4$, softdrop corrected mass $>$ 40, 2 AK4 jets $>$ $\Delta R$ 0.8 away from fatjet, dCSV $>$ 0.2219, \pt $>$ 30, $|\eta| < 2.4$, with highest total btag and within $\Delta R$ 1.5 of each other, lepton veto, trigger}\label{tab:ttbarcut}
+\end{table}
+
+Below, the softdrop mass of \ttbar shows that most AK8 jets are often W's, and occasionaly a top, as seen in Fig.~\ref{fig:ttbarmass}, with the same preselection as the shape plots.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/ttbarsdmass.pdf}
+\end{center}
+\caption{Softdrop mass for \ttbar.}
+\label{fig:ttbarmass}
+\end{figure} 
+
+In addition to these studies, we also show that varying the amount of \ttbar does not have a significant effect on the background estimate. We compare the $R_{p/f}$ for varying amounts of \ttbar (100\%, 125\%, and 75\%) in the data signal region, to show that the ratio hardly changes with this variation, in Fig.~\ref{fig:ttbarpf}. Additionally, we compare the background estimate in MC to the signal region MC for 100\% \ttbar and 75\% \ttbar, and find that the background estimate agreement hardly changes in MC in the signal region, as seen in Fig.~\ref{fig:ttbarMCest}.
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/ttbarPF1.pdf}
+\includegraphics[scale=0.35]{Figures/ttbarPF1p25.pdf}
+\includegraphics[scale=0.35]{Figures/ttbarPF0p75.pdf}
+\end{center}
+\caption{Alphabet pass/fail ratio for varying amounts of \ttbar MC in the signal region in data.}
+\label{fig:ttbarpf}
+\end{figure} 
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/ttbarMC1.pdf}
+\includegraphics[scale=0.35]{Figures/ttbarMC0p75.pdf}
+\end{center}
+\caption{Background estimate in MC comparing subtracting 75\% \ttbar and 100\% \ttbar.}
+\label{fig:ttbarMCest}
+\end{figure} 
+
+Looking in a \ttbar rich control region, we examined two different $p_{T}$ reweighting schemes. For the control region, we removed the rejection of fully boosted events, reversed the triAK4jet cut, and limited the AK4 dijet mass and AK8 softdrop corrected mass to the range 110-210 GeV. We examined the top group formula for reweighting, and compared it with a formula developed for a high $p_{T}$ Z'$\rightarrow$ tT' analysis, where the semi-boosted analysis falls in the middle of these two schemes. We found fairly good agreement in both regions, and only a small change in the control region, proving once again that $\ttbar$ is not of large consequence for this analysis, as seen in Fig.~\ref{fig:ttrwcheck}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/dEta1rwTop.pdf}
+\includegraphics[scale=0.25]{Figures/dEta1rwZtT.pdf}\\
+\includegraphics[scale=0.25]{Figures/dEta2rwTop.pdf}
+\includegraphics[scale=0.25]{Figures/dEta2rwZtT.pdf}
+\end{center}
+\caption{Background estimate in \ttbar rich control region comparing two different reweighting schemes. Top left - top group scheme, $\Delta\eta$ 0-1. Top right - Z'$\rightarrow$ tT' scheme, $\Delta\eta$ 0-1. Bottom left - top group scheme, $\Delta\eta$ 1-2. Bottom right - Z'$\rightarrow$ tT'scheme, $\Delta\eta$ 1-2. There is relatively good agreement overall.}
+\label{fig:ttrwcheck}
+\end{figure}

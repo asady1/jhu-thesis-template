@@ -1,0 +1,32 @@
+\section{Blinded Limits\label{app:limits}}
+
+The blinded limits for the selection rejecting boosted events can be found in Fig~\ref{fig:blindboost}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/blindboostlimits.pdf}
+\end{center}
+\caption{Blinded limits for the selection rejecting boosted events.}
+\label{fig:blindboost}
+\end{figure} 
+
+The blinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:blindboth}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/blindbothlimits.pdf}
+\end{center}
+\caption{Blinded limits for the selection rejecting boosted and resolved events.}
+\label{fig:blindboth}
+\end{figure} 
+
+The blinded limits for the selection retaining boosted and resolved events can be found in Fig~\ref{fig:blindnone}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/blindnonelimits.pdf}
+\end{center}
+\caption{Blinded limits for the selection retaining boosted and resolved events.}
+\label{fig:blindnone}
+\end{figure} 
+

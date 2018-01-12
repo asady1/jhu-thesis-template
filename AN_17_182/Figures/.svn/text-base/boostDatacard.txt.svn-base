@@ -1,0 +1,56 @@
+max    1     number of categories
+jmax   2     number of samples minus one
+kmax    *     number of nuisance parameters
+-------------------------------------------------------------------------------
+shapes * * HH4b2p1_mX_750_test_13TeV.root vh/$PROCESS vh/$PROCESS_$SYSTEMATIC
+-------------------------------------------------------------------------------
+bin                                            vh4b
+observation                                    489.000000
+-------------------------------------------------------------------------------
+bin                                             vh4b              vh4b       vh4b
+process                                          0                 1          2  
+process                                 Signal_mX_750_test   testEST    ttbar
+rate                                             8.501264                534.090905         52.355269
+-------------------------------------------------------------------------------
+lumi_13TeV lnN                                   1.025             -          1.025
+AK4_invariant_mass lnN                           1.005             -          1.005
+CMS_eff_tau21_sf lnN                             1.136/0.864       -          1.136/0.864
+CMS_eff_JMS lnN                                  1.0094/0.9906     -          1.0094/0.9906
+CMS_eff_JMR lnN                                  1.20/0.80         -          1.20/0.80
+CMS_eff_Htag_sf lnN                              1.037644                -          - 
+CMS_JEC lnN 		                          1.014761                -          1.009167
+CMS_eff_bbtag_sf lnN                             1.036296                -          1.036257
+CMS_eff_csv_sf lnN                               1.029626                -          1.061211
+CMS_JER lnN                                      1.006059                -          1.007646
+CMS_PU lnN                                       1.002920                -          1.009856
+CMS_TRIG lnN                                     1.276412                -          1.241377
+CMS_ptnorm lnN                                   -                 -          1.015376
+CMS_ptalpha lnN                                  -                 -          1.042412
+CMS_scaletest_13TeV shapeN2          -                 1.000      -
+CMS_PDF_Scales lnN                               1.006000/1.005000         -         1.000000/1.000000
+CMS_stattest_13TeV_bin0 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin1 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin2 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin3 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin4 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin5 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin6 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin7 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin8 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin9 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin10 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin11 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin12 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin13 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin14 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin15 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin16 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin17 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin18 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin19 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin20 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin21 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin22 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin23 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin24 shapeN2      -       1.000      -
+CMS_stattest_13TeV_bin25 shapeN2      -       1.000      -

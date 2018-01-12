@@ -1,0 +1,23 @@
+\section{$\pt$ Optimization\label{app:pt}}
+
+The \pt requirement on the AK8 and AK4 jets is examined. We can only go so low in AK8 jet \pt before the jet won't be boosted any more, and we can only go so low in AK4 jet \pt before it's unlikely that it would be a signal jet. We consider AK8 \pt $>$ 250 and 300 GeV and AK4 \pt $>$ 30 and 40 GeV, and find that AK8 \pt $>$ 250 GeV and AK4 \pt $>$ 30 GeV has the best expected limits, as can be seen in Tab.~\ref{tab:ptopt}, where boosted and resolved events are rejected. However, since AK8 \pt $>$ 300 GeV and AK4 \pt $>$ 30 GeV is not too different, and is consistent with B2G-16-026, we have chosen this for our \pt cuts.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & AK8 $p_{T}$ 250 AK4 \pt 30 & AK8 $p_{T}$ 300 AK4 \pt 30& AK8 \pt 250 AK4 $p_{T}$ 40 & AK8 $p_{T}$ 300 AK4 $p_{T}$ 40 \\ \hline
+500 & 856.25 & 856.25 & 916.25 & 927.5\\
+550 & 493.75 & 526.25 & 602.5 & 642.5\\
+600 & 353.75 & 369.06 & 393.75 & 412.5\\
+650 & 235.63 & 240.63 & 256.25 & 261.25\\
+750 & 100.31 & 100.94 & 117.18 & 118.75\\
+800 & 99.06 & 101.56 & 112.81 & 115.93\\
+900 & 82.19 & 84.06 & 97.81 & 100.94\\
+1000 & 69.06 & 70.94 & 81.56 & 84.06\\
+1200 & 36.40 & 37.34 & 41.40 & 42.65\\
+1600 & 23.13 & 23.67 & 27.26 & 28.20\\
+2000 & 29.30 & 29.92 & 38.59 & 39.53\\
+\hline
+\end{tabular}
+\caption{$p_{T}$ optimization, using full selection rejecting boosted and resolved events, expected limits for each bulk graviton mass point}\label{tab:ptopt}
+\end{table}

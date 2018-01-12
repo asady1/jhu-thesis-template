@@ -1,0 +1,150 @@
+\section{Mass Optimization\label{app:mass}}
+
+While the AK8 jet softdrop corrected mass window is set based off of extensive study in other analyses as well as an attempt to avoid unblinding other analyses to be between 105 and 135 \GeV, the AK4 dijet mass window can be altered. We begin with a mass window matching that of the AK8 jet softdrop corred mass (105 - 135 GeV), and examine increasing this window by 10 GeV (95 - 135 GeV), and also by 20 GeV (90 - 140 GeV). Examining significance, we see that a mass window of 90-140 GeV provides the highest significance for most points, where we quote the mean using a priori expected significance calculation in combine, presented in Tab.~\ref{tab:massoptsig}. Additionally, the expected limits of these three mass windows are presented in Tab.~\ref{tab:massopt}, where boosted and resolved events are rejected.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & dijet mass 105-135 & dijet mass 95-135 & dijet mass 90-140 \\ \hline
+750 & 0.578 & 1.103 & 0.751 \\
+800 & 0.474 & 0.565 & 0.755 \\
+900 & 0.575 & 0.485 & 0.741 \\
+1000 & 0.569 & 0.640 & 0.940\\
+1200 & 1.383 & 1.333 & 1.208 \\ 
+1600 & 2.352 & 2.264 & 2.632\\
+2000 & 2.259 & 1.990 & 2.437\\
+\hline
+\end{tabular}
+\caption{Mass optimization, using full selection rejecting boosted events, expected limits for each bulk graviton mass point, using significance}\label{tab:massoptsig}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & dijet mass 105-135 & dijet mass 95-135 & dijet mass 90-140 \\ \hline
+500 & 856.25 & 756.25 & 568.125 \\
+550 & 493.75 & 546.25 & 403.75 \\
+600 & 353.75 & 339.06 & 278.12 \\
+650 & 235.63 & 234.37 & 198.18 \\
+750 & 100.31 & 105.93 & 92.18 \\
+800 & 99.06 & 97.81 & 89.06 \\
+900 & 82.19 & 78.43 & 70.31 \\
+1000 & 69.06 & 65.93 & 58.28 \\
+1200 & 36.40 & 39.68 & 34.21 \\ 
+1600 & 23.13 & 27.57 & 23.20\\
+2000 & 29.30 & 34.53 &29.60 \\
+\hline
+\end{tabular}
+\caption{Mass optimization, using full selection rejecting boosted and resolved events, expected limits for each bulk graviton mass point}\label{tab:massopt}
+\end{table}
+
+%This suggests that a mass window of 90-140 GeV would be best for the dijet mass window.
+
+Additionally, we examine the mean and standard deviation of four signal mass points, where the preselection for shape plots outlined in Sec.~\ref{sec:EvtSel} is applied to each mass point. This is documented in Tab.~\ref{tab:resmean}, and we can see that the mean of the AK4 dijet mass is closer to the actual Higgs mass, and the resolution is slightly larger than that of softdrop, which explains why it is helpful to increase the mass window to 90-140 GeV. 
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & Res (AK8) & Res (AK4) & Mean (AK8) & Mean (AK4) \\ \hline
+600 & 40.65 & 59.04 & 106.9 & 127.1\\
+800 & 32.35 & 37.85 & 108.9 & 119.5\\
+1000 & 32.69 & 38.56 & 111.8 & 121.9\\
+1200 & 34.29 & 40.86 & 113.5 & 126.1\\
+\hline
+\end{tabular}
+\caption{Resolution and mean for four bulk graviton mass points, comparing AK8 softdrop corrected mass with AK4 dijet mass.}\label{tab:resmean}
+\end{table}
+
+We also examined using regression on the AK4 jets to see if this produced a better significance. We found the mean and standard deviation to be slightly lower for samples with regression than with no regression, as seen in Tab.~\ref{tab:regmeanstd}.
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Sample & Mean & Std Dev \\ \hline
+750 no reg& 118.4 & 40.33\\
+750 reg & 118.3 & 38.48\\
+800 no reg& 118.8 & 39.85\\
+800 reg & 118.7 & 38.28\\
+900 no reg&120.6 & 41.71 \\
+900 reg & 121.2 & 40 \\
+1000 no reg& 122.9 & 44.26 \\
+1000 reg & 122.5 & 41.74 \\
+1200 no reg& 127.3 & 51.04\\
+1200 reg & 126.6 & 47.54\\
+1600 no reg& 150.8 & 89.94 \\
+1600 reg & 149.6 & 84.7 \\
+2000 no reg& 193.7 & 148.3 \\
+2000 reg & 186.2 & 136.5 \\
+\hline
+\end{tabular}
+\caption{Mean and Std Deviation after preselection for AK4 dijet mass.}
+\label{tab:regmeanstd}
+\end{table}
+We also examined the yields from the datacards, finding that the amount of background when using regression is $\sim$60\% of the amount estimated when using no regression, and the amount of signal yielded when using regression is $\sim$70\% of the amount estimated when using no regression, as seen in Tab.~\ref{tab:regyield}.
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Sample & Yield \\ \hline
+750 no reg & 10.13 \\
+750 reg & 8.28\\
+800 no reg & 12.56\\
+800 reg & 9.66\\
+900 no reg & 14.43\\
+900 reg & 10.49\\
+1000 no reg & 14.80\\
+1000 reg & 10.74\\
+1200 no reg & 15.33\\
+1200 reg & 11.51\\
+1600 no reg & 9.16\\
+1600 reg & 6.87\\
+2000 no reg & 4.29\\
+2000 reg & 3.53\\
+QCD est no reg & 624.46\\ 
+QCD est reg& 359.00\\
+ttbar no reg & 59.99\\
+ttbar reg & 34.42\\
+\hline
+\end{tabular}
+\caption{Yield after full selection, comparing regression and no regression.}
+\label{tab:regyield}
+\end{table}
+
+Comparing the a priori expected significance as calculated in combine, in three different AK4 dijet mass ranges (105-135 GeV, 95-135 GeV, and 90-140 GeV), regression didn't show any clear increase, as seen in Tab.~\ref{tab:regsig}. We decided to proceed with no regression.
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & dijet mass 105-135 & dijet mass 95-135 & dijet mass 90-140  & reg 105-135 & reg 95-135 & reg 90 - 140 \\ \hline
+750 & 0.578 & 1.103 & 0.751 & 1.073 & 0.779& 0.810\\
+800 & 0.474 & 0.565 & 0.755 & 0.572 & 0.483& 0.562\\
+900 & 0.575 & 0.485 & 0.741 & 1.236 & 0.974& 0.714\\
+1000 & 0.569 & 0.640 & 0.940 & 0.834& 0.535& 0.522\\
+1200 & 1.383 & 1.333 & 1.208 & 1.603& 1.241&1.242\\
+1600 & 2.352 & 2.264 & 2.632 & 2.302& 2.411& 2.582\\
+2000 & 2.259 & 1.990 & 2.437 &2.554 & 2.339& 2.479\\
+\hline
+\end{tabular}
+\caption{Mass optimization, using full selection rejecting boosted events. A priori expected significance for each bulk graviton mass point, for samples with and without AK4 regression with three different AK4 dijet mass windows.}
+\label{tab:regsig}
+\end{table} 
+
+The AK4 dijet mass distribution of the bulk graviton at 800 GeV was examined at full selection (minus the dijet mass cut), and the $p_{T}$ spectrum of QCD, \ttbar, and bulk graviton 800 were examined at preselection equivalent to the shape plots in Sec.~\ref{sec:EvtSel}, as well as full selection, as can be seen in Figs.~\ref{fig:bg800regnoreg} and~\ref{fig:ptregnoreg}. No significant deviation from expectation was found, as any unexpected feature can be attributed to the weighting of MC QCD files at low statistics, thus leading us to belive that regression was properly implemented.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/rnrDJM1.pdf}\\
+\end{center}
+\caption{Bulk graviton at 800 GeV AK4 dijet mass with full selection applied except for the AK4 dijet mass cut, comparing the distribution with AK4 jet regression and without.}
+\label{fig:bg800regnoreg}
+\end{figure}
+
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/rnrPre1.pdf}
+\includegraphics[scale=0.35]{Figures/rnrPre2.pdf}\\
+\includegraphics[scale=0.35]{Figures/rnrFS1.pdf}
+\includegraphics[scale=0.35]{Figures/rnrFS2.pdf}
+\end{center}
+\caption{AK4 jet $p_{T}$ spectrum comparing QCD MC, \ttbar MC, and signal, where QCD and \ttbar are weighted by cross section multiplied by luminosity and divided by total events and signal is weighted to be seen. Top left - AK4 jet 1 $p_{T}$ at preselection (where preselection is defined for shape plots in Sec.~\ref{sec:EvtSel}), Top right - AK4 jet 2 $p_{T}$ at preselection, Bottom left - AK4 jet 1 $p_{T}$ at full selection, Bottom right - AK4 jet 2 $p_{T}$ at full selection.}
+\label{fig:ptregnoreg}
+\end{figure}
+ 

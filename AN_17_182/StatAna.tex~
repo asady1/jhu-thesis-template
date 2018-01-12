@@ -1,0 +1,5 @@
+\section{Statistical analysis\label{sec:StatAna}}
+Results are obtained from combined signal binned likelihood fits to the shape of the distribution of the reduced mass. Bin width increases as the dijet mass to account for shrinking resolution at high dijet masses. We use the same binning as other CMS dijet searches, extrapolated to lower mass.
+
+The list of the nuisance parameters and the resulting \textit{Combine} data card are provided in Section~\ref{sec:Systematics}. The limit setting procedure and the associated hypotheses are described in Section~\ref{sec:Results}.
+

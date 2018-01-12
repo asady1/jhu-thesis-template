@@ -1,0 +1,45 @@
+\section{Choosing the AK8 and two AK4 triplet\label{app:AK8AK4choice}}
+
+Many different ways of choosing the AK8 and two AK4 jet triplets were compared in order to come to a conclusion, as can be seen in Tab.~\ref{tab:AK8AK4choose}. The current way is to choose the highest \pt AK8 jet with the highest combined deep CSV AK4 btag values. While the highest signal efficiency was found when the lowest value of $|M_{\rm soft\,drop} - 120|$ was chosen with the highest combined deep CSV AK4 btag values, the background estimate would not converge due to the fact that this biases the mass distribution, as can be seen in Fig.~\ref{fig:massdif}.
+
+\begin{table}[h]
+\topcaption{Fraction of events left after full selection based off of how the AK8 and two AK4 jets were selected. AK4 pT = highest combined AK4 pT, AK4 M = lowest (dijet mass - 120), AK4b = highest combined deep CSV, AK8 pT = highest pT AK8, AK8 M = lowest (AK8 sdmass - 120), AK8b = highest double b}\label{tab:AK8AK4choose}
+\scalebox{0.55}{
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ Mass&AK4pT&AK4M&AK4b&AK8pT/AK4pT&AK8pT/AK4M&AK8pT/AK4b&AK8M/AK4pT&AK8M/AK4M&AK8M/AK4b&AK8b/AK4pT&AK8b/AK4M&AK8b/AK4b\\ \hline
+750 & 0.0138 & 0.0169 & 0.0176 & 0.0116 & 0.0122 & 0.0122 & 0.014 & 0.0176 & \textbf{0.0177} & 0.0135 & 0.0166 & 0.0169\\
+900 & 0.0186 & 0.0225 & 0.0234 & 0.0146 & 0.0152 & 0.0152 & 0.0191 & 0.0262 & \textbf{0.0267} & 0.0166 & 0.0233 & 0.0242\\
+1000 & 0.0222 & 0.0264 & 0.0274 & 0.0163 & 0.0174 & 0.0171 & 0.0212 & 0.0302 & \textbf{0.0305} & 0.0191 & 0.0272 & 0.0284\\
+1200 & 0.0256 & 0.0308 & 0.0322 & 0.0219 & 0.0228 & 0.0228 & 0.0263 & 0.0346 & \textbf{0.0352} & 0.0241 & 0.0321 & 0.0335\\
+1600 & 0.0153 & 0.0233 & 0.0236 & 0.0198 & 0.0209 & 0.0208 & 0.0211 & \textbf{0.0244} & \textbf{0.0244} & 0.0193 & 0.0226 & 0.0228\\
+%NR12 & 0.0047 & 0.0058 & 0.006 & 0.0039 & 0.0041 & 0.0041 & 0.0051 & 0.0063 & \textbf{0.0064} & 0.0048 & 0.0059 & 0.0061\\
+%NRSM & 0.0014 & 0.0018 & 0.0017 & 0.0009 & 0.001 & 0.001 & 0.0014 & \textbf{0.0019} & 0.0017 & 0.0014 & 0.0018 & 0.0017\\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/massdemo.pdf}
+\end{center}
+\caption{AK8 softdrop mass for data with shape plot selection if lowest $|M_{\rm soft\,drop} - 120|$ is used versus if highest \pt AK8 is used.}
+\label{fig:massdif}
+\end{figure}
+
+Additionally, the signal yields of the two strategies are not very different, as can be seen in Tab.~\ref{tab:sigyield}.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & \pt Picking & Mass Picking \\ \hline
+750 & 3.78 & 3.71 \\
+800 & 4.42 & 4.57 \\
+900 & 4.96 & 5.35 \\
+1000 & 5.44 & 5.58 \\
+1200 & 7.03 & 7.16 \\
+\hline
+\end{tabular}
+\caption{Difference between AK8Pt/AK4btag versus AK8M/AK4btag for signal yield.}\label{tab:sigyield}
+\end{table}

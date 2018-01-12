@@ -1,0 +1,40 @@
+\section{Mass Optimization\label{app:mass}}
+
+While the AK8 jet softdrop corrected mass window is set based off of extensive study in other analyses as well as an attempt to avoid blinding other analyses, the AK4 dijet mass window can be altered. We begin with a mass window matching that of the AK8 jet softdrop corred mass (105 - 135 GeV), and examine increasing this window by 10 GeV (95 - 135 GeV), and also by 20 GeV (90 - 140 GeV). The expected limits of these three mass windows are presented in Tab.~\ref{tab:massopt}, where boosted and resolved events are rejected.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & dijet mass 105-135 & dijet mass 95-135 & dijet mass 90-140 \\ \hline
+500 & 856.25 & 756.25 & 568.125 \\
+550 & 493.75 & 546.25 & 403.75 \\
+600 & 353.75 & 339.06 & 278.12 \\
+650 & 235.63 & 234.37 & 198.18 \\
+750 & 100.31 & 105.93 & 92.18 \\
+800 & 99.06 & 97.81 & 89.06 \\
+900 & 82.19 & 78.43 & 70.31 \\
+1000 & 69.06 & 65.93 & 58.28 \\
+1200 & 36.40 & 39.68 & 34.21 \\ 
+1600 & 23.13 & 27.57 & 23.20\\
+2000 & 29.30 & 34.53 &29.60 \\
+\hline
+\end{tabular}
+\caption{Mass optimization, using full selection rejecting boosted and resolved events, expected limits for each bulk graviton mass point}\label{tab:massopt}
+\end{table}
+
+This suggests that a mass window of 90-140 GeV would be best for the dijet mass window.
+
+Additionally, we examine the mean and standard deviation of four signal mass points, where the preselection for shape plots outlined in~\ref{sec:EvtSel} is applied to each mass point. This is documented in Tab.~\ref{tab:resmean}, and we can see that the mean of the AK4 dijet mass is closer to the actual Higgs mass, and the resolution is slightly larger than that of softdrop.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & Res (AK8) & Res (AK4) & Mean (AK8) & Mean (AK4) \\ \hline
+600 & 40.65 & 59.04 & 106.9 & 127.1\\
+800 & 32.35 & 37.85 & 108.9 & 119.5\\
+1000 & 32.69 & 38.56 & 111.8 & 121.9\\
+1200 & 34.29 & 40.86 & 113.5 & 126.1\\
+\hline
+\end{tabular}
+\caption{Resolution and mean for four bulk graviton mass points, comparing AK8 softdrop corrected mass with AK4 dijet mass.}\label{tab:resmean}
+\end{table}

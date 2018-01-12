@@ -1,0 +1,155 @@
+\section{Choosing Variables to Remove \texorpdfstring{$\ttbar$}{ttbar}\label{app:AK4variables}}
+
+Many of our selection choices were based off of choices that the boosted or resolved analyses made, including the background estimate process. Using Alphabet means limiting \ttbar is essential. In order to do this, several different variables related were examined.
+
+With the following event selection, plots of various variables that were examined can be found below:
+\begin{itemize}
+  \item Triggers applied;
+ \item At least one AK8 jet in the event with $\pt > 250\GeV$ and $|\eta| < 2.4$;
+\item The soft drop mass of the AK8 jet is $105 < M_{\rm soft\,drop} < 135\GeV$, with all necessary jet mass corrections applied;
+\item Double b $>$ 0.8;
+ \item At least two AK4 jets with $\pt > 30\GeV$ and $|\eta| < 2.4$, with a deep CSV value $>$ 0.6324;
+\item The combined mass of the two AK4 jet is $105 < M_{dijet} < 135\GeV$;
+ \item The AK8 jet is $\Delta R$ $>$ 0.8 away from each AK4 jet, and the two AK4 jets are within $\Delta R$ $<$ 1.5,
+       and if more than one AK8 + two AK4 triplet is found, the triplet with highest $\pt$ AK8 jet and then the highest AK4 deep CSV values is chosen;
+ \item Lepton veto;
+ \item Boosted and resolved events removed.
+\end{itemize}
+
+All figures in this section have the same preselection, with QCD MC (yellow) and \ttbar (red) weighted by their cross section multiplied by the luminosity of the dataset and divided by the total number of events. The signal samples (different dashed lines) are weighted by the cross section multiplied by the luminosity of the dataset and divided by the total number of events, and then multiplied by a factor until they are easy to see on the plots. 
+
+N-subjettiness variables $\tau_{3}/\tau_{2}$ was examined, shown in Fig.~\ref{fig:AK8tau32}, but it showed no discrimination power between signal and \ttbar.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/extraplSRtau32.pdf}
+\end{center}
+\caption{The $\tau_{3}/\tau_{2}$ of the AK8 jet.}
+\label{fig:AK8tau32}
+\end{figure} 
+
+The AK8 jet was matched to a CA15 jet and the ratio of their $\pt$ is shown in Fig.~\ref{fig:AK8CA15}, in attempt to create a variable that would be able to eliminate jets with radiation nearby the AK8 jet, but it showed little discrimination power between signal and \ttbar.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/extraplSRakca.pdf}
+\end{center}
+\caption{The AK8 jet $\pt$ divided by the CA15 jet $\pt$.}
+\label{fig:AK8CA15}
+\end{figure} 
+
+The number of AK4 jets (Fig.~\ref{fig:nAK4}), as well as the number of AK4 jets within $\Delta R$ of 1.5 of the two selected AK4 jets (Fig.~\ref{fig:nAK4sAK4}), were examined, but they showed little discrimination power between signal and \ttbar. 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/extraplSRnumAK4.pdf}
+\end{center}
+\caption{The number of AK4 jets.}
+\label{fig:nAK4}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/extraplSRnumnAKAK1.pdf}
+\includegraphics[scale=0.34]{Figures/extraplSRnumnAKAK2.pdf}
+\end{center}
+\caption{The number of AK4 jets within $\Delta R$ of 1.5 of the highest $\pt$ AK4 selected jet (left) and the other selected AK4 jet (right).}
+\label{fig:nAK4sAK4}
+\end{figure} 
+
+The nearest unselected AK4 jet to the AK8 jet was found, and the $\Delta R$ between this jet and AK8 as well as the invariant mass of this AK4 jet and the AK8 jet were examined, as shown in Fig~\ref{fig:AK4FJ}. They showed some discrimination power between signal and \ttbar, but better variables exist.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/dRFJAK4.pdf}
+\includegraphics[scale=0.34]{Figures/invMFJAK4.pdf}
+\end{center}
+\caption{The $\Delta R$ between the AK8 jet and the nearest unselected AK4 jet (left) and the invariant mass of these two jets (right).}
+\label{fig:AK4FJ}
+\end{figure} 
+
+The nearest unselected AK4 jet to the two selected AK4 jets was examined. First, the $\pt$ of the highest selected AK4 jet combined with the nearest unselected AK4 jet, along with the $\pt$ of the other selected AK4 jet combined the nearest unselected AK4 jet was examined, as shown in Fig.~\ref{fig:ptnAK4}, but they showed little discrimination power between signal and \ttbar.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/extraplSRpTnAKAK1.pdf}
+\includegraphics[scale=0.34]{Figures/extraplSRpTnAKAK2.pdf}
+\end{center}
+\caption{The $\pt$ of the highest selected AK4 jet combined with the nearest unselected AK4 jet to it (left), along with the $\pt$ of the other selected AK4 jet combined the nearest unselected AK4 jet to it (right).}
+\label{fig:ptnAK4}
+\end{figure} 
+
+The nearest unselected AK4 jet to either of the selected AK4 jets was examined, with the $\Delta R$ between that jet and its nearest selected AK4 jet and the invariant mass of the two selected AK4 jets combined with this jet (triAK4jet mass). These are shown in Fig.~\ref{fig:dRMAK4}. These both provide the best discrimination power between signal and \ttbar of any variables examined.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/emSRdRsnAK4cl.pdf}
+\includegraphics[scale=0.34]{Figures/emSRinvmsnAK4cl.pdf}
+\end{center}
+\caption{$\Delta R$ between the nearest unselected AK4 jet and the selected AK4 jet that it is nearest to (left), and the invariant mass of this unselected jet combined with the two AK4 selected jets (right).}
+\label{fig:dRMAK4}
+\end{figure} 
+
+Two cuts were examined further, $\Delta R$ (nearest unselected AK4, selected AK4) $>$ 1.0 and triAK4jet mass $>$ 200 GeV. The fraction of events left after applying each of these cuts is compared (after applying the above selection) in Tab.~\ref{tab:dRinvM}. Although $\Delta R$ does slightly better than triAK4jet mass in eliminating \ttbar, the triAK4jet mass cut retains more signal.
+
+\begin{table}[h]
+\topcaption{Number of events left after applying $\Delta R$ (nearest unselected AK4, selected AK4) $>$ 1.0 and triAK4jet mass $>$ 200 GeV divided by number of events after applying only the selection described at the beginning of this section}\label{tab:dRinvM}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & $\Delta R$ $>$ 1.0 & TriAK4jet $>$ 200\\ \hline
+500 & 0.676 & 0.868\\
+550 & 0.868 & 0.874\\
+600 & 0.776 & 0.807\\
+650 & 0.757 & 0.787\\
+750 & 0.847 & 0.836\\
+800 & 0.84 & 0.845\\
+900 & 0.823 & 0.858\\
+1000 & 0.825 & 0.875\\
+1200 & 0.792 & 0.902\\
+1600 & 0.836 & 0.946\\
+2000 & 0.837 & 0.947\\
+ttbar & 0.363 & 0.384\\
+QCD 700-1000 & 0.786 & 0.786\\
+QCD 1000-1500 & 0.762 & 0.905\\
+QCD 1500-2000 & 0.806 & 0.871\\
+QCD 2000+ & 0.545 & 0.909\\
+\hline
+\end{tabular}
+\end{table}
+
+A 2D cut including both of these variables was examined, but adding in the $\Delta R$ cut only made a small difference in eliminating \ttbar and removed too much signal, as can be seen in Fig.~\ref{fig:2D}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/2dqcd.pdf}
+\includegraphics[scale=0.34]{Figures/2dttbar.pdf}\\
+\includegraphics[scale=0.34]{Figures/2dsig.pdf}
+\end{center}
+\caption{2D plots of $\Delta R$ (nearest unselected AK4, selected AK4) and triAK4jet mass (top left QCD HT 700-1000 GeV, top right \ttbar, bottom signal mass 800 GeV). While the $\Delta R$ cut removes more \ttbar, it also removes too much signal.}
+\label{fig:2D}
+\end{figure} 
+
+In order to calculate a systematic for this cut on the triAK4jet mass, the Bulk Graviton 1000 Pythia and Herwig samples were compared. Fig.~\ref{fig:PHmass} shows the triAK4jet mass for both samples. The cut efficiency for Herwig is 0.8777 and the cut efficiency for Pythia is 0.8731 for requiring triAK4jet mass $>$ 200 GeV, which is quite close, so a systematic of 0.5\% is assigned. The \pt of the two selected AK4 jets and the \pt of the unselected nearest AK4 jet, along with the $\Delta R$ between the unselected and nearest selected AK4 jet, can be seen in Fig.~\ref{fig:PHother}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/newcutinvmsnAK4cl.pdf}
+\end{center}
+\caption{TriAK4jet mass for Bulk Gravion 1000 Pythia and Herwig samples. The shape is quite similar for the two samples.}
+\label{fig:PHmass}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/newcutptJ1.pdf}
+\includegraphics[scale=0.34]{Figures/newcutptJ2.pdf}\\
+\includegraphics[scale=0.34]{Figures/newcutpTAK4AKs.pdf}
+\includegraphics[scale=0.34]{Figures/newcutdRsnAK4cl.pdf}
+\end{center}
+\caption{For Bulk Graviton 1000 Pythia and Herwig samples, highest \pt selected AK4 jet \pt (top left), other selected AK4 jet \pt (top right), \pt of the nearest unselected AK4 jet to the selected AK4 jets (bottom left), and the $\Delta R$ between the nearest unselected AK4 jet to one of the selected AK4 jets. All shapes are similar.}
+\label{fig:PHother}
+\end{figure} 
+
+
+
+

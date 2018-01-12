@@ -12,16 +12,16 @@ As physicists advanced the study of quantum mechanics, many new particles were d
 
 \section{The Standard Model}
 The SM describes the interaction of all elementary particles with one formula, shown in Figure \ref{Fig:Intro:SML}. This lengthy Lagrangian can be summarized as a list of particles and mediating forces, represented in Figure \ref{Fig:Intro:SMTable}.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
         \includegraphics[width=0.75\textwidth]{F1/StandardModelEquation}
-        \caption{The Lagrangian of the Standard Model.}
+        \caption{The Standard Model Lagrangian.}
         \label{Fig:Intro:SML}
 \end{figure}
 \begin{figure}[h]
     \centering
         \includegraphics[width=\textwidth]{F1/StandardModelTable}
-        \caption{The Standard Model. Image taken from CERN\cite{SMTable}.}
+        \caption{Table of Standard Model particles. Image from CERN\cite{SMTable}.}
         \label{Fig:Intro:SMTable}
 \end{figure}
 
@@ -65,21 +65,21 @@ The Standard Model describes how matter particles, described above, interact wit
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.33\textwidth]{F1/Vertex1}
-        \caption{Visual representation of the interaction between two electrons and a photon.}
+        \caption{Visual representation of the interaction between two electrons (straight lines) and a photon (wiggly line).}
         \label{Fig:Intro:Vertex1}
 \end{figure}
 This vertex can be arranged and combined with other vertices in a variety of ways to represent different interactions between electrons, positrons, and photons. For example, we can consider the case where two electrons are propelled towards each other. Using two of the vertex pictured in \ref{Fig:Intro:Vertex1}, we can see that this must result in two electrons, as can be seen in Figure \ref{Fig:Intro:Feynman1}, where time propagates to the right on the x-axis, and distance is represented on the y-axis. 
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.49\textwidth]{F1/FeynDiag1}
-        \caption{A Feynman Diagram depicting the interaction of two electrons. The action of the electromagnetic force is equivalent to the exchange of a photon. The vertical axis represents the distance between the electrons and the horizontal axis the passage of time.}
+        \caption{A Feynman Diagram showing the interaction of two electrons. Time increases to the right on the x-axis, and the y-axis represents the distance between the two electrons.}
         \label{Fig:Intro:Feynman1}
 \end{figure}
 Alternatively, if we were to consider the interaction between an electron an a positron, which can be represented as an electron with an arrow pointing backwards in time, we can see that the resulting process is described by Figure {Fig:Intro:Feynman2}, where an electron and a positron annihilate to a photon, which produces anelectron positron pair.
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.49\textwidth]{F1/FeynDiag2}
-        \caption{A Feynman Diagram depicting the annihilation of a positron and an electron.}
+        \caption{A Feynman Diagram showing the annihilation of a positron and an electron.}
         \label{Fig:Intro:Feynman2}
 \end{figure}
 In both of these diagrams, we notice that charge is conserved on either side of the diagram. Many more diagrams can be made with this vertex, combining it with other vertices that involve a photon as well. In understanding these diagrams, we can explain three of the four fundamental forces at a qualitative level, below, while also introducing new theories in later chapters that have motivated the search for new particles.
@@ -92,7 +92,7 @@ Quantum Chromodynamics (QCD) describes quantum interactions related to the stron
 \begin{figure}[h]
     \centering
         \includegraphics[width=\textwidth]{F1/Vertex2}
-        \caption{Three vertexes arising from QCD interactions. The curly line represents gluons. Note that gluons, which are colored, may interact with themselves.}
+        \caption{QCD interactions can be described by three vertices. The curly line represents gluons, while the straight lines represent quarks. Since gluons are colored, they can interact with themselves.}
         \label{Fig:Intro:Vertex2}
 \end{figure}
 As mentioned before, each quark has a color charge, and each anti-quark has an anti-color charge. Since color must be conserved, we can see that the gluon must carry a color and an anti-color for the vertices in Figure \ref{Fig:Intro:Vertex2} to be true. Naively, since there are three colors, one would think there are nine gluons, or nine possible combination of three colors and three anticolors. These are summarized below:
@@ -119,102 +119,98 @@ Particles comprised of quarks must be color neutral, both mesons (two-quark boun
 
 The strong force is responsible for hadronization, or the production of many quarks and gluons when quarks are smashed apart due to an event such as a proton-proton collision. As quarks drift apart after the collision, a color tube of self-interacting gluons is created between the quarks. These tubes are stretched as the quarks drift further apart, increasing energy in the tube due to the constant force exerted from stretching. At distances of roughly $10^{-15}$ m, it becomes more energetically favorable for two new quarks to be created from the vacuum, through the process shown in the top left vertex in Figure \ref{Fig:Intro:Vertex2}. If these new quarks are still too energetic to be contained in a particle, this process will repeat until the energy has been sufficiently decreased for all new quark pairs to stay bound. This property is known as confinement, and is critical to the understanding of hadronic activity within a particle detector.
 
-%ALICE START HERE
 \subsection{The Weak Force:}
-In this very distant past, the Weak force and the Electromagnetic force were one. They were called the Electroweak Interaction, and there were four carrier particles, $W_1$, $W_2$, $W_3$ and $B$. All four of these were massless, and had unit spins (as such, they were \textit{bosons}). While temperatures were high enough, these bosons were able to ignore the effects of the Higgs field, which we discuss in the next section.
-
-As the universe cools down, the four bosons begin to interact with this field. The fermions now no longer interact directly with the $W_1$, $W_2$, $W_3$ and $B$, but rather, with superpositions of them. Where previously there were a $B$ and a $W_3$ Boson, we now have, $\gamma$ and $Z$. This superposition is simple to write:
+When the universe had first begun and was still very hot, the weak force and the electromagnetic force were combined to form the electroweak force. At this time, the electroweak interaction was mediated by four massless bosons: $W_1$, $W_2$, $W_3$ and $B$. As the universe cooled, the bosons eventually began interacting with the Higgs field (addressed in the following section), and soon, the bosons that interacted with fermions were no longer these four, but a superposition of them. 
+We can write this superpositions as
 \begin{equation}
     \left( \begin{array}{c} \gamma \\ Z \end{array} \right) = \left( \begin{array}{c} \cos\theta_W \\ -\sin\theta_W \end{array} \begin{array}{c} \sin\theta_W \\ \cos\theta_W \end{array} \right) \left( \begin{array}{c} B \\ W_3 \end{array} \right)
 \end{equation}
-Where $\theta_W$ called the Mixing Angle or Weinberg Angle, is a parameter of the Standard Model. The photons of the Electromagnetic force are just a particular combination of the $B$ and $W_3$. The $Z$ Boson is one of the carrier particles of the Weak Force. Similarly ,the $W_1$ and $W_2$ bosons combine via the superposition
-\begin{equation}
+    \begin{equation}
     W^\pm = \frac{(W_1\mp iW_2)}{\sqrt{2}}
 \end{equation}
-to form two new Bosons, the $W^+$ and $W^-$. 
+where $\theta_W$, the mixing angle, is a parameter of the SM. Therefore, while $\gamma$ is the force carrier for the electromagnetic force, the $Z$, $W^{+}$, and $W^{-}$ are the force carriers for the weak force. The weak interaction is interesting because it only acts on left-handed particles and right-handed anti-particles.
 
-We've already talked about the behavior of the photon, so we just need to detail the vertexes involving the W and Z bosons for a full description of the Weak Force. These vertexes are shown in Figure \ref{Fig:Intro:Vertex3}.
+The vertexes describing the weak force interactions can be found in Figure \ref{Fig:Intro:Vertex3}.
 \begin{figure}[h]
     \centering
         \includegraphics[width=\textwidth]{F1/Vertex3}
-        \caption{Vertexes arising from weak interactions. The wavy lines represent the Bosons. The straight lines represent any particle where the appropriate quantities are conserved (details in the text).}
+        \caption{Weak interactions can be described by the following vertices. The wavy lines represent bosons, while the straight lines represent any particle where the appropriate quantities are conserved.}
         \label{Fig:Intro:Vertex3}
 \end{figure}
-The Z Boson is not massless, it has mass $91.2$ GeV/c$^2$\footnote{The unit GeV/c$^2$ is a unit of mass. One eV/c$^2$ is equal to $1.78 \times 10^{-36}$ kg. An electron has mass $\sim$ 0.5 MeV/c$^2$ and a proton $\sim$ 1 GeV/c$^2$.}. Z bosons couples particles to their anti-particles. For example, the process $Z\rightarrow e^-e^+$ is allowed but the process $Z\rightarrow\mu^+e^-$ is not. Similarly, $Z\rightarrow b\overline{b}$ is allowed but $Z\rightarrow b\overline{u}$ is not. In this regard, it behaves like a heavy version of the photon, except that it can couple to neutral particles (for example, $Z\rightarrow\nu_e\overline{\nu}_e$).
+While the photon is massless, the three weak force carriers are not. The Z Boson has a mass of $91.2$ GeV/c$^2$ (where  protons have a mass of $\sim$ 1 GeV/c$^2$ for reference). The Z boson allows particles to interact with their anti-particles through the weak force. For example, the process $Z\rightarrow e^-e^+$ is permitted, but the process $Z\rightarrow\mu^+e^-$ is not permitted. The Z boson can couple to both electrically charged and neutral particles, as well as particles with and without color.
 
-The W boson (with a mass of $80.4$ GeV/c$^2$) also couples pairs of fermions, except that it links the flavors within a generation. For example, a W boson might decay to two quarks ($W\rightarrow u\overline{d}$) or to a lepton and its neutrino ($W\rightarrow\mu\nu_\mu$). It is charged, so the process $\gamma\rightarrow W^+W^-$ is allowed. The decay $Z\rightarrow W^+W^-$ is also allowed.
+The $W^\pm$ boson, which has a mass of $80.4$ GeV/c$^2$, also couples pairs of fermions. Rather than linking particles and anti-particles like the Z boson, it allows the flavors within a generation to interact. For example, a $W^{+}$ boson can decay to two quarks ($W^{+}\rightarrow u\overline{d}$), and a $W^{-}$ can decay to a lepton and its neutrino ($W^{-}\rightarrow\mu\nu_\mu$). Since the $W^{\pm}$ is electrically charged, electric charge must be conserved at each vertex, and also $\gamma\rightarrow W^+W^-$ is allowed. The decay $Z\rightarrow W^+W^-$ is also a potential vertex.
 
-The W boson is a fascinating object to study. As we've already mentioned in passing: The weak interaction only acts on left-handed particles and right-handed anti-particles\footnote{This causes considerable complications because neutrinos have mass. It is therefore possible to define a reference frame in which the neutrino is moving backwards with relation to the W it decayed from, thus flipping its helicity...}.
+%The W boson is a fascinating object to study. As we've already mentioned in passing: The weak interaction only acts on left-handed particles and right-handed anti-particles\footnote{This causes considerable complications because neutrinos have mass. It is therefore possible to define a reference frame in which the neutrino is moving backwards with relation to the W it decayed from, thus flipping its helicity...}.
 
-The decay $\gamma\rightarrow \mu^+e^-$ is a perfectly plausible decay, seeing as charge is conserved. However, it never occurs. Similarly, the Z boson might be allowed to decay to different generation quarks (this wouldn't violate charge or color), but it simply does not happen. These decays are called \textit{flavor changing neutral currents}. Flavor changing \textit{charged} currents on the other hand, do exist. Specifically, Ws can decay to quark pairs outside of their generation. For example, we might see $W\rightarrow s\overline{u}$. The probability of a W decaying to different generations is encoded in the CKM Matrix, an empirically measured set of values. Here is that matrix:
+%The decay $\gamma\rightarrow \mu^+e^-$ is a perfectly plausible decay, seeing as charge is conserved. However, it never occurs. Similarly, the Z boson might be allowed to decay to different generation quarks (this wouldn't violate charge or color), but it simply does not happen. These decays are called \textit{flavor changing neutral currents}. Flavor changing \textit{charged} currents on the other hand, do exist. Specifically, Ws can decay to quark pairs outside of their generation. For example, we might see $W\rightarrow s\overline{u}$. 
+The probability of a W decaying to different generations is dictated by the CKM Matrix, where each of these values has been experimentally measured:
 \begin{equation}\label{Eq:CKM}
     \left(\begin{array}{c} V_{ud}\\V_{cd}\\V_{td} \end{array}\begin{array}{c}  V_{us}\\V_{cs}\\V_{ts} \end{array}\begin{array}{c} V_{ub}\\V_{cb}\\V_{tb}  \end{array}\right) = \left(\begin{array}{c} 0.974\\0.225\\0.009 \end{array}\begin{array}{c}  0.225\\0.973\\0.040 \end{array}\begin{array}{c} 0.004\\0.041\\0.999  \end{array}\right)
 \end{equation}
 where $|V_{ij}|^2$ is the probability that a quark $i$ decays to a quark $j$ through the emission of a W.
 
-It is then because of the W and the W only that our world seems to be composed of only up and down quarks and electrons. All other particles will eventually decay (through a W) to something lighter. The other leptons (the muons and the taus) will eventually decay by emitting a neutrino and a W, with the W decaying to an electron and a neutrino. All the various particles discovered in the last century eventually decayed to protons and neutrons because the higher order quarks embedded in them decayed (again, through a W) back to the first generation.
+Since all other particles decay through a W to a lighter particle, this explains why our world is built with up quarks, down quarks, and electrons (the building blocks of atoms). 
 
 \subsection{Mass and the Higgs Boson}
-The Higgs Boson is the most recent addition to the Standard Model to be discovered. It is responsible for giving the other particles their mass\footnote{except the neutrinos, which by now you must have noticed, are devious...} As we already mentioned, this does not happen at very high energies. To understand this, we should consider the Higgs Potential. For the purpose of illustration we can simplify it to the form $\sim (\phi^2 - \eta^2)^2$, where $\phi$ is the Higgs Field, which we plot in Figure \ref{Fig:Intro:HiggsPot}\footnote{This shape is sometimes called the ``mexican hat'' or ``champagne bottle'' potential, depending on the level of cultural sensitivity required.}. 
+The Higgs Boson is the most recent confirmed Standard Model particle. It is related to the mass of other SM particles. To understand how this is so, we will look at the Higgs potential, which we can write as $\sim (\phi^2 - \eta^2)^2$ for the purpose of explanation. This is plotted in Figure \ref{Fig:Intro:HiggsPot}.
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.66\textwidth]{F1/higsspot}
-        \caption{Sketch of the Higgs Potential. Notice that while the over-all shape is symmetric about the y-axis, the function is not symmetric about the minima.}
+        \caption{Approximation of the Higgs potential. While the shape is symmetric about the y-axis, the function is not symmetric about the minima.}
         \label{Fig:Intro:HiggsPot}
 \end{figure}
-The potential in question is symmetric (about the y-axis, which in the case of the actual Higgs potential would have units of energy). In the high-temperature early universe, the energies of particles was such that the "bump" at the bottom of the potential played no part. As the universe cools, however, things must settle into either of the two valleys. It's not the case that the equations of of the Standard Model aren't symmetric, it's that practically, at the energies in question, they cause behavior which is not. This is called \textit{spontaneous symmetry breaking}.
+The potential is symmetric about the y-axis, or the axis with units of energy. In the early universe while everything was still very hot, the energies of particles were so high that the bumps at the bottom of the potential had no consequence. As the universe cooled, however, these minima became important, and one must be chosen. This is known as spontaneous symmetry breaking.
 
-This asymmetry causes the Higgs field in the low temperature universe to take on a vacuum expectation value (roughly speaking: its average value in empty space) which is non-zero (it's 246 GeV). We usually abbreviate this as just the \textit{VEV}. The VEV couples to the electroweak interactions, creating the photon and the weak force bosons as we experience them.
+Once the universe had cooled sufficiently, the Higgs field took on a vacuum expectation value (VEV), or an average value in empty space, which was non-zero. This VEV couples to electroweak interactions, as referenced in the previous section, and the photon and weak force bosons mixed to form the states we know today. The spontaneously broken Higgs field also couples to quarks, electrons, muons, taus, Z bosons, and $W^{\pm}$ bosons. However, it does not couple to neutrinos, so the explanation for their mass must lie elsewhere.
 
-Through a similar but not identical process, this spontaneously broken Higgs field also couples to the weak bosons, quarks, electron, muon and tau, giving them mass where without it they were massless. The neutrinos do not couple, and are therefore massless in the standard model.
-
-So far we've been talking about the Higgs field, but as you may have heard, there is also a Higgs Boson. This particle is just an excitation of the Higgs Field the way we think of a photon as being an excitation of the electromagnetic field. It was discovered in 2012 at the Large Hadron Collider after a 40 year long search. This Higgs has no charge, has no spin, and has a mass of 126 GeV. It couples to anything with mass, which means it couples to itself. The Higgs Vertex is the very last piece of the Standard Model, and is shown in Figure \ref{Fig:Intro:Vertex4}.
+While we have been referring to the Higgs field, the Higgs boson is the particle that was recently discovered at the LHC in 2012. This particle is an excitation of the Higgs field in the same way that a photon is an excitation of the electromagnetic field. The SM Higgs has no charge, no spin, and a mass of 126 GeV. It couples to anything with mass (aside from the neutrinos), so it can also couple to itself. These vertexes take the form shown in Figure \ref{Fig:Intro:Vertex4}.
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.5\textwidth]{F1/Vertex4}
-        \caption{The Higgs Vertex. The dashed line is the Higgs Boson and the straight lines represent any massive particle (including the Higgs).}
+        \caption{The Higgs Vertex. The dashed line is the Higgs Boson and the straight lines are any massive particle.}
         \label{Fig:Intro:Vertex4}
 \end{figure}
+
 \section{Rounding Up the Standard Model Particles}
-So to recap, there are, once we count all the colors and anti-particles, 61 particles in the standard model. We know they interact, and we can pictorally express a number of complex interactions using the Feynman diagram. For example, consider the diagram in Figure \ref{Fig:Intro:ttbar}.
+In total, including particles of different colors and all anti-particles, there exist 61 particles in the SM. We can describe their interactions easily using the vertices presented in each section
+So to recap, there are, once we count all the colors and anti-particles, 61 particles in the standard model. We know they interact, and we can pictorally express a number of complex interactions using the Feynman diagram. For example, consider the diagrams in Figure \ref{Fig:Intro:hh}.
 \begin{figure}[h]
     \centering
-        \includegraphics[width=0.5\textwidth]{F1/ttbarIntroDiag}
-        \caption{Collider Example: two quarks collide and form a gluon, which decays to two top quarks.}
-        \label{Fig:Intro:ttbar}
+        \includegraphics[width=0.5\textwidth]{F1/dihiggs}
+        \caption{Left: Two gluons interact with a quark, while each gluon interacts with an additional different quark, and these additional different quarks interact with a shared fourth quark and each pair of quarks interacts to form a Higgs boson. Right: Two gluons interact with a quark, while each gluon interacts with an additional quark, and these additional different quarks interact with each other to form a Higgs boson, which interacts with two Higgs bosons. The result of both of these processes is a final state with two Higgs.}
+        \label{Fig:Intro:hh}
 \end{figure}
-This is an important physics process\footnote{incidentally, the primary background of this Thesis' analysis} found in high energy colliders, and we'll discuss it in much more detail later on. For now, it serves as a useful example of the kind of processes we can construct with our Feynman diagrams: two protons collide and quarks inside of them annihilate\footnote{See Chapter \ref{Sec:CMS} for a more formal description of what's happening there} into a gluon. That gluon propagates some distance before it decays back to quarks, this time to a pair of top quarks. Each of these decays through Weak interactions to a b and a W (this is almost always the case, see Equation \ref{Eq:CKM}). One W decays to a lepton and a neutrino, and the other to a pair of quarks. This diagram then contains five distinct vertexes.
+These are important physics processes by which two gluons interact with quarks to produce two Higgs, which is central to the topic of this thesis. This shows an example of the different kind of processes possible using Feynman diagrams: two protons collide and gluons inside of them interact with different quarks to produce two Higgs bosons (left) or one Higgs boson that then produces two Higgs bosons (right).
 
-Indeed, we can make these diagrams as complicated as we want. Some of them become quite silly. See Figure \ref{Fig:Intro:Diags} for some more entertaining examples.\begin{figure}[h]
-    \centering
-        \includegraphics[width=0.4\textwidth]{F1/goof3}
-        \includegraphics[width=0.4\textwidth]{F1/goof2}
-        \includegraphics[width=0.66\textwidth]{F1/goof1}
-        \caption{Some more Feynman Diagrams representing real physics processes. Some of these play real roles in modern analyses and some of these were constructed for the sake of the diagram itself.}
-        \label{Fig:Intro:Diags}
-\end{figure}
+%Indeed, we can make these diagrams as complicated as we want. Some of them become quite silly. See Figure \ref{Fig:Intro:Diags} for some more entertaining examples.\begin{figure}[h]
+%    \centering
+%        \includegraphics[width=0.4\textwidth]{F1/goof3}
+%        \includegraphics[width=0.4\textwidth]{F1/goof2}
+%        \includegraphics[width=0.66\textwidth]{F1/goof1}
+%        \caption{Some more Feynman Diagrams representing real physics processes. Some of these play real roles in modern analyses and some of these were constructed for the sake of the diagram itself.}
+%        \label{Fig:Intro:Diags}
+%\end{figure}
 
-We've given a mostly qualitative description of the model, without differentiating between facts gleaned from experiments and facts that come from calculations within the model itself. Fortunately, the Standard Model is extremely self-consistent and despite there being 61 particles, 4 forces and 1 Higgs field, there are only 19 ``free parameters'' which have to be determined experimentally. Most of them are masses. The Higgs Boson is the reason that the particles have mass, but it doesn't specify what those masses should be. What was the question ``why does a particle have this mass'' now becomes ``why is this particle's coupling to the Higgs what it is''. The CKM Matrix's nine entries can be interrelated with just four parameters. The remaining parameters have to do with the Higgs field or the couplings of the forces.
+While this description has been qualitative, and has not drawn distinction between what has been experimentally determined and what has been predicted in the SM, the SM is quite self-consistent. There are only 19 parameters which are experimentally determined, most of which are masses.
 
-\subsection{The top quark}
-No discussion of the standard model is complete unless it mentions how strange the top quark is\footnote{even though it has strangeness 0.}. The top quark's mass is 174 GeV/c$^2$. The next heaviest quark barely makes it to the 5 GeV/c$^2$ mark, with all other fermions being lighter than it. 
+%We've given a mostly qualitative description of the model, without differentiating between facts gleaned from experiments and facts that come from calculations within the model itself. Fortunately, the Standard Model is extremely self-consistent and despite there being 61 particles, 4 forces and 1 Higgs field, there are only 19 ``free parameters'' which have to be determined experimentally. Most of them are masses. The Higgs Boson is the reason that the particles have mass, but it doesn't specify what those masses should be. What was the question ``why does a particle have this mass'' now becomes ``why is this particle's coupling to the Higgs what it is''. The CKM Matrix's nine entries can be interrelated with just four parameters. The remaining parameters have to do with the Higgs field or the couplings of the forces.
 
-This might just be a curiosity, as there is nothing inherently ``wrong'' with a very heavy top, but it does lead to some strange behavior. The top quark is the only quark that can exist outside of a color singlet. This is because the color tubes we mentioned before never form: due to its very large mass, the top decays immediately (in $5\times 10^{-25}$ seconds) through the Weak force to a bottom quark (or very rarely, a c or a d) and a W Boson. 
+%\subsection{The top quark}
+%No discussion of the standard model is complete unless it mentions how strange the top quark is\footnote{even though it has strangeness 0.}. The top quark's mass is 174 GeV/c$^2$. The next heaviest quark barely makes it to the 5 GeV/c$^2$ mark, with all other fermions being lighter than it. 
 
-This does not mean that the top quark can only interact weakly, just that it decays that way. The top quark plays an important role in Higgs production (since the Higgs couples so strongly to it), as shown in Figure \ref{Fig:Intro:TopDecayHiggs}. As we will see, the top quark is a frequent player in searches for new physics as new theories often couple preferentially to massive objects.
-\begin{figure}[h]
-    \centering
-        \includegraphics[width=0.66\textwidth]{F1/higgsProd}
-        \caption{Production of a Higgs boson from the collision of two gluons (which, notably, cannot couple directly to the Higgs). The triangular structure is a \textit{loop}.}
-        \label{Fig:Intro:TopDecayHiggs}
-\end{figure}
-\section{A Few Open Questions}
-For a supposed Theory of Everything, the Standard Model could use some improvement. It only covers a slim $4.6\%$ of the content of the known universe. Dark Matter, something completely outside the Standard Model, accounts for a further $24\%$, with the rest being mysterious Dark Energy. Both these Dark Entities loom as considerable proof that while the Standard Model does a good job of describing that little $4.6\%$ we call \textit{Baryonic Matter}, it is far from a complete description of the world.
+%This might just be a curiosity, as there is nothing inherently ``wrong'' with a very heavy top, but it does lead to some strange behavior. The top quark is the only quark that can exist outside of a color singlet. This is because the color tubes we mentioned before never form: due to its very large mass, the top decays immediately (in $5\times 10^{-25}$ seconds) through the Weak force to a bottom quark (or very rarely, a c or a d) and a W Boson. 
 
-Actually, the Standard Model isn't even a complete description of Baryonic Matter. The obvious problem being of course, that it fails to explain, or in any way even include, the most obvious of forces: Gravity. Gravity is not included in the Standard Model. It's easy to just say that gravity just doesn't matter at the very small distances the Standard Model applies to, but the addition of some massless force-carrying \textit{Graviton} would certainly be welcome.
+%This does not mean that the top quark can only interact weakly, just that it decays that way. The top quark plays an important role in Higgs production (since the Higgs couples so strongly to it), as shown in Figure \ref{Fig:Intro:TopDecayHiggs}. As we will see, the top quark is a frequent player in searches for new physics as new theories often couple preferentially to massive objects.
+%\begin{figure}[h]
+ %   \centering
+ %       \includegraphics[width=0.66\textwidth]{F1/higgsProd}
+ %       \caption{Production of a Higgs boson from the collision of two gluons (which, notably, cannot couple directly to the Higgs). The triangular structure is a \textit{loop}.}
+ %       \label{Fig:Intro:TopDecayHiggs}
+%\end{figure}
+\section{Beyond the Standard Model}
+While the SM is an impressive feat of mathematics and experiments, it leaves many questions unanswered. For example, the SM only accounts for baryonic matter, which is estimated to be $4.6\%$ of the universe. A remaining $24\%$ is accounted for by dark matter, which can only be gravitationally detected, while the rest of the universe is said to be made up of dark energy.
 
-Of course, there's also these pesky neutrinos and their unwarranted masses to directly (experimentally) challenge our model. These are not the only hints that we're missing something. One obvious observation is that while the Standard Model treats positrons and electrons (and quarks and anti-quarks) symmetrically, the universe's Baryonic Matter is overwhelmingly composed of electrons and quarks. What happened to all the anti-particles?
+The SM is also missing one of the four fundamental forces, gravity. While we have convincing understanding of quantum mechanics and general relativity, a unification for these two theories has yet to be discovered. Neutrino mass is unaccounted for by the SM. The Higgs mass is much lower than one might expect from the SM. The universe is dominated by matter, rather than anti-matter. 
 
-And what are these insanely energetic cosmic rays we detect from time to time? The Standard Model puts limits on the energy a cosmic ray can attain before it is slowed down by interactions in space... and yet, we have detected particles some orders of magnitude above that limits.
-
-One of the great strengths of the Standard Model is that it is incredibly self-consistent. Indeed, it has been tested and re-tested, with no obvious internal flaw. Now however, as we start to seek the answer to new questions, this strength becomes a flaw as there is no way to modify the model without un-hinging some other internal aspect. To answer the questions of modern physics then, we must venture into new territory Beyond The Standard Model!
+Many questions remain that require answers beyond the SM, and so we search for new particles at the LHC in hopes of providing new insight into these difficult problems.

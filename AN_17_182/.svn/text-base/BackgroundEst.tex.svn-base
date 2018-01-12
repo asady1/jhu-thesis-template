@@ -1,0 +1,187 @@
+\section{Background Estimation\label{sec:BkgEst}}
+
+\subsection{Alphabet Background Estimate\label{ss:Alphabet}}
+We measure the QCD background with a data-driven method which exploits a number of sidebands of the signal region. These sidebands are defined with respect to the AK8 jet based on its mass and the value of the double-b discriminator. Considering these two variables, we may define several regions, as outlined in Figure \ref{F:ABCDEFregions}: the \textit{pre-tag} region consists of all events which pass all selection requirements except the soft-drop mass requirements and tagger requirements on the AK8 jet. The \textit{signal} region is the subset of those events which pass the mass requirement and pass the tagger requirement we impose on our signal. The \textit{anti-tag} region is the subset of events which pass the mass requirement but fail the tagger requirement. All other events in the pre-tag region constitute the mass-sideband. For QCD background, we expect the shapes but not normalizations of distributions of events in the signal and anti-tag regions to be similar. If there were no correlation between the jet mass and the tagging variable, we could simply measure in the mass sideband the ratio of passing to failing events and scale the anti-tag region by this to obtain an estimate of the signal region (this method is often referred to as the ABCD method).
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{Figures/pretag2.pdf}
+  \caption{Schematic representation of the regions used to perform our estimate.} \label{F:ABCDEFregions}
+\end{figure}
+
+%As can be seen from Figure \ref{F:twotone2} the tagging variable we consider has a dependence on mass. Thus, 
+As documented in ~\cite{CMS-PAS-B2G-16-026}, the tagging variable we consider has a dependence on mass.
+Thus, to obtain the normalization, we must measure a \textit{conversion rate} or the pass-fail ratio, $R_{p/f}$ which depends on mass. We can fit for such a dependence in the mass-sidebands. The pass-fail ratio $R_{p/f}$ is obviously correlated with the double b tagger operating point used to define the passing criteria for the jets.
+
+The background estimation is performed for the following cases: rejecting any events that pass the boosted selection, rejecting any events that pass the boosted or resolved selections, and only applying full selection with no rejection of boosted or resolved events. 
+%\begin{figure}[h!]
+%  \centering
+%    \includegraphics[width=\textwidth]{TwoToneBOnly.pdf}
+%    \includegraphics[width=\textwidth]{TwoToneBAfter.pdf}
+%  \caption{Dependence of the double b-tagger on the jet mass, before (top) and after (bottom) the application of the $\tau_2/\tau_1$ cut. We separa%te high HT and low HT events. The solid curve represents the profile distribution of a respective region while the dashed line is the profile of the other HT region. From this we can see that the double b-tagger has no dependence on the jet $\pt$, making it a stronger candidate for use in our estimate than the n-subjettiness.} \label{F:twotone2}
+%\end{figure}
+
+%\subsection{Results in Simulation\label{ss:BkgValInMC}}
+
+%Figure \ref{F:closuresim} (left) shows a quadratic fit in the mass sidebands of the conversion rate $R_{p/f}$ to pass the requirement double-b$ > 0.6$, in QCD MC for the full selection. Note that the signal region and anti-tag regions are not included in the fit. The true value of the conversion rate in this mass window is also shown in the figure. This conversion rate is then applied (as a function of mass) to the anti-tag region to obtain an estimate of the signal region. The estimated and true background in signal region are shown in Figure \ref{F:closuresim} (right).Two systematic uncertainties arise naturally from this estimate. The dominant error is the uncertainty in the fit to the mass sideband regions. The uncertainty in the fit is shown as a dashed line enveloping the fit in Figure \ref{F:closuresim} (left). This error can be treated as fully correlated between all mass bins when setting limits. The second source of error comes from propagating the statistical uncertainty in the anti-tag region to the signal region. This error is uncorrelated between bins and is smaller than the fitting error. Both errors are shown in the figure.
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Fit_HH_MM_QCD.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Plot_SigTestQCD.pdf}\\
+%  \caption{For QCD simulation: (left) Fit in the mass sideband regions for the conversion rate $R_{p/f}$ and (right) application of that fit to the% anti-tag region to estimate the background in the signal region, both jets pass the medium double-b tagger working point ($> 0.6$), compared with the true background (black markers).}
+%\label{F:closuresim}
+%\end{figure}
+
+\subsection{Closure Test in Data\label{ss:BkgValInData}}
+
+We look at two closure regions, one where we require AK4 dijet mass $<$ 70\GeV and remove the triAK4jet mass requirement, and the other where we require AK4 jet 2 deep CSV $<$ 0.6324 and remove the triAK4jet mass requirement, the choice of which is documented in App~\ref{app:background}. We use a quadratic fit in the mass sidebands of the conversion rate $R_{p/f}$ to pass the requirement double-b$ > 0.8$, after first subtracting \ttbar MC from data. This choice of function is documented in App.~\ref{app:background}. Note that the signal region and anti-tag regions are not included in the fit. The true value of the conversion rate in this mass window is also shown in the figure. This conversion rate is then applied (as a function of mass) to the anti-tag region to obtain an estimate of the signal region. The estimated and true background in signal region are shown on the right in Fig.~\ref{fig:closuredataboost} for a selection rejecting boosted events, for the first closure region. Two systematic uncertainties arise naturally from this estimate. The dominant error is the uncertainty in the fit to the mass sideband regions. The uncertainty in the fit is shown as a dashed line enveloping the fit on the left figure in Fig.~\ref{fig:closuredataboost} for a selection rejecting boosted events. This error can be treated as fully correlated between all mass bins when setting limits. The second source of error comes from propagating the statistical uncertainty in the anti-tag region to the signal region. This error is uncorrelated between bins and is smaller than the fitting error. Both errors are shown in the figure. The top row of figures is for $\Delta\eta <$ 1.0 and the bottom row of figures is for 1.0 $< \Delta\eta <$ 2.0. Studies on the signal contamination in the two control regions, agreement in the control region in variables other than reduced mass (including a documented and well understood difference in the prediction and actual distribution of $\tau_{21}$), and the goodness of fit in the control region can be found in App. ~\ref{app:background}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_boost_dEta0_CR2.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_boost_dEta0_CR2.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_boost_dEta1_CR2.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_boost_dEta1_CR2.pdf}
+\caption{First control region (AK4 dijet mass $<$ 70\GeV and remove the triAK4jet mass requirement) (left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection rejecting boosted events.(right) Application of those fits to the anti-tag region to estimate the background in the first control regions, compared with the true background (black markers). Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:closuredataboost}
+\end{figure}
+
+%The $R_{p/f}$ and background estimate for the full selection with boosted and resolved events rejected are shown in Fig.~\ref{fig:closuredataboostres}.
+These same figures are shown for the second control region in~\ref{fig:closuredataboost2}. We note that the second control region has more statistics.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_boost_dEta0_CR3.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_boost_dEta0_CR3.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_boost_dEta1_CR3.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_boost_dEta1_CR3.pdf}
+\caption{Second control region (AK4 jet 2 deep CSV < 0.6324 and remove the triAK4jet mass requirement). (left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection rejecting boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the control regions, compared with the true background (black markers). Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:closuredataboost2}
+\end{figure}
+
+The $R_{p/f}$ and background estimate for the full selection with boosted and resolved events retained are shown in Fig.~\ref{fig:closuredata} and~\ref{fig:closuredata2}, while the $R_{p/f}$ and background estimate for the full selection with boosted and resolved events rejected are shown in Fig.~\ref{fig:closuredataboostres} and~\ref{fig:closuredataboostres2}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_none_dEta0_CR2.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_none_dEta0_CR2.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_none_dEta1_CR2.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_none_dEta1_CR2.pdf}
+\caption{First control region. (left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection retaining both boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the control regions, compared with the true background (black markers). Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:closuredata}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_none_dEta0_CR3.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_none_dEta0_CR3.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_none_dEta1_CR3.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_none_dEta1_CR3.pdf}
+\caption{Second control region. (left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection retaining both boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the control regions, compared with the true background (black markers). Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:closuredata2}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_both_dEta0_CR2.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_both_dEta0_CR2.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_both_dEta1_CR2.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_both_dEta1_CR2.pdf}
+\caption{First control region. (left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection retaining both boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the control regions, compared with the true background (black markers). Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:closuredataboostres}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_both_dEta0_CR3.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_both_dEta0_CR3.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_both_dEta1_CR3.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_both_dEta1_CR3.pdf}
+\caption{Second control region. (left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection retaining both boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the control regions, compared with the true background (black markers). Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:closuredataboostres2}
+\end{figure}
+
+%As a further test of closure, we test our method in data, estimating the QCD content of a region similar to the signal region except that the 2$^{nd}$ jet is constrained to fail the double-b requirement. Results are shown in Figure \ref{F:closuredata} in the same format as for the closure test in QCD, for three values of the cut on the double-b: 0.8 (tight), 0.6 (medium) and 0.3 (loose). Further checks of our method are shown in the Appendix~\ref{app:SigInjection}.
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Fit_T0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Plot_T0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Fit_M0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Plot_M0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Fit_L0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/HHSR_Plot_L0.pdf}
+%\caption{(left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for (from top to bottom) the Tight, Medium and Loose working p%oint.(right) Application of those fits to the anti-tag region to estimate the background in the control regions, compared with the true background (black markers).}
+%\label{F:closuredata}
+%\end{figure}
+
+\subsection{Signal Regions Prediction\label{ss:BkgInSigRegion}}
+
+%The sensitivity of the analysis with respect to the choice of double-b tagging working point was optimized using the limit expected from various scenarios. In the end, we choose to combine two regions: the first, which we call TT, requires that both Higgs candidates pass the tight double-b requirement: double-b$ > 0.8$, where the value $0.8$ was chosen to maximize sensitivity. At high di-jet masses, the background component is reduced, and a looser working point can be used. We define a second category, which we call LL, where we require both jets to pass the requirement double-b$ > 0.3$. We will eventually combine these two regions, with the events from TT are removed from LL to ensure that the two region are orthogonal. This will allow us to set the strongest limit possible on the full range of signal masses.
+ 
+%The background prediction of the signal region (in data) is shown in Figure \ref{F:AlphabetSIGTT} for the TT region, and in Figure \ref{F:AlphabetS
+%IGLL} for the LL region. The analysis remains blinded at this time. Please notice that the LL region is made orthogonal to the TT region. 
+
+The blinded conversion rate $R_{p/f}$ and application of that fit to the anti-tag region to estimate the background in the signal region can be found in Fig.~\ref{fig:databoost} for a selection rejecting boosted events, in Fig.~\ref{fig:databoostres} for a selection rejecting boosted and resolved events, and in Fig.~\ref{fig:data} for a selection retaining both boosted and resolved events. The choice of a quadratic function to fit $R_{p/f}$ is supported by performing an F-test on both data and MC, documented in App.~\ref{app:background}, along with a study on the contamination of signal in the anti-tag region.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_boost_dEta0.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_boost_dEta0.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_boost_dEta1.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_boost_dEta1.pdf}
+\caption{(left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection rejecting boosted events.(right) Application of those fits to the anti-tag region to estimate the background in the blinded signal region. Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:databoost}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_both_dEta0.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_both_dEta0.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_both_dEta1.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_both_dEta1.pdf}
+\caption{(left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection rejecting boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the blinded signal region. Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:databoostres}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_none_dEta0.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_none_dEta0.pdf}\\
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1SR_Fit_BG_none_dEta1.pdf}
+\includegraphics[width=0.45\textwidth]{Figures/HH4b2p1_Plot_BG_none_dEta1.pdf}
+\caption{(left) Fits in the mass sideband regions for the conversion rates $R_{p/f}$ for a selection retaining boosted and resolved events.(right) Application of those fits to the anti-tag region to estimate the background in the blinded signal region. Top is $\Delta\eta$ 0 - 1.0 and bottom is $\Delta\eta$ 1.0 - 2.0.}
+\label{fig:data}
+\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.45\textwidth]{cratio_HHSR_Fit_HH_TT_Data.pdf}
+%\includegraphics[width=0.45\textwidth]{calphabet_HHSR_Plot_HH_TT_Data_IsData0}
+%\caption{TT region: (left) Fit in the mass sideband regions for the conversion rate $R_{p/f}$ and (right) application of that fit to the anti-tag r%egion to estimate the background in the signal region. The Analysis remains blinded at this time. The signal has been scaled down by a factor of 10 compared to the numbers presented in Section \ref{sec:Samples}.}
+%\label{F:AlphabetSIGTT}
+%\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.45\textwidth]{cratio_HHSR_Fit_HH_LL_Data.pdf}
+%\includegraphics[width=0.45\textwidth]{calphabet_HHSR_Plot_HH_LL_Data_IsData0}
+%\caption{LL region: (left) Fit in the mass sideband regions for the conversion rate $R_{p/f}$ and (right) application of that fit to the anti-tag r%egion to estimate the background in the signal region. The Analysis remains blinded at this time. The signal has been scaled down by a factor of 10% compared to the numbers presented in Section \ref{sec:Samples}.}
+%\label{F:AlphabetSIGLL}
+%\end{figure}
+\clearpage
+%\subsubsection{Signal Models}\label{ss:SigBkgModels}
+
+
+%Signal shape is modelled with a sum of a crystal ball function and a Gaussian to describe the tails. CB and Gaus%sian functions are constrained to have the same mean value. The $\mjjs$ distributions for the signal are modelled using the sum of a Gaussian and a Crystal-Ball function.
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.49\textwidth]{c_Radion_LL.pdf}
+%\includegraphics[width=0.49\textwidth]{c_Radion_TT.pdf}
+%\includegraphics[width=0.49\textwidth]{c_BulkGrav_LL.pdf}
+%\includegraphics[width=0.49\textwidth]{c_BulkGrav_TT.pdf}
+%\caption{Signal modelling for the radion (upper row) and bulk graviton (lower row) signal using the sum of Gaussian and Crystal-Ball functions. Sho%wn are the probablity density functions (Pdfs) for the LL (left) and TT (right) categories.}
+%\label{fig:sigfit}
+%\end{figure}
+
+
+

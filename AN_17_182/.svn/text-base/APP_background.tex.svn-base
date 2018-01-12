@@ -1,0 +1,223 @@
+\section{Background Studies\label{app:background}}
+We examine two closure regions, CR1 where we remove the triAK4jet mass cut and require AK4 dijetmass $<$ 70 GeV, and CR2 where we remove the triAK4jet mass cut and require AK4 jet 2 deep CSV $<$ 0.6324. We study the amount of signal contamination in these regions, looking at non-resonant HH $\rightarrow$ bbbb signals described in AN-17-217. There is a negligible amount of signal compared with the amount of background, as can be seen in Tab.~\ref{tab:CRcontam}, where signal is weighted by cross section (10 $\text{fb}^{-1}$ multiplied by luminosity and divided by the total number of events so that it can be compared directly to data.
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Sample & NEvents CR1 & NEvents CR2 \\ \hline
+2 & 0.02 & 0.33 \\
+3 & 0.05 & 0.74 \\
+4 & 0.03 & 0.40 \\
+5 & 0.02 & 0.27 \\
+6 & 0.03 & 0.39 \\
+7 & 0.02 & 0.40 \\
+8 & 0.004 & 0.07 \\
+9 & 0.004 & 0.13 \\
+10 & 0.02 & 0.15 \\
+11 & 0.06 & 0.91 \\
+12 & 0.06 & 0.91 \\
+13 & 0.05 & 0.97 \\
+SM & 0.01 & 0.18 \\
+box & 0.006 & 0.11 \\
+data & 236 & 1112 \\
+\hline
+\end{tabular}
+\caption{Number of events in CR1 (no triAK4jet mass cut, AK4 dijet mass $<$ 70 GeV) and number of events in CR2 (reversed AK4 jet 2 btag and no triAK4jet mass cut). MC signal is weighted by cross section of 10 $\text{fb}^{-1}$ multiplied by data luminosity and divided by total number of simulated events.}\label{tab:CRcontam}
+\end{table}
+
+We looked at other variables in CR1 to examine agreement, which is within error, for the most part. Fig.~\ref{fig:CR1djm} shows AK4 dijet mass and Fig.~\ref{fig:CR1fjpt} show AK8 jet $p_{T}$.
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/CR1DJMdeta0.pdf}
+\includegraphics[scale=0.25]{Figures/CR1DJMdeta1.pdf}
+\end{center}
+\caption{AK4 dijet mass in CR1 control region, $\Delta \eta <$ 1.0 on the left and 1.0 $ < \Delta \eta <$ 2.0 on the right.}
+\label{fig:CR1djm}
+\end{figure}
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/CR1FJPTdeta0.pdf}
+\includegraphics[scale=0.25]{Figures/CR1FJPTdeta1.pdf}
+\end{center}
+\caption{AK8 jet $p_{T}$ in CR1 control region, $\Delta \eta <$ 1.0 on the left and 1.0 $ < \Delta \eta <$ 2.0 on the right.}
+\label{fig:CR1fjpt}
+\end{figure}
+
+We examine the choice of function used for the pass/fail ratio, comparing a linear, quadratic, and cubic fit. Datacards are made using data with each fit, and we begin by comparing linear and quadratic. Data is fit with both models, then pseudodata is generated with the linear (lower order) fit, then pseudodata is fit with both models, and we compute the F-statistic, where we have
+\begin{equation}
+F = \frac{\frac{-2\text{log}\lambda_{1} + 2\text{log}\lambda_{2}}{p_{2} - p_{1}}}{\frac{-2\text{log}\lambda_{2}}{n_{bins} - p_{2}}},
+\end{equation}
+where 1 is the lower order and 2 is the higher order (linear and quadratic in this case), $n_{bins}$ is the number of bins, $p_{i}$ is the order of the equation, and $\lambda$ is given by
+\begin{equation}
+-2\text{log}\lambda = 2 \sum_{i}^{n_{bins}} (f_{i} - d_{i} + d_{i}\text{log}(d_{i}/f_{i}))
+\end{equation}
+where $f_{i}$ is the model and $d_{i}$ is data.
+The data value is compared to the F distribution and if the p-value $<$ 0.5, we must go to higher order and repeat this process. The p-value for linear and quadratic is 0.00 as can be seen in Fig.~\ref{fig:ftest} (left), so we repeat the test with quadratic and cubic, and find a p-value of 0.35, which proves that choosing a quadratic fit for the pass/fail ratio is the correct choice, seen in Fig.~\ref{fig:ftest} (right).
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/ftestlinquad.pdf}
+\includegraphics[scale=0.25]{Figures/ftestquadcub.pdf}
+\end{center}
+\caption{Results of f-test comparing linear and quadratic (left) and quadratic and cubic (right) pass/fail ratio fit choice. A linear fit is not sufficient to describe the data, but a cubic fit is unnecessary, supporting our choice to use quadratic.}
+\label{fig:ftest}
+\end{figure}
+
+We also examined the ftest comparing quadratic to cubic in MC, and find that quadratic still performs well enough that cubic is not needed, since the p-value is 0.30, as seen in Fig.~\ref{fig:ftestMC}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/ftestMC.pdf}
+\end{center}
+\caption{Results of f-test comparing quadratic and cubic pass/fail ratio fit choice in MC. A cubic fit is unnecessary, supporting our choice to use quadratic.}
+\label{fig:ftestMC}
+\end{figure}
+
+
+
+We look at the goodness of fit for CR1, as depicted below in Fig.~\ref{fig:pvalCR1} for $\Delta\eta <$ 1.0 (left) and 1.0 $< \Delta\eta <$ 2.0. The p-values suggest that there is a relatively good agreement.
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/CR1PVALdeta0.pdf}
+\includegraphics[scale=0.25]{Figures/CR1PVALdeta1.pdf}
+\end{center}
+\caption{P-values for each $\Delta\eta$ region for CR1. $\Delta\eta <$ 1.0 (left) and 1.0 $< \Delta\eta <$ 2.0.}
+\label{fig:pvalCR1}
+\end{figure}
+
+We also examined the impact of nuisances on the expected limit, the results of which can be found in Fig.~\ref{fig:nuisance},~\ref{fig:nuisance2}, and~\ref{fig:nuisance3}. The largest uncertainties come from Alphabet, the trigger efficiency, and $\tau_{21}$ SF.
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/nuisance1.pdf}\\
+\end{center}
+\caption{Nuisance parameters for non-resonant signal node 12 v0 benchmark.}
+\label{fig:nuisance}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/nuisance2.pdf}\\
+\end{center}
+\caption{Nuisance parameters for non-resonant signal node 12 v0 benchmark.}
+\label{fig:nuisance2}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/nuisance3.pdf}
+\end{center}
+\caption{Nuisance parameters for non-resonant signal node 12 v0 benchmark.}
+\label{fig:nuisance3}
+\end{figure}
+
+We look at the contamination of signal in the anti-tag region. If we were to have a Bulk Graviton at 1000 GeV, there would be 15 signal events (weighted for discovery cross section multiplied by luminosity and divided by total simulated events). Since the pass/fail ratio is about 0.04, this means that 1 signal event would end up in the signal region, which, in comparison with the 600 or so background events, is negligible. Fig.~\ref{fig:sigAT} depicts this visually.
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/signalAT.pdf}
+\end{center}
+\caption{If a bulk graviton were to exist at discovery cross section at 1 TeV, 15 signal events would be in the anti-tag region, and this translates to roughly 1 event (out of 600 or so background events), so it is a negligible fraction.}
+\label{fig:sigAT}
+\end{figure}
+
+Several different variables were examined in CR2, of which the only one that shows significant discrepancy is AK8 $\tau_{21}$, which is expected and accounted for with the large scale factor uncertainty in the systematics. These can be found in Fig.~\ref{fig:CR2start} -~\ref{fig:CR2fin}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/AK8ptCR2.pdf}
+\includegraphics[scale=0.35]{Figures/AK8etaCR2.pdf}\\
+\includegraphics[scale=0.35]{Figures/dEtaCR2.pdf}
+\end{center}
+\caption{Variables in CR2, AK8 $p_{T}$ (top left), AK8 $\eta$ (top right), and $\Delta\eta$ bottom. Relatively good agreement between estimated and true background.}
+\label{fig:CR2start}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/AK8tau21CR2.pdf}
+\includegraphics[scale=0.35]{Figures/AK8jetmassCR2.pdf}\\
+\end{center}
+\caption{Variables in CR2, AK8 $\tau_{21}$ (top left), AK8 softdrop corrected mass (top right). Relatively good agreement between estimated and true background for jet mass, but $\tau_{21}$ has a shape difference.}
+\label{fig:CR2a}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/AK41ptCR2.pdf}
+\includegraphics[scale=0.25]{Figures/AK41etaCR2.pdf}\\
+\includegraphics[scale=0.25]{Figures/AK42ptCR2.pdf}
+\includegraphics[scale=0.25]{Figures/AK42etaCR2.pdf}
+\end{center}
+\caption{Variables in CR2, AK4 jet 1 $p_{T}$ (top left), AK4 jet 1 $\eta$ (top right), AK4 jet 2 $p_{T}$ (bottom left), and AK4 jet 2 $\eta$ (bottom right). Relatively good agreement between estimated and true background.}
+\label{fig:CR2b}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/AK41dcsvCR2.pdf}
+\includegraphics[scale=0.25]{Figures/AK42dcsvCR2.pdf}\\
+\includegraphics[scale=0.25]{Figures/AK4djmCR2.pdf}
+\includegraphics[scale=0.25]{Figures/triAK4jetCR2.pdf}
+\end{center}
+\caption{Variables in CR2, AK4 jet 1 deep CSV (top left), AK4 jet 2 deep CSV (top right), AK4 dijet mass (bottom left), and triAK4jet mass (bottom right). Relatively good agreement between estimated and true background.}
+\label{fig:CR2fin}
+\end{figure}
+
+After noticing that $\tau_{21}$ had a difference in shape in the control region, we investigated this further. Below you will find $\tau_{21}$ in control region 2 and the signal region for MC (Fig.~\ref{fig:CR2tauMC}), $\tau_{21}$ in MC in the anti-tag and tag region with full selection (Fig.~\ref{fig:tauATT}), and several 2D plots of $\tau_{21}$, the double b-tagger, and softdrop jetmass (Figs.~\ref{fig:tauDBSD} and~\ref{fig:tauslice}) along with pass/fail ratio plots for different $\tau_{21}$ cuts (Fig.~\ref{fig:tausliceRPF}). The reason $\tau_{21}$ look different in the anti-tag region than in the tag region is because both $\tau_{21}$ and the double b-tagger have a correlation with softdrop mass. Since there is no reason to expect that this correlation is the same, this results in a mismodeling of $\tau_{21}$.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/tau21MCCR2.pdf}
+\includegraphics[scale=0.35]{Figures/tau21MCSR.pdf}
+\end{center}
+\caption{$\tau_{21}$ in MC in CR2 (left) and signal region (right). Similar mismodeling as observed in data in CR2.}
+\label{fig:CR2tauMC}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.55]{Figures/tau21AT.pdf}
+\includegraphics[scale=0.55]{Figures/tau21T.pdf}\\
+\end{center}
+\caption{$\tau_{21}$ in the anti-tag (left) and tag (right) region for the full selection.}
+\label{fig:tauATT}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/tau21vdoublebBeforeMassCut.pdf}
+\includegraphics[scale=0.35]{Figures/tau21vdoublebAfterMassCut.pdf}\\
+\includegraphics[scale=0.35]{Figures/tau21jetmass2D.pdf}
+\end{center}
+\caption{Top: $\tau_{21}$ vs double b-tagger before (left) and after (right) the softdrop mass cut. Bottom: $\tau_{21}$ vs softdrop mass.}
+\label{fig:tauDBSD}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/2Dtau21_0p275.pdf}
+\includegraphics[scale=0.35]{Figures/2Dtau21_0p55.pdf}\\
+\includegraphics[scale=0.35]{Figures/2Dtau21_1.pdf}
+\end{center}
+\caption{Double b-tagger vs softdrop jet mass for three different $\tau_{21}$ regions (0-0.275 top left, 0.275-0.55 top right, 0.55-1.0 bottom).}
+\label{fig:tauslice}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/Rpftau21_0p275.pdf}
+\includegraphics[scale=0.35]{Figures/Rpftau21_0p55.pdf}\\
+\includegraphics[scale=0.35]{Figures/Rpftau21_1.pdf}
+\end{center}
+\caption{Pass/fail ratio for three different $\tau_{21}$ regions (0-0.275 top left, 0.275-0.55 top right, 0.55-1.0 bottom).}
+\label{fig:tausliceRPF}
+\end{figure}
+
+
+We examined a cubic fit for the pass fail ratio in comparison with the quadratic fit, and it was found to be within quadratic fit errors of the background estimate, as can be seen in Fig.~\ref{fig:cvqhist}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.35]{Figures/dEta1CvQ.pdf}
+\includegraphics[scale=0.35]{Figures/dEta2CvQ.pdf}\\
+\end{center}
+\caption{Comparison of cubic pass fail ratio function background estimate to quadratic pass fail ratio function background estimate - cubic function is within errors of the quadratic function for both $\Delta\eta$ regions (left 0-1, right 1-2).}
+\label{fig:cvqhist}
+\end{figure}

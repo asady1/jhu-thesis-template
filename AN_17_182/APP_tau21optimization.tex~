@@ -1,0 +1,16 @@
+\section{N-subjettiness Optimization\label{app:tau21}}
+
+The boosted analysis used the $\tau_{21}$ low working point, but we examined all three working points to optimize for this analysis. It was found that the low working point was better at lower mass, while the tight working point is better at higher mass. Since the boosted analysis does better than this analysis at higher mass, we use the low working point.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & tauL & tauM & tauT \\ \hline
+600 &0.0868 & 0.0861 & 0.0848 \\
+800 &0.4888 & 0.4522 & 0.4371 \\
+1000 &0.6764 & 0.7332 & 0.7831\\
+1200 &1.0463 & 1.0505 & 1.2554\\
+\hline
+\end{tabular}
+\caption{sig/sqrt(background) for bulk graviton signal and QCD + ttbar background, for full selection with a cut on puppi tau21 $<$ 0.55, 0.4, 0.35 (L, M, T respectively).}\label{tab:tau21opt}
+\end{table}

@@ -1,0 +1,44 @@
+\section{Trigger Studies\label{app:trigger}}
+
+Several different trigger strategies were considered to maximize effectiveness of the analysis. In Tab.~\ref{tab:trigopt}, we compare the significance for different signal masses for just HT800, the Boosted OR triggers (the triggers used by the boosted analysis), and the BTag OR triggers (the triggers used by the resolved analysis). The HT800 trigger can't be used by itself because it's prescaled in some of the runs, and the Boosted OR performs best at mid-mass, where this analysis is most effective, so this trigger set was chosen.
+
+\begin{table}[h]
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & HT800 & Boosted OR & BTag OR \\ \hline
+500 & 0.0232 & 0.0204 & 0.0173\\
+550 & 0.080 & 0.0724 & 0.0796\\
+600 & 0.0939 & 0.0869 & 0.1288}\\
+650 & 0.1589 & 0.1429 & 0.2283}\\
+750 & 0.397 & 0.426 & 0.4129\\
+800 & 0.4077 & 0.4213& 0.4014\\
+900 & 0.5674 & 0.4922 & 0.4896\\
+1000 & 0.6391 & 0.5404 & 0.5357\\
+1200 & 1.0611 & 0.8779 & 0.8806\\
+1600 & 1.5803 & 1.3356 & 1.3356\\
+2000 &1.3166 & 1.2413 & 1.3166\\\hline
+\end{tabular}
+\caption{Signal/sqrt(Background) with signal weighted to xsec*lumi/nEvents. HT800 = Events that pass HT800 trigger, Boosted OR = Events that pass one or more of the following triggers:  PFHT650WideJetMJJ900DEtaJJ1p5, AK8PFHT650TrimR0p1PT0p03Mass50, AK8PFHT700TrimR0p1PT0p03Mass50, PFHT800, PFHT900, AK8PFJet360TrimMass30, AK8DiPFJet280200TrimMass30BTagCSVp20, BTag OR = Events in JetHT dataset that pass HT800 trigger + events in BTagCSV dataset that fail HT800 but pass at least one of the following: HLTQuadJet45TripleBTagCSVp087v, HLTDoubleJet90Double30TripleBTagCSVp087v}\label{tab:trigopt}
+\end{table}
+
+It was noticed that the triggers never became fully efficient as a function of reduced mass. When examining the same trigger efficiency as a function of HT, in Fig.~\ref{fig:trigHTeff}, it does become fully efficient around ~1000 \GeV as expected. In order to account for this, it is best to bin trigger efficiency in $|AK8 eta - (AK4_1 + AK4_2) eta|$, or $\Delta\eta$. In Fig.~\ref{fig:trigdEta}, we can see that for $\Delta\eta > 1.3$ the trigger is not fully efficient as a function of reduced mass, but for $\Delta\eta < 1.3$, it is. This has been studied by many dijet analyses before and is expected. We aim to change our trigger SF calculation strategy to reflect this ASAP.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/trigHTfuleff.pdf}
+\end{center}
+\caption{Trigger efficiency as a function of HT.}
+\label{fig:trigHTeff}
+\end{figure}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.25]{Figures/deta0.pdf}
+\includegraphics[scale=0.25]{Figures/deta1.pdf}\\
+\includegraphics[scale=0.25]{Figures/deta2.pdf}
+\includegraphics[scale=0.25]{Figures/deta3.pdf}\\
+\includegraphics[scale=0.25]{Figures/deta012.pdf}
+\end{center}
+\caption{Trigger efficiency as a function of reduced mass for $\Delta\eta < 0.434$ (top left), $0.434 < \Delta\eta < 0.868$ (top right), $0.868 < \Delta\eta < 1.3$ (middle left) and $\Delta\eta > 1.3$ (middle right), as well as for $\Delta\eta < 1.3$ (bottom).}
+\label{fig:trigdEta}
+\end{figure}

@@ -1,0 +1,113 @@
+\section{DataMC Comparison\label{sec:BkgComp}}
+
+%In order to study the background composition of the events passing our selection criteria we have used two different control samples. We have built them by inverting either the $\tau_{21}$ or the double-b tag cuts for exactly one of the two selected jets.
+
+%\subsection{\texorpdfstring{$\tau_{21}$}{tau21} inverted control region\label{ss:t21control}}
+
+The same preselection applied to the shape plots is applied to the following plots as described in Sec.~\ref{ss:JetSel}, comparing data, QCD, and ttbar. However, the following cuts are applied to create a control region that is more similar to the signal region while leaving the signal region blind:
+\begin{itemize}
+\item Rejecting events in the softdrop mass window $105 < M_{\rm soft\,drop} < 135 \GeV$;
+\item Enforcing the dijet mass window $105 < M_{dijet} < 135 \GeV$;
+\item Enforcing the deep CSV medium point, requiring deep CSV $> 0.6324$ for each AK4 jet.
+\end{itemize} 
+Data MC agreement is good across variables, as can be seen in Figs.~\ref{fig:dMCAK8pteta}-~\ref{fig:dMCredm}. 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/dataMCptFJ.pdf}
+\includegraphics[scale=0.34]{Figures/dataMCetaFJ.pdf}\\
+\end{center}
+\caption{Left. The $\pt$ of the AK8 jet. Right. The $\eta$ of the AK8 jet.}
+\label{fig:dMCAK8pteta}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/dataMCptJ1.pdf}
+\includegraphics[scale=0.34]{Figures/dataMCetaJ1.pdf}\\
+\end{center}
+\caption{Left. The $\pt$ of the highest $\pt$ selected AK4 jet. Right. The $\eta$ of the highest $\pt$ selected AK4 jet.}
+\label{fig:dMCAK41pteta}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/dataMCptJ2.pdf}
+\includegraphics[scale=0.34]{Figures/dataMCetaJ2.pdf}\\
+\end{center}
+\caption{Left. The $\pt$ of the other selected AK4 jet. Right. The $\eta$ of the other selected AK4 jet.}
+\label{fig:dMCAK42pteta}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/dataMCjetmass.pdf}
+\end{center}
+\caption{The soft-drop mass of the AK8 jet.}
+\label{fig:dMCAK8mass}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/dataMCdijetmass.pdf}
+\end{center}
+\caption{The dijet mass of the AK4 jet.}
+\label{fig:dMCAK4dijetmass}
+\end{figure}
+
+\begin{figure}[th!b]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/dataMCptau21.pdf}
+\end{center}
+\caption{$\nsub$ distribution for the AK8 jet.\label{fig:dMCtau21}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/dataMCdoubleb.pdf}
+\end{center}
+\caption{Double-b tagger discriminant for the AK8 jet.}
+\label{fig:dMCdoubleb}
+\end{figure} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.34]{Figures/dataMCbtag1.pdf}
+\includegraphics[scale=0.34]{Figures/dataMCbtag2.pdf}
+\end{center}
+\caption{Deep CSV P(b) + P(bb) tagger discriminant for the highest $\pt$ selected AK4 jet (left) and the other selected AK4 jet (right).}
+\label{fig:dMCAK4btag}
+\end{figure} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/dataMCinvmsnAK4cl.pdf}
+\end{center}
+\caption{Invariant mass of the two selected AK4 jets and the nearest unselected AK4 jet.}
+\label{fig:dMCtriak4jetm}
+\end{figure} 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/dataMCredmass.pdf}
+\end{center}
+\caption{Reduced mass of the two selected AK4 jets and the AK8 jet.}
+\label{fig:dMCredm}
+\end{figure} 
+
+
+%The $\tau_{21}$ inverted control sample has been selected by applying all of the event selection criteria but the $\tau_{21}$ requirement; instead we require either only leading jet or only subleading jet passes the $\tau_{21}$ requirement. 
+%In this comparison no SF is applied and simulation yield is scaled to match the one in data (data/MC is $\approx 1.26$) in Figures \ref{fig:dMCjet1_tau_inverted} and \ref{fig:jet2_tau_inverted}.
+%The major background from QCD multi-jet production is simulated and compared with the data. We have split this contribution by flavor content.
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.45\textwidth]{Figures/anti_tau21_rereco_doublebtagv4/puppiSDMassThea_j0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/anti_tau21_rereco_doublebtagv4/pt_j0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/anti_tau21_rereco_doublebtagv4/eta_j0.pdf}
+%\includegraphics[width=0.45\textwidth]{Figures/anti_tau21_rereco_doublebtagv4/doubleSV_j0.pdf}
+%\caption{ Comparison plots of data/simulation for kinematic observables and double-b tag value for the leading jet in the $\tau_{21}$ inverted cont%rol sample. From left to right: Thea-corrected softdrop mass, $\pt$, $\eta$ and double-b tag discriminator.}
+%\label{fig:jet1_tau_inverted}
+%\end{figure}
+
+

@@ -1,0 +1,17 @@
+\section{B-tagging Optimization\label{app:doubleb}}
+
+The $\tau_{21}$ cut, triAK4jet cut, and double b cut were examined together to see which had the highest significance. It was found that double b $>$ 0.8, $\tau_{21} < 0.55$ and triAK4jet mass $>$ 200 GeV produce the highest significance, as seen in Tab.~\ref{tab:doubleb}. All MC is weighted by cross section multiplied by luminosity and divided by number of total events.
+
+\begin{table}[h]
+\small
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & 0.6 & 0.6 + tau & 0.6 + mass & 0.6 + tau + mass & 0.8 & 0.8 + tau & 0.8 + mass & 0.8 + tau + mass \\ \hline
+600 & 0.0629 & 0.0624 & 0.0647 & 0.0642 & 0.0834 & 0.0833 & 0.083 & 0.0842 \\
+800 & 0.3744 & 0.3723 & 0.3906 & 0.3979 & 0.4057 & 0.4149 & 0.4384 & 0.4806 \\
+1000 & 0.4809 & 0.4795 & 0.4968 & 0.4904 & 0.5743 & 0.5869 & 0.6411 & 0.6505\\
+1200 & 0.8106 & 0.8133 & 0.8435 & 0.8597 & 0.8598 & 0.9323 & 0.8866 & 1.0149\\
+\hline
+\end{tabular}
+\caption{sig/sqrt(background) for bulk graviton signal and QCD + ttbar background, for full selection with a cut on double b of 0.6 or 0.8, a cut on puppi tau21 $<$ 0.55, and a cut on the invariant mass of the 2 AK4 jets and the nearest AK4 jet to them of $>$ 200. Note for mass 600, the mean and standard deviation were different for cuts including doubleb $>$ 0.6  and 0.8 histograms so a different mass window was used, while for 800 and up, the same mass window is used for cuts including 0.6 and 0.8.}\label{tab:doubleb}
+\end{table}

@@ -1,0 +1,313 @@
+\section{Semi-Resolved Case\label{app:2p1}}
+%add semi-resolved case to abstract
+
+The semi-resolved case bridges the gap between the fully resolved analysis for HH $\rightarrow$ 4b~\cite{CMS_AN_2015-108} and the boosted analysis, presented in this note. It assumes one H is boosted enough to be contained within an AK8 jet with two subjets and the other H is not, resulting in two AK4 jets, one for each b quark. We use techniques similar to the boosted analysis to identify the boosted Higgs and use techniques similar to the resolved analysis to identify the two resolved b-jets. For this case, the mass range is sensitive as well.
+
+The datasets used, JetHT and BTagCSV data, can be found in Tables~\ref{tab:data} and \ref{tab:data_2p1}, respectively. We use the \texttt{HLT\_PFHT800} trigger on JetHT data, and for BTagCSV data we require that it fails the \texttt{HLT\_PFHT800} trigger so as to avoid double counting events, but passes one of two b-tag triggers:\\ \texttt{HLT\_QuadJet45\_TripleBTagCSV\_p087\_v}, and \\ \texttt{HLT\_DoubleJet90\_Double30\_TripleBTagCSV\_p087\_v}. The efficiency measurement and the associated systematics for the two triple b-tag triggers are addressed in~\cite{CMS_AN_2015-108}. 
+The signal MC files used for this analysis are summarized in Table~\ref{tab:signal_MC_2p1}.
+
+\begin{table}[htbH]\footnotesize
+  \begin{center}
+    \topcaption{List of primary datasets for the \Pp\Pp\,collisions at $\sqrt{s} = 13~\TeV$ and their corresponding integrated luminosities.}
+    \begin{tabular}{l|c|c}
+      \hline
+      \hline
+      Dataset & Processing & Int. lumi. (fb$^{-1}$) \\
+      \hline
+      BTagCSV/Run2016B & PromptReco & 5.8 \\
+      BTagCSV/Run2016C & PromptReco & 2.6 \\
+      BTagCSV/Run2016D & PromptReco & 4.3 \\
+      BTagCSV/Run2016E & PromptReco & 4.0 \\
+      BTagCSV/Run2016F & PromptReco & 3.2 \\
+      BTagCSV/Run2016G & PromptReco & 7.3 \\
+      BTagCSV/Run2016H & PromptReco & \textcolor{red}{TODO} \\
+      \hline
+      Total & & 27.2 \\ 
+      \hline
+      \hline  
+    \end{tabular}  
+    \label{tab:data_2p1}
+  \end{center}
+\end{table}
+
+\begin{table}[htb]\footnotesize
+  \begin{center}
+    \topcaption{List of \mc samples used for the semi-resolved analysis only. The cross sections $\sigma$ and number of events generated are also given. \label{tab:signal_MC_2p1}}
+    \begin{tabular}{l|c|c}
+      \hline
+      \hline
+      \multicolumn{3}{c}{Bulk graviton} \\ \cline{1-3}
+      Process & $\sigma$ (pb) & Events\\ \hline
+      {GluGluToBulkGravitonToHHTo4B\_M-500\_narrow\_13TeV-madgraph} &1 & 100000\\
+      {GluGluToBulkGravitonToHHTo4B\_M-550\_narrow\_13TeV-madgraph} &1 & 100000 \\                                                                 
+      {GluGluToBulkGravitonToHHTo4B\_M-600\_narrow\_13TeV-madgraph} &1 & 98000\\                                                                  
+      {GluGluToBulkGravitonToHHTo4B\_M-650\_narrow\_13TeV-madgraph} &1 & 100000\\                                                                  
+      {GluGluToBulkGravitonToHHTo4B\_M-700\_narrow\_13TeV-madgraph} &1 & 100000\\                                                                   
+      {GluGluToBulkGravitonToHHTo4B\_M-750\_narrow\_13TeV-madgraph} &1 & 95600\\                                                                   
+      {GluGluToBulkGravitonToHHTo4B\_M-800\_narrow\_13TeV-madgraph} &1 & 100000 \\                                                                 
+      {GluGluToBulkGravitonToHHTo4B\_M-900\_narrow\_13TeV-madgraph} &1 & 95800 \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+To-do: 
+\begin{itemize}
+\item Currently, $m_{pruned}$, with a window of 105 to 135 GeV, is used in place of softdrop mass because this was what was available at the ntuple level, but the analysis will switch to softdrop mass when the samples needed are available. This means that the dijet mass is also currently restricted to be between 105 and 135 GeV, but this will also change to reflect the softdrop mass window once it is appropriate to do so, if a change is needed.
+
+\item This analysis does not reject events that pass either the fully boosted selection or the fully resolved selection, but will do so once the selection for these two channels is finalized.
+
+\item CMVAv2 M WP is currently used for the AK4 b-tag but CSV M WP will be used moving forward, due to availability of scale factors at high jet $p_{T}$. Our studies show this should have a negligible effect on the limits.
+
+\item Currently, there is a requirement that the AK8 jet be $\Delta R$ $>$ 1.5 away from the AK4 jets, but this will be changed to $\Delta R$ $>$ 0.8, as studies have been done to show that it should be sufficient to require that the AK4 jets are not within the cone of the AK8 jet.
+
+\item The background estimation currently uses fixed $t\bbbar{t}$ MC. We will ammend this to allow the $t\bbbar{t}$ normalization to float at every step. We have studied that varying $\alpha$ in the reweighting of $t\bbbar{t}$ produces a negligible effect, and as can be seen in Fig.~\ref{fig:2p1_control}, the agreement between tagged data and the addition of $t\bbbar{t}$ MC and QCD estimation from anti-tagged data with $t\bbbar{t}$ subtracted is good.
+\end{itemize}
+
+\subsection{Event Selection\label{sec:EvtSel2p1}} 
+This analysis is processed in CMSSW\_8\_0\_19. The jet kinematics selection is the same as that of the boosted analysis for the AK8 jet. The AK4 jets also have a kinematic selection. Events are required to have:
+\begin{itemize}
+\item lepton veto
+\item 2 AK4 jets, $p_{T}$ $>$ 30 GeV, $\etaj < 2.4$, CMVAv2 $>$ 0.185 (medium WP), $\Delta$R (jet 1, jet 2) $<$ 1.5
+\item 1 AK8 jet, $p_{T}$ $>$ 250 GeV, $\etaj < 2.4$, $\Delta$R (AK8 jet, AK4 jets) $>$ 1.5, $m_{pruned}$ $>$ 40 GeV, highest $p_{T}$ jet that meets these requirements
+\end{itemize}
+If there is more than one set of 1 AK8 jet and 2 AK4 jets that meet these requirements, the set with the highest CMVAv2 tags is chosen. 
+%After this, both the dijet mass and $m_{pruned}$ of the AK8 jet are required to be between 105 and 135 GeV, and the double b-discriminant is used to determine the control region (double b discriminant $<$ 0.8, Tight WP) and signal region (double b discriminant $>$ 0.8). 
+
+The cutflow for signal can be found in Table~\ref{tab:2p1cut}. The shape comparison of signal and QCD for pruned mass of the AK8 jet, the dijet mass of the AK4 jets, the double b discriminant, and the invariant mass of the AK8 and AK4 jets can be found in Figure~\ref{fig:2p1shape}, where there is no mass window cut on the dijet mass or pruned mass, and no cut on the double b discriminant. The pruned mass is required to be $>$ 40 GeV.
+
+%Plots of invariant mass, dijet mass, fatjet mass, and fatjet double-b discriminant with all cuts except for mass requirements and double b-requirement
+%\begin{table}[htb]\footnotesize
+%\begin{center}
+%\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+%\hline
+%\begin{table}[h]
+%\topcaption{Efficiency of Trigger selection in Signal MC \label{tab:2p1ef}}
+%\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+%\hline
+%\hline
+%Mass & Trigger \\ \hline
+%500 & 0.507 \\
+%550 & 0.560 \\
+%600 & 0.608 \\
+%650 & 0.648 \\
+%700 & 0.683 \\
+%750 & 0.727 \\
+%800 & 0.770 \\
+%900 & 0.889 \\
+%1000 & 0.943 \\
+%1200 & 0.984 \\
+%1400 & 0.994 \\ 
+%1600 & 0.996\\ 
+%1800 & 0.998\\ 
+%2000 & 0.998\\
+%\hline
+%\end{tabular}
+%\label{tab:2p1ef}
+%\caption{Trigger efficiency for semi resolved case.}
+%\end{center}
+%\end{table}
+%\hline
+%\hline
+%\end{tabular}
+%\end{table}
+
+%\begin{table}[h]\footnotesize
+%\scalebox{0.75}{
+%\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+%\hline
+\begin{table}[h]
+\topcaption{ Cutflow of N Events After Cut / N Total Events\label{tab:2p1cut}. Note that mass denotes both the pruned mass cut and the mass cut on the dijet mass, and that we have provided two additional values of the double b cut for reference, but implement the working point of double b $>$ 0.8.}
+\scalebox{0.9}{
+\begin{tabular}{|l|c|p{18mm}|p{12mm}|p{25mm}|p{15mm}|c|p{11mm}||p{11mm}|p{11mm}|c|c|}
+%\hline
+\hline
+Mass & Trigger & Jet \newline Kinematics & Lepton \newline veto & 2 AK4 jets \newline dR(FJ) $>$ 1.5 \& \newline cmva $>$ 0.185 & AK4 jets \newline dR $<$ 1.5& mass & double b 0.8 &double b 0.6 & double b 0.9 \\ \hline
+500 & 0.507 & 0.280& 0.278& 0.240 & 0.0419 & 0.0046 & 0.0017 & 0.0023 & 0.0013  \\
+550 & 0.560 & 0.401& 0.397& 0.343& 0.0736 & 0.013 & 0.0068 & 0.0084 & 0.0049  \\
+600 & 0.608 & 0.515 & 0.511& 0.437 & 0.128 & 0.029 & 0.017 & 0.021& 0.012 \\
+650 & 0.648 & 0.603 & 0.598 & 0.498 & 0.204 & 0.059 & 0.037 & 0.044 & 0.027 \\
+700 & 0.683 & 0.662 & 0.657 & 0.529 & 0.274 & 0.089 & 0.058 & 0.070 & 0.043\\
+750 & 0.727& 0.715 & 0.710 & 0.553 & 0.335 & 0.115 & 0.074 & 0.089 & 0.053\\
+800 & 0.770 & 0.762 & 0.757& 0.574 & 0.378& 0.138 & 0.090 & 0.108 & 0.065 \\
+900 & 0.889 & 0.885 & 0.879 & 0.618 & 0.451 & 0.174 & 0.105 & 0.129 & 0.080 \\
+1000 & 0.943 & 0.942 & 0.936 & 0.644 & 0.476 & 0.197 & 0.124 & 0.151 & 0.088 \\
+1200 & 0.984 & 0.983 & 0.978 & 0.606 & 0.470 & 0.203 &0.130& 0.158 & 0.092 \\ 
+1400 & 0.994 & 0.992 & 0.989 & 0.453 & 0.348 & 0.142 &0.090 &0.110  & 0.063 \\ 
+1600 & 0.996 & 0.992 & 0.989 & 0.334 & 0.245 & 0.092 &0.057 &0.070  & 0.040 \\
+1800 & 0.998 & 0.994 & 0.992 & 0.256 & 0.178 & 0.058 &0.036 & 0.044 & 0.025 \\
+2000 & 0.998 & 0.994 & 0.992 & 0.210 & 0.137 & 0.039 &0.023 & 0.029  & 0.016 \\
+%ttbar & 0.146 & 0.146 & 0.106 & 0.036 & 0.004 & 0.0002 &0.00005 & 0.00003&0.00001 \\\hline
+\hline
+\end{tabular}
+%\end{tabular}
+}
+%\label{tab:2p1cut}
+%\caption{ Cutflow as a percent of initial events for semi resolved case.}
+%\end{table}
+\end{table}
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.4]{Figures/2p1/AN16300_hInvMass.pdf}\\
+\includegraphics[scale=0.4]{Figures/2p1/AN16300_hJetDJMass.pdf}\\
+\includegraphics[scale=0.4]{Figures/2p1/AN16300_hJetHMass.pdf}\\
+\includegraphics[scale=0.4]{Figures/2p1/AN16300_hJetHbbtag.pdf}
+\end{center}
+\caption{The invariant mass of the AK8 and AK4 jets (top left), the dijet mass of the AK4 jets (top right), the pruned mass of the AK8 jet (bottom left) and the double b discriminant of the AK8 jet (bottom right). Note that a pruned mass cut of 40 GeV has been applied, but the mass window and the double b discriminant have not been applied.\label{fig:2p1shape}}
+\end{figure}
+
+\subsection{Identification of Higgs jets in semi-resolved analysis\label{sec:EvtSelBtaggingCMVA}}
+For the semi-resolved analysis, events are required to have at least one jet as described Section~\ref{sec:EvtSel}. The double b-tagger described in Section~\ref{sec:EvtSelBtagging} is used to identify the boosted Higgs jet in the semi-resolved analysis, requiring the fatjet pass the Tight working point of double b discriminant $>$ 0.8. 
+
+In addition to this jet, events must have two jets clustered with the anti-$k_{\rm T}$ algorithm using a distance parameter $R = 0.4$, referred to as AK4 jets. These AK4 jets must have $\pt > 30~\GeV$ and $\etaj < 2.4$. The AK4 jets must each be $\Delta R$ $>$ 1.5 away from the AK8 jet, and the AK4 jets must satisfy $\Delta R$(AK4 jet 1, AK4 jet2) $<$ 1.5. The CMVAv2 algorithm~\cite{CMS-PAS-BTV-15-001} is used to identify the two AK4 jets that come from the resolved Higgs, where we require Medium working point of CMVAv2 $>$ 0.185. 
+
+The mass requirements used for the boosted analysis are applied to the AK8 jet, and the dijet mass of the two AK4 jets is required to be in the same mass window as the AK8 jet. The invariant mass of all three jets is used in the same way as the reduced dijet mass is used for the boosted analysis. 
+
+%We use the same JetHT data samples as the boosted analysis, using \texttt{HLT\_PFHT800}, \\ \texttt{HLT\_QuadJet45\_TripleBTagCSV\_p087\_v}, and \\ \texttt{HLT\_DoubleJet90\_Double30\_TripleBTagCSV\_p087\_v} in this data set, but we also use the data corresponding to the Gold JSON file from the BTagCSV dataset, as listed in Table~\ref{tab:data}. We veto events in the BTagCSV dataset that pass \texttt{HLT\_PFHT800} and use the two triple b-tag triggers to select events from this dataset. The additional signal files are summarized in Table~\ref{tab:signal_MC}.
+
+%\begin{table}[htbH]\footnotesize
+%\begin{center}
+%\topcaption{List of additional primary datasets for the \Pp\Pp\,collisions at $\sqrt{s} = 13~\TeV$, the JSON file, and their corresponding integrated luminosity, used for the semi-resolved case.}
+%\begin{tabular}{l|c|c}
+%\hline
+%\hline
+%Dataset & JSON & Int. lumi. (fb$^{-1}$) \\
+%\hline
+%BTagCSV/Run2016B &  &  \\
+%BTagCSV/Run2016C       & & \\
+%BTagCSV/Run2016D        & & \\
+%\hline
+%Total & & \\ 
+%\hline
+%\hline  
+%\end{tabular}  
+%\label{tab:2p1data}
+%\end{center}
+%\end{table}
+  
+%\begin{table}[htb]\footnotesize
+%%\begin{center}
+%\topcaption{List of additional \mc samples used for the semi-resolved case. The cross sections $\sigma$ and number of events generated are also given.\label{tab:2p1_MC}}
+%\begin{tabular}{l|c|c}
+%\hline
+%\hline
+%\multicolumn{3}{c}{Bulk graviton} \\ \cline{1-3}
+%Process & $\sigma$ (pb) & Events\\
+%\hline
+%{GluGluToBulkGravitonToHHTo4B\_M-500\_narrow\_13TeV-madgraph} &1 & 100000 \\
+%{GluGluToBulkGravitonToHHTo4B\_M-550\_narrow\_13TeV-madgraph} &1 & 100000 \\
+%%{GluGluToBulkGravitonToHHTo4B\_M-600\_narrow\_13TeV-madgraph} &1 & 98000\\
+%{GluGluToBulkGravitonToHHTo4B\_M-650\_narrow\_13TeV-madgraph} &1 & 100000\\
+%{GluGluToBulkGravitonToHHTo4B\_M-700\_narrow\_13TeV-madgraph} &1 & 100000\\
+%{GluGluToBulkGravitonToHHTo4B\_M-750\_narrow\_13TeV-madgraph} &1 & 95600\\
+%{GluGluToBulkGravitonToHHTo4B\_M-800\_narrow\_13TeV-madgraph} &1 & 100000 \\
+%{GluGluToBulkGravitonToHHTo4B\_M-900\_narrow\_13TeV-madgraph} &1 & 95800\\
+%\hline
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+
+%\begin{figure}
+%\includegraphics[width=0.5\textwidth]{Figures/TriggerQuad/L1Pt1PtPt3Pt4.png}
+%\includegraphics[width=0.5\textwidth]{Figures/TriggerQuad/CaloPt4.png}\\
+%\includegraphics[width=0.5\textwidth]{Figures/TriggerQuad/CaloCSV3.png}
+%\includegraphics[width=0.5\textwidth]{Figures/TriggerQuad/PFPt4.png}
+%\caption{TurnOn for the L1 trigger requirements, Calo-jets and PF-jets selections for \texttt{QuadJet45\_TripleCSV087} trigger.}
+%\label{fig:tnQuad}
+%\end{figure}
+
+%\begin{figure}
+%\includegraphics[width=0.33\textwidth]{Figures/TriggerDouble/L1Pt1PtPt3Pt4.png}
+%\includegraphics[width=0.33\textwidth]{Figures/TriggerDouble/CaloPt4.png}
+%\includegraphics[width=0.33\textwidth]{Figures/TriggerDouble/CaloPt2.png}\\
+%\includegraphics[width=0.33\textwidth]{Figures/TriggerDouble/CaloCSV3.png}
+%\includegraphics[width=0.33\textwidth]{Figures/TriggerDouble/PFPt4.png}
+%\includegraphics[width=0.33\textwidth]{Figures/TriggerDouble/PFPt2.png}
+%\caption{TurnOn for the L1 trigger requirements, Calo-jets and PF-jets selections for \texttt{DoubleJet90\_Quad30\_TripleCSV087} trigger.}
+%\label{fig:tnDouble}
+%\end{figure}
+
+
+\subsection{Background Estimation\label{sec:Back2p1}}
+The background estimation is performed using Alphabet (Sec.~\ref{sec:BkgEst}). The signal region is defined as the event selection with an additional cut on the pruned mass of the AK8 jet and the dijet mass of the two AK4 jets, both requiring a mass window between 105 and 135 GeV. The control region is defined as the event selection with an additional cut on the pruned mass of the AK8 jet, requiring a mass window between 105 and 135 GeV, and requiring the dijet mass of the AK4 jets $<$ 70 GeV. 
+
+For the background estimation, $t\bbbar{t}$ is taken from MC and reweighted by a factor dependent upon the total $p_{T}$ of the generator level tops as prescribed by the Top group~\cite{CMS-PAS-TOP-16-008,CMS-PAS-TOP-16-011}. It is then subtracted from the data distribution in order to calculate the conversion rate $R_{p/f}$ between events that pass or fail the requirement double-b $>$ 0.8. The background estimate used to calculate the limits includes $t\bbbar{t}$ MC contribution and the estimated QCD contribution calculated from the anti-tag region. 
+
+For the control region, Figure~\ref{fig:2p1_control} (left) shows a quadratic fit in the the mass sidebands of the conversion rate $R_{p/f}$. The true value of the conversion rate in the mass window is shown in blue. The conversion rate is applied as a function of mass to the anti-tag region (with $t\bbbar{t}$ subtracted) to obtain an estimate of QCD in the signal region. The estimated QCD, $t\bbbar{t}$ MC, and true background in the signal region are shown in Figure~\ref{fig:2p1_control} (right). The uncertainty in the fit is shown as a dashed line eveloping the fit, while the error that results from propagating the statistical uncertainty in the anti-tag region to the signal region included as well. The true background is indicated by the black markers, while blue indicates QCD estimation and red indicates $t\bbbar{t}$ MC. From this plot of invariant mass, we can see that the QCD estimation calculated from the anti-tag data combined with the $t\bbbar{t}$ MC provide a good estimation of the tagged data region.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.37]{Figures/2p1/2p1_Fit_CR.pdf}
+\includegraphics[scale=0.37]{Figures/2p1/2p1_invmass_CR.pdf}
+\end{center}
+\caption{For control region in data of dijet mass $<$ 70 GeV: (left) Fit in mass sideband regions for the conversion rate $R_{p/f}$ and (right) application of that fit to the anti-tag region to estimate the background in the signal region, compared with the true background (black markers). Blue indicates QCD estimation and red indicates$t\bbbar{t}$ MC. \label{fig:2p1_control}}
+\end{figure}
+
+The fit in the signal region, with full selection applied, is shown in Figure~\ref{fig:2p1_signal} (left) and the background prediction is shown to the right. The analysis remains blinded at this time. Note that there are no events in the mass sideband in between 50 and 70 GeV after $t\bbbar{t}$ subtraction is performed.
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.37]{Figures/2p1/2p1_Fit_SR.pdf}
+\includegraphics[scale=0.37]{Figures/2p1/2p1_invmass_SR.pdf}
+\end{center}
+\caption{For full selection in data (blinded): (left) Fit in mass sideband regions for the conversion rate $R_{p/f}$ and (right) application of that fit to the anti-tag region to estimate the background in the signal region. Blue indicates QCD estimation and red indicates$t\bbbar{t}$ MC. \label{fig:2p1_signal}}
+\end{figure}
+
+\subsection{Statistical analysis\label{sec:Stat2p1}}
+Results are obtained from combined signal and background binned likelihood fits to the shape of the distribution of the invariant mass. Bin width increases as the invariant mass increases to account for shrinking resolution at high dijet masses. Above 890 GeV, the same binning as other CMS dijet searches is used, while below 890 GeV the bin spacing is extrapolated to extend down to 450 GeV. A list of nuisance parameters follows, along with the resulting Combine data card, in Section~\ref{sec:Syst2p1}, while the limit setting procedure and associated hypotheses are described in Section~\ref{sec:Results2p1}.
+
+\subsection{Systematic uncertainties\label{sec:Syst2p1}}
+
+The following sources of systematic uncertainty affect the expected signal efficiencies in this analysis. 
+
+\begin{itemize}
+
+\item \textbf{Luminosity}: An uncertainty of 2.7\%~\cite{LumiTWiki} is applied.
+
+\item \textbf{Pileup}: An uncertainty of about 1.0-3.4\% is associated with pileup impact on $\mjjs$ by varying the estimated minimum bias cross section of pp collisions at 13~\TeV (= 69~mb) by $\pm5\%$~\cite{PileupTWiki}.
+
+\item \textbf{PDF and scale hypotheses impact}: The impact is estimated to be 2\% in the simulated samples used. This value is obtained from Ref. \cite{AN-15-197}, page 41. In this paper the $X \to WV$ analysis is discussed. The scale and PDF uncertainties affects the production mechanism and are at first approximation independent of the final state.
+
+%\item \textbf{Trigger Efficiency}: Uncertainties in modeling the trigger response are important in Monte Carlo simulations below 1\TeV where the triggers efficiency drops below 99\%. The \Hbbt analysis uses a side band approach and can more easily work with complex turn on regions than the \Sjbt analysis, which performs a smoothness test. We vary the trigger efficiency within $\pm 1 \sigma$ of its measured uncertainty. The variation is maximum for the lowest mass point under investigation, 800 GeV Fig.~\ref{fig:trigunc}. The 1 and 1.2 TeV resonance mass are also reported.
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.7\textwidth]{Figures/mxtriggersyst.pdf}
+%\includegraphics[width=0.4\textwidth]{Figures/trigEf_BulkGrav_M-800_TriggervsDataDriven_test.pdf}
+%\includegraphics[width=0.4\textwidth]{Figures/trigEf_BulkGrav_M-1000_TriggervsDataDriven_test.pdf}
+%\includegraphics[width=0.4\textwidth]{Figures/trigEf_BulkGrav_M-1200_TriggervsDataDriven_test.pdf}
+
+%\caption{The impact of trigger uncertainty on final dijet mass spectrum, shown for three signal mass points.}
+%\label{fig:trigunc}
+%\end{figure}
+
+\item \textbf{Double-b-tagging}: Scale factors for the double-b tagger have been computed in an enriched gluon splitting to \bbbar data sample. We have corrected the signal yields accordingly and the uncertainty is propagated into the analysis. Details on the derivation of this SF are provided in Ref.~\cite{CMS-PAS-BTV-15-002}. The corresponding uncertainty with current reported SF values ranges between 5\% and 7\%.%The corresponding uncertainty is of about 25\%.
+
+\item \textbf{AK4 Jet b-tagging}: Scale factors for the CMVAv2 tagger have been computed as described in Ref.~~\cite{CMS-PAS-BTV-15-001}. The corresponding uncertainty for applying the scale factors twice (once for each b-tagged jet) is between 3\% and 6\%. Note that this will be updated once new ntuples are available.
+
+%\item \textbf{Higgs Mass Tagging}: Scale Factors for the the Higgs mass and nsubjetiness cuts are evaluated on hadronic W decays in semi-leptonic ttbar events along with associated uncertainties. These are propagated to evaluations of the Higgs jets according to the procedure described in AN-15-287. In 2015 data these corresponded to uncertainties of around $7%$ per jet. \textbf{At the moment, we are awaiting samples to reproduce this in 2016 data!}
+
+%\item \textbf{QCD multi-jet background}: The main source of uncertainty for the non-top background is propagated directly from the error of the fit in mass-sidebands from which we have estimated the transfer factor. This uncertainty can be treated as a shape based uncertainty. While this uncertainty is the dominant uncertainty in the entire analysis, it is fully correlated between all bins of a particular estimate. We must further account for the statistical uncertainty in the anti-tag region which is propagated to the signal region when the estimate is made. This uncertainty is small compared to the fit uncertainty, but is uncorrelated from bin to bin. The relative contributions of both uncertainties in the QCD closure test are shown in Section \ref{sec:BkgEst}.
+
+\item \textbf{Jet Energy Scale}: We have accounted for 2\% effect on the yield.
+
+\item \textbf{Jet Energy Resolution}: We have accounted for 2\% effect on the yield.
+
+\end{itemize}
+
+\subsection{Results\label{sec:Results2p1}}
+
+We use the CMS Higgs Combination Tool to compute the limit at 95\% confidence for the production cross section of $\sigma(pp\to\XHbbHbb)$. 
+
+The Asymptotic $\mathrm{CL_S}$ method of the Higgs Combination Tool is used to compute the expected upper limits on the signal cross sections at 95\% confidence level. These limits are shown in Figures~\ref{fig:2p1_limit}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.7]{Figures/2p1/2p1_limits.pdf}
+\end{center}
+\caption{The expected upper limit of $\sigma(pp \to \XHbbHbb)$ at 95\% confidence level using 27.2 \fbinv of data. \label{fig:2p1_limit}}
+\end{figure}
+ 

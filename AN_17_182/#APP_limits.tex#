@@ -1,0 +1,66 @@
+\section{Blinded Limits\label{app:limits}}
+
+For bulk graviton:
+
+The blinded limits for the selection rejecting boosted events can be found in Fig~\ref{fig:BGblindboost}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/brazflag_BG_boost.pdf}
+\end{center}
+\caption{Blinded limits for bulk graviton for the selection rejecting boosted events.}
+\label{fig:BGblindboost}
+\end{figure} 
+
+The blinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:BGblindboth}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/brazflag_BG_both.pdf}
+\end{center}
+\caption{Blinded limits for bulk graviton for the selection rejecting boosted and resolved events.}
+\label{fig:BGblindboth}
+\end{figure} 
+
+The blinded limits for the selection retaining boosted and resolved events can be found in Fig~\ref{fig:BGblindnone}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/brazflag_BG_none.pdf}
+\end{center}
+\caption{Blinded limits for bulk graviton for the selection retaining boosted and resolved events.}
+\label{fig:BGblindnone}
+\end{figure} 
+
+For radion:
+
+The blinded limits for the selection rejecting boosted events can be found in Fig~\ref{fig:radblindboost}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radboost.pdf}
+\end{center}
+\caption{Blinded limits for radion for the selection rejecting boosted events.}
+\label{fig:radblindboost}
+\end{figure} 
+
+The blinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:radblindboth}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radboth.pdf}
+\end{center}
+\caption{Blinded limits for radion for the selection rejecting boosted and resolved events.}
+\label{fig:radblindboth}
+\end{figure} 
+
+The blinded limits for the selection retaining boosted and resolved events can be found in Fig~\ref{fig:radblindnone}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{Figures/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radnone.pdf}
+\end{center}
+\caption{Blinded limits for radion for the selection retaining boosted and resolved events.}
+\label{fig:radblindnone}
+\end{figure} 
+

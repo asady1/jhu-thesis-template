@@ -35,13 +35,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} % load a font with all the characters
 %\usepackage{hyperref}
-\usepackage{tocbibind} % need this to contents adding for TOC
+%\usepackage{tocbibind} % need this to contents adding for TOC
 \usepackage{setspace}
 \setstretch{1.05}
-\usepackage{RJournal_nogeom} % Changes the colors of links among other things
+%\usepackage{RJournal_nogeom} % Changes the colors of links among other things
 %\usepackage[all]{hypcap}
-\usepackage[hypcap=true]{caption}
-\hypersetup{linktocpage}
+%\usepackage[hypcap=true]{caption}
+%\hypersetup{linktocpage}
 \usepackage{amsmath,amssymb,array}
 \usepackage{booktabs}
 \usepackage{subfig}
@@ -51,9 +51,9 @@
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{graphics} 
-\usetikzlibrary{positioning}
-\usetikzlibrary{shapes,arrows}
-\usepackage{dcolumn}
+%\usetikzlibrary{positioning}
+%\usetikzlibrary{shapes,arrows}
+%\usepackage{dcolumn}
 % A math shortcut frequently used by John Muschelli
 \newcommand{\bbeta}{\mbox{\boldmath $\beta$}}
 
@@ -90,6 +90,7 @@
 }
 \makeatother
 
+
 \definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
 \newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
 \newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
@@ -100,6 +101,50 @@
 \newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%l
 \newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
 \newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\newcommand{\cPqb}{\rm b}
+\newcommand{\Hbb}{\mathrm{H}\rightarrow\cPqb\overline{\cPqb}}
+\newcommand{\ttjets}{\ensuremath{\cPqt\overline{\cPqt}}+jets\xspace}
+\newcommand{\wjets}{\PW+jets\xspace}
+\newcommand{\bjet}{\cPqb~jet\xspace}
+\newcommand{\bjets}{\cPqb~jets\xspace}
+\newcommand{\sm}{the standard model\xspace}
+\newcommand{\mc}{Monte Carlo\xspace}
+\newcommand{\com}{13~\TeV\xspace}
+\newcommand{\intLumi}{35.9\fbinv\xspace}
+
+\newcommand{\GeV}{GeV}
+\newcommand{\PH}{H}
+\newcommand{\PWp}{\rm W^{+}}
+\newcommand{\PWm}{\rm W^{-}}
+\newcommand{\PZz}{\rm Z^{0}}
+\newcommand{\TeV}{TeV}
+\newcommand{\Mpl}{M_{Pl}}
+\newcommand{\Pp}{p}
+\newcommand{\Hbbt}{double \cPqb\,tagger\xspace}
+\newcommand{\Sjbt}{subjet \PQb\,tagger\xspace}
+\newcommand{\GRS}{ \mathrm{G}_\mathrm{RS}} 
+\newcommand{\mjjs}{ M_{\rm jjj}^{\rm red}} 
+\newcommand{\Mjjs}{ M_{\rm jjj}^{\rm red}} 
+\newcommand{\mjj}{ M_{\rm jjj}} 
+\newcommand{\Mjj}{ M_{\rm jjj}} 
+\newcommand{\mH}{ M_{\rm \PH}} 
+\newcommand{\mx}{ M_{\rm X}} 
+\newcommand{\mux}{ \mu_{\rm X}^{\rm CB}} 
+\newcommand{\nsub}{ \tau_{21}} 
+\newcommand{\etaj}{ |\eta|} 
+\newcommand{\deta}{ |\Delta\eta_{\rm jj}|} 
+\newcommand{\mjp}{ M_{\rm jet}^{\rm pruned}} 
+\newcommand{\mjsd}{ M_{\rm jet}^{\rm softdrop,puppi}} 
+\newcommand{\mj}{ M_{\rm jet}} 
+\newcommand{\LambdaR}{\Lambda_{\rm R}}
+\newcommand{\HH}{\PH\PH}
+\newcommand{\bbbar}{b$\bar{\rm b}$}
+\newcommand{\sgx}{\sigma_{\rm X}^{\rm gaus}}
+\newcommand{\scbx}{\sigma_{\rm X}^{\rm CB}}
+\newcommand{\HbbHbb}{\mathrm{\Hbb\Hbb}}
+\newcommand{\XHbbHbb}{\mathrm{X}\rightarrow\PH\PH\rightarrow\bbbar\bbbar}
+
+\newcommand*{\THESIS}{}
 
 \usepackage{framed}
 \makeatletter
@@ -241,6 +286,7 @@ Thanks!
 %% remember to update the makefile accordingly.
 
 \include{Intro}
+\include{AN_17_182/Introduction}
 %\include{BSM}
 %\include{CMS}
 \bibliographystyle{IEEEtran}
