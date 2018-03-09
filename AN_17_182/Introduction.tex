@@ -25,11 +25,26 @@ Models with a warped extra dimension (WED), as proposed by Randall and Sundrum \
 \end{figure}
 Then the metric for the full five-dimensional spacetime, which as it turns out solves Einstein's equations, can be written as 
 \begin{equation}
-ds^{2} = e^{-2kr_{c}\phi}{\eta_{\mu\nu}dx^{\mu}dx^{\nu} + r^{2}_{c}d\phi^{2} 
+ds^{2} = e^{-2kr_{c}\phi}\eta_{\mu\nu}dx^{\mu}dx^{\nu} + r^{2}_{c}d\phi^{2} 
 \end{equation}
 This means that four-dimensional mass scales (the masses we measure) are related to five-dimensional mass parameters (the masses predicted by the full five dimensional theory) by the warp factor, $e^{-2kr_{c}\phi}$. Therefore, this provides a good explanation as to why the Higgs boson mass is predicted to be on the order of the Planck scale ($\Mpl \sim 10^{18}$ GeV) but is observed to have a mass on the electroweak scale (125 GeV). This warp factor explains this relationship, without introducing a new hierarchy into the theory, since this large difference between the predicted and observed Higgs mass can be explained with a relatively small $r_{c}$. In this framework, we expect gravity to be much stronger in the bulk than in our four-dimensional world, which explains why gravity is observed to be so much weaker than the other three fundamental forces.
 
-Lastly, this class of models predicts the existence of new particles. One of these particles would be the massless spin-2 graviton, which would give us insight into the inner workings of quantum gravity. There are also other new particles, such as the spin-0 radion \cite{Goldberger:1999uk,DeWolfe:1999cp,Csaki:1999mp}, and the spin-2 bulk graviton \cite{Davoudiasl:1999jd,Csaki:2000zn, Agashe:2007zd}. In this analysis, we consider a scenario where SM particles are allowed in the bulk, which .
+Lastly, this class of models predicts the existence of new particles. One of these particles would be the massless spin-2 graviton, which would give us insight into the inner workings of quantum gravity. There are also other new particles, such as the spin-0 radion \cite{Goldberger:1999uk,DeWolfe:1999cp,Csaki:1999mp}, and the spin-2 bulk graviton \cite{Davoudiasl:1999jd,Csaki:2000zn, Agashe:2007zd}. The radion is a particle that helps stabilize the size of the extra dimension. We consider the case where no mixing between the radion and Higgs boson (in other words, the two have separate mass states unrelated to each other). The couplings of SM particles to the bulk graviton depend on where SM particles can be located. In this analysis, we consider a scenario where SM particles are allowed in the bulk~\cite{Fitzpatrick:2007qr}.
+
+Supersymmetry is a class of theories that predict a supersymmetric new particle for every SM particle that currently exists. Some supersymmetric models also predict one spin-0 resonance that, when sufficiently massive, decays to a pair of SM Higgs bosons. Those would be additional Higgs bosons \cite{Djouadi:2005gj,Barbieri:2013nka}. The signal modeling for a spin-0 particle is identical if it is a radion or an additional Higgs boson.
+
+In searching for the bulk graviton and radion, we will compare the cross section of di-Higgs production we observe in data to the cross sections predicted by these theories. If no new particles are found, then depending on the sensitivity of the analysis and the value of the cross section for bulk graviton and radion decay to di-Higgs, we may be able to rule out these particles below a certain mass. For the bulk graviton and radion signals that we consider, the tools used to calculate the cross sections for the production of KK graviton in the bulk and RS1 models are described in Ref. \cite{Agashe:2013kyb, deAquino:2011ix}. The implementation of the calculations is described in Ref. \cite{Oliveira:2014kla}.   
+%In analogy with the \PH boson, the radion field is predominantly produced through gluon-gluon fusion \cite{Mahanta:2000zp, Davoudiasl:2000wi}. When calculating cross sections, approximations are made in order to complete the calculations.
+%The cross section for radion production is calculated at next-to-leading-order electroweak and next-to-next-to-leading logarithmic QCD accuracy, using the recipe suggested in Ref. \cite{Giudice:2000av}. 
+%It is usual to express the benchmark points of the model in terms of the dimensionless quantity $k/\overline{\Mpl}$, and the mass scale $\LambdaR = \sqrt{6} e^{-kl}\times \overline{\Mpl}$~\cite{Giudice:2000av}. 
+%This recipe consists of multiplying the radion cross section based on the 
+%fundamental parameter of the theory, $\LambdaR$, by a $K$-factor calculated for SM-like \PH boson 
+%production through gluon-gluon fusion \cite{Catani:2003zt,Heinemeyer:2013tqa}. 
+
+%The calculations are performed for the SM-like \PH boson with masses up to 1\TeV. They are considered constant above 1\TeV. We use the CTEQ6L PDF \cite{Nadolsky:2008zw} in these calculations. No mixing between a radion and the \PH boson is considered in this paper. The absolute value for the production cross section scales with $(k/\overline{\Mpl})^2$ for the KK Graviton \cite{Oliveira:2010uv} and with $1/\LambdaR^2$ for the radion \cite{Barger:2011qn}.
+
+Searches for narrow particles decaying to two Higgs bosons have already been performed by the ATLAS \cite{Aad:2014yja, Aad:2015uka, Aad:2015xja} and CMS \cite{Khachatryan:2014jya,Khachatryan:2015year,Khachatryan:2015tha} collaborations in \Pp\Pp collisions at $\sqrt{s} = $7 and 8 \TeV. Until now their reach was limited to $\mx = 1.5\TeV$. Moreover, some of the models that predict the coupling of the new resonance to $\HH$ also expect it to couple to $\PWp\PWm$ or $\PZz\PZz$ \cite{Brehmer:2015dan}. Searches for these final states were performed by ATLAS and CMS \cite{ATLASVV, ATLASWV, ATLASZV, Khachatryan:2014hpa, CMSZVWV}. 
+
 
 
 %The gap between the two fundamental scales of nature, such as the Planck scale ($\Mpl$), and the electroweak scale, is controlled by a warp factor ($k$) in the metric, which corresponds to one of the fundamental parameters of  the theory. The brane where the density of the extra dimensional metric is localized is called the "Planck brane", while the other, where the Higgs field is localized, is called the "TeV brane". It is common in the 
@@ -37,35 +52,86 @@ Lastly, this class of models predicts the existence of new particles. One of the
 
 %There are two possible ways of describing a KK graviton from the standpoint of WED that depend on the choice of localization for the SM matter fields. In the RS1 model, only gravity is allowed to propagate in the extra-dimensional bulk, and with the KK-graviton couplings to matter fields fully defined by $k/\overline{\Mpl}$ \cite{Randall:1999ee}. For the possibility of particles in the bulk (the so-called bulk RS model), the coupling of the KK graviton to matter depends on the choice for the localization of the SM bulk fields. This paper uses the scenario of Ref. \cite{Fitzpatrick:2007qr} as the starting point, where the propagation of SM fields is allowed in the bulk, and follows the characteristics of the SM gauge group, with the right-handed top quark localized on the TeV brane (so called elementary top hypothesis). 
 
-The radion is an additional element of WED models that is needed to stabilize the size of the extra dimension $l$. It is usual to express the benchmark points of the model in terms of the dimensionless quantity $k/\overline{\Mpl}$, and the mass scale $\LambdaR = \sqrt{6} e^{-kl}\times \overline{\Mpl}$, with the latter interpreted as the ultraviolet cutoff of the theory \cite{Giudice:2000av}. 
-The addition of a scalar-curvature term can induce a mixing between the
-scalars radion and Higgs boson \cite{Giudice:2000av,Dominici:2002jv}, this possibility can be grounded on microscopic theories (see for example \cite{Antoniadis:2002ut}).
-Due to electroweak precision tests this mixing is expected to be small, for an updated reference see for example \cite{Desai:2013pga}.
-In the interpretations of the constraints derived in this note we neglect the possibility of Higgs-radion mixing. 
+%The radion is an additional element of WED models that is needed to stabilize the size of the extra dimension $l$. It is usual to express the benchmark points of the model in terms of the dimensionless quantity $k/\overline{\Mpl}$, and the mass scale $\LambdaR = \sqrt{6} e^{-kl}\times \overline{\Mpl}$, with the latter interpreted as the ultraviolet cutoff of the theory \cite{Giudice:2000av}. 
+%The addition of a scalar-curvature term can induce a mixing between the
+%scalars radion and Higgs boson \cite{Giudice:2000av,Dominici:2002jv}, this possibility can be grounded on microscopic theories (see for example \cite{Antoniadis:2002ut}).
+%Due to electroweak precision tests this mixing is expected to be small, for an updated reference see for example \cite{Desai:2013pga}.
+%In the interpretations of the constraints derived in this note we neglect the possibility of Higgs-radion mixing. 
 
-For the KK-graviton resonance, the choice of the localization of the SM matter fields potentially modifies the kinematics  
-of the signal and drastically modifies the production and decay \cite{Oliveira:2010uv}. 
-The physics of the radion from other side has little dependence on the choice of scenario \cite{Giudice:2000av} and therefore we do not need to specify between RS1 and bulk RS. 
-Supersymmetric models also  predict one spin-0 resonance that, when sufficiently massive, decays to a pair of SM Higgs bosons. Those would be additional Higgs bosons \cite{Djouadi:2005gj,Barbieri:2013nka}. The signal modeling for a spin-0 particle is identical if it is a radion or an additional Higgs boson.
+%For the KK-graviton resonance, the choice of the localization of the SM matter fields potentially modifies the kinematics  
+%of the signal and drastically modifies the production and decay \cite{Oliveira:2010uv}. 
+%The physics of the radion from other side has little dependence on the choice of scenario \cite{Giudice:2000av} and therefore we do not need to specify between RS1 and bulk RS. 
 
 
-The tools used to calculate the cross sections for the production of KK graviton in the bulk and RS1 models are described in Ref. \cite{Agashe:2013kyb, deAquino:2011ix}. The implementation of the calculations is described in Ref. \cite{Oliveira:2014kla}.   
-In analogy with the \PH boson, the radion field is predominantly produced through gluon-gluon fusion \cite{Mahanta:2000zp, Davoudiasl:2000wi}. 
-The cross section for radion production is calculated  at NLO electroweak and next-to-next-to-leading logarithmic QCD 
-accuracy, using the recipe suggested in Ref. \cite{Giudice:2000av}. This recipe consists of multiplying the radion cross section based on the 
-fundamental parameter of the theory, $\LambdaR$, by a $K$-factor calculated for SM-like \PH boson 
-production through gluon-gluon fusion \cite{Catani:2003zt,Heinemeyer:2013tqa}. The calculations are performed for the SM-like \PH boson with masses up to 1\TeV. They are considered constant above 1\TeV. We use the CTEQ6L PDF \cite{Nadolsky:2008zw} in these calculations. No mixing between a radion and the \PH boson is considered in this paper. The absolute value for the production cross section scales with $(k/\overline{\Mpl})^2$ for the KK Graviton \cite{Oliveira:2010uv} and with $1/\LambdaR^2$ for the radion \cite{Barger:2011qn}.
+%We compare the experimental results to the radion production cross section for $\LambdaR = 1$ and $3\TeV$. In the first case, the WED theory predicts a cross section that can be detected at LHC \cite{Khachatryan:2015year}, but is challenged by the constraints derived from the electroweak precision measurements \cite{Archer:2014jca}. This specific model is excluded up to $\mx = 1.1\TeV$ by the previous $X \to \PH\PH$ searches \cite{Aad:2015uka, Khachatryan:2015year}. In contrast, the predicted cross section for $\LambdaR=3 \TeV$ is a factor of 9 times smaller, but the theory is less constrained by these searches. We consider exclusively the $gg \to X$ production, with $\mathcal{B}({\rm radion} \to \HH) \approx 25\%$ in the mass range under consideration. 
 
-We compare the experimental results to the radion production cross section for $\LambdaR = 1$ and $3\TeV$. In the first case, the WED theory predicts a cross section that can be detected at LHC \cite{Khachatryan:2015year}, but is challenged by the constraints derived from the electroweak precision measurements \cite{Archer:2014jca}. This specific model is excluded up to $\mx = 1.1\TeV$ by the previous $X \to \PH\PH$ searches \cite{Aad:2015uka, Khachatryan:2015year}. In contrast, the predicted cross section for $\LambdaR=3 \TeV$ is a factor of 9 times smaller, but the theory is less constrained by these searches. We consider exclusively the $gg \to X$ production, with $\mathcal{B}({\rm radion} \to \HH) \approx 25\%$ in the mass range under consideration. 
-
-Searches for narrow particles decaying to two Higgs bosons have already been performed by the ATLAS \cite{Aad:2014yja, Aad:2015uka, Aad:2015xja} and CMS \cite{Khachatryan:2014jya,Khachatryan:2015year,Khachatryan:2015tha} collaborations in \Pp\Pp collisions at $\sqrt{s} = $7 and 8 \TeV. Until now their reach was limited to $\mx = 1.5\TeV$. Moreover, some of the models that predict the coupling of the new resonance to $\HH$ also expect it to couple to $\PWp\PWm$ or $\PZz\PZz$ \cite{Brehmer:2015dan}. Searches for these final states were performed by ATLAS and CMS \cite{ATLASVV, ATLASWV, ATLASZV, Khachatryan:2014hpa, CMSZVWV}. 
 %The combinations of results within experiments~\cite{Aad:2015ipg, CMSZVWV}, as well as within the LHC~\cite{Brehmer:2015dan, Dias:2015mhm}, indicates that the region around $\mx \approx 2\TeV$ is particularly interesting to explore. 
 
-\ifdefined\THESIS{}
-\else{\section{Analysis strategy\label{ss:strategy}}
-We consider both Higgs bosons decaying through $\Hbb$, with the final state having four \cPqb\, quarks. The topology of the final state is constrained by $\mx / 2\mH > 1$, where $\mH \approx 125\GeV$ is the $\PH$ boson mass \cite{Aad:2015zhl}. This analysis operates in the semi-boosted regime, where one Higgs boson is boosted enough to be contained in one large jet (boosted side), while the other Higgs boson is reconstructed as two smaller b-jets (resolved side). 
+%\ifdefined\THESIS{}
+%\else{\section{Analysis strategy\label{ss:strategy}}
+%We consider both Higgs bosons decaying through $\Hbb$, with the final state having four \cPqb\, quarks. The topology of the final state is constrained by $\mx / 2\mH > 1$, where $\mH \approx 125\GeV$ is the $\PH$ boson mass \cite{Aad:2015zhl}. This analysis operates in the semi-boosted regime, where one Higgs boson is boosted enough to be contained in one large jet (boosted side), while the other Higgs boson is reconstructed as two smaller b-jets (resolved side). 
 %, and defines the so-called boosted regime \cite{Gouzevitch:2013qca,Cooper:2013kia, Butterworth:2008iy}, in which each $\PH$ boson is produced with a large momentum and its decay products are collimated along its direction of motion. 
-The hadronization of a narrowly separated \bbbar pair arising from the boosted Higgs boson decay will result in a single reconstructed jet of mass compatible with $\mH$. The boosted $\PH$ candidate is selected by employing jet substructure techniques to identify jets containing constituents with kinematics consistent with the decay of a boosted $\PH$ boson. The hadronization of a slightly more separated \bbbar pair arising from the resolved Higgs boson decay results in two reconstructed jets with a combined mass compatible with $\mH$. This $\PH$ candidate is selected by using b-tagging and kinematics to determine which jets are most likely to have come from a $\PH$ boson decay.}\fi
+%The hadronization of a narrowly separated \bbbar pair arising from the boosted Higgs boson decay will result in a single reconstructed jet of mass compatible with $\mH$. The boosted $\PH$ candidate is selected by employing jet substructure techniques to identify jets containing constituents with kinematics consistent with the decay of a boosted $\PH$ boson. The hadronization of a slightly more separated \bbbar pair arising from the resolved Higgs boson decay results in two reconstructed jets with a combined mass compatible with $\mH$. This $\PH$ candidate is selected by using b-tagging and kinematics to determine which jets are most likely to have come from a $\PH$ boson decay.}\fi
 
 
 %An additional case is considered where one H is boosted enough to be contained in one fat jet containing two b jets and the other is not, resulting in two smaller jets which each contain one b jet. The fat jet should be far away from the two smaller jets, which should be close to each other. For this case, the mass range is sensitive as well. The details can be found in Appendix~\ref{app:2p1}, and not currently scheduled for approval.
+\\
+\section{Nonresonant Production \label{nonresprod}}
+%The discovery of a boson with a mass of approximately 125\GeV, and with properties close to those expected for the 
+%Higgs boson (\PH) of the standard model (SM)~\cite{Chatrchyan:2012ufa,HiggsdiscoveryAtlas}, has stimulated 
+%interest in the exploration of the Higgs potential. 
+%The production of a pair of Higgs bosons within 
+%the SM is a rare process that is sensitive to the structure of this potential through the self-coupling mechanism of the Higgs boson. 
+%In the SM, the cross section for the production of two \PH bosons in pp collisions at 8\TeV is $10.0 \pm 1.4\unit{fb}$
+%for the gluon-gluon fusion process~\cite{deFlorian:2013jea,Baglio:2012np}, which lies beyond the reach of analyses based on the first run of the CERN LHC.
+
+%The production of two Higgs bosons provides a good channel for studying the SM Higgs potential and the Higgs self-coupling. 
+
+The non resonant production of two Higgs bosons has not been observed yet, as it is a rare process with a small cross section of $33.45^{+4.3}_{-6.0} \pm 2.1 \pm 2.3$ fb~\cite{MelladoGarcia:2150771,deFlorian:2013jea,Dawson:1998py,Borowka:2016ehy,deFlorian:2015moa} in p-p collisions at $\sqrt{s}$ = 13 TeV for $m_{H}$ = 125 \GeV. It would take ${\cal O}(1)ab^{-1}$ of data to observe a process with a cross section this small and a large irreducible background. However, both ATLAS~\cite{Aad:2015xja,Aaboud:2016xco} and CMS~\cite{Khachatryan:2016sey} have set upper limits on the cross section. These limits can be improved with more data, and parameter space related BSM couplings can be further probed. The parametrization and search strategy detailed by the LHC Higgs Cross Section Working Group can be found in~\cite{CarvalhoAntunesDeOliveira:2130724}.
+
+We consider di-Higgs production where both Higgs decay to b-quarks, as this state has the highest branching fraction and has been found by ATLAS to be the best channel to search for non resonant production with a small amount of data. In the SM, pair production occurs primarily through gluon-gluon fusion via an internal fermion loop, which is dominated by the top quark. In the absence of new light states, the gluon fusion higgs boson pair production at the LHC can be described by five parameters, to leading order: $\kappa_{\lambda}$, $\kappa_{t}$, $c_g$, $c_{2g}$, and $c_2$. The Higgs boson tri-linear coupling ($\lambda_{SM}=m_h^2/2v^2$, where $v$ is the vacuum-expectation value of the Higgs field) and the top Yukawa interaction exist in the SM Lagrangian. Any deviations from the SM value for these two quantities is parametrized by $\kappa_{\lambda}$ and $\kappa_{t}$, respectively. However, the contact interaction of the Higgs and gluons, as well as two Higgs and two gluons or \ttbar, are not predicted by the SM. These are instead paramterized by the absolute couplings $c_g$, $c_{2g}$, and $c_2$. Extending the SM with operator of mass dimension $4<D\leq6$ in the framework of an effctive field theory, the Lagrangian follows as
+
+\begin{eqnarray}
+{\cal L}_h = 
+\frac{1}{2} \partial_{\mu}\, h \partial^{\mu} h - \frac{1}{2} m_h^2 h^2 -
+  {\kappa_{\lambda}}\,  \lambda_{SM} v\, h^3 
+- \frac{ m_t}{v}(v+   {\kappa_t} \,   h  +  \frac{c_{2}}{v}   \, h\,  h ) \,( \bar{t_L}t_R + h.c.) \nonumber  \\ 
++ \frac{1}{4} \frac{\alpha_s}{3 \pi v} (   c_g \, h -  \frac{c_{2g}}{2 v} \, h\, h ) \,  G^{\mu \nu}G_{\mu\nu}\,,
+\label{eq:lag}
+\end{eqnarray}
+
+where we assume an absence of any other light state in addition to SM particles and CP-violating BSM effects are not considered. This Lagrangian encodes the effects of new heavy states currently beyond experimental reach. If electroweak symmetry breaking is linearly realized, then $c_{2g} = - c_g$~\cite{Giudice:2007fh,BUCHMULLER1986621}. Additionaly, the bottom quark Yukawa coupling is constrained in the effective field theory to $0.75<\kappa_b<1.25$ from previous LHC data~\cite{Corbett:2015ksa}, which excludes large enhancements, and therefore is omitted in this framework. The Feynman diagrams contributing to HH signal at leading order can be found in Fig.~\ref{fig:dia}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{F2/translation.pdf}
+\caption{\small Feynman diagrams that contribute to Higgs boson pair production by gluon-gluon fusion at leading order. Diagrams (a) and (b) correspond to SM-like processes, while diagrams (c), (d), and (e) correspond to pure BSM effects: (c) and (d) describe contact interactions between the Higgs boson and gluons, and (e) exploits the contact interaction of two Higgs bosons with top quarks.   \label{fig:dia}}
+\end{figure}
+Translation of this parametrization to the flavour-diagonal Higgs basis is documented in~\cite{Falkowski:2015fla}.
+
+The phase space for the Higgs boson couplings in the BSM scenario has 5 parameters, where constraints come from measurements of single Higgs boson production and other theoretical considerations. While this phase space is large, the kinematics of HH also depend on these five parameters. In particular, the distribution of the di-Higgs invariant mass and the modulus of the cosine of the polar angle of one Higgs boson with respect to the beam axis, are similar across many different parameter combinations. A statistical approach was developed to identify twelve clusters of models with similar distribution in both kinematic variables, described in full in~\cite{Carvalho2016}. Twelve benchmarks, one from each cluster, were chosen to as the model that best represents each cluster. These are described in Tab.~\ref{tab:benchmarks}.
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+Benchmark & $\kappa_{\lambda}$ & $\kappa_{t}$ & $c_2$ & $c_g$ & $c_{2g}$ \\ \hline 
+1 & 7.5 & 1.0 & -1.0 & 0.0 & 0.0\\
+2 & 1.0 & 1.0 & 0.5 & -0.8 & 0.6 \\
+3 & 1.0 & 1.0 & -1.5 & 0.0 & -0.8 \\
+4 & -3.5 & 1.5 & -3.0 & 0.0 & 0.0 \\
+5 & 1.0 & 1.0 & 0.0 & 0.8 & -1.0 \\
+6 & 2.4 & 1.0 & 0.0 & 0.2 & -0.2 \\
+7 & 5.0 & 1.0 & 0.0 & 0.2 & -0.2 \\
+8 & 15.0 & 1.0 & 0.0 & -1.0 & 1.0 \\
+9 & 1.0 & 1.0 & 1.0 & -0.6 & 0.6 \\
+10 & 10.0 & 1.5 & -1.0 & 0.0 & 0.0 \\
+11 & 2.4 & 1.0 & 0.0 & 1.0 & -1.0 \\
+12 & 15.0 & 1.0 & 1.0 & 0.0 & 0.0 \\
+SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Parameter values of the final benchmarks selected with number of clusters $N_{clus}$ = 12.}
+\label{tab:benchmarks}
+\end{table}
