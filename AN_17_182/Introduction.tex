@@ -12,6 +12,9 @@ the SM is a rare process that is sensitive to the structure of this potential th
 A cross section tells us the probability of a particular final state of events. This depends on the initial conditions of the collision,  or the energy going into the collision and what you are colliding. The unit used for cross section is barn, with $1 \text{b} = 100 \text{fm}^2 = 10^{-28} \text{m}^2$. In the SM, the cross section for the production of two \PH bosons in pp collisions at 13\TeV is $33.5 \pm 2.5/2.8 \text{fb}$
 for the gluon-gluon fusion process \cite{deFlorian:2016spz,deFlorian:2013jea,Baglio:2012np}, which lies beyond the reach of analyses based on the first run of the CERN LHC. An increase in the cross section beyond SM expectation would be a smoking gun for new physics. This can happen in one of two ways: there are new particles which decay to HH that contribute to the production of HH, or there are new processes, or additional vertices, that contribute to the production of HH. The first is called ``resonant" production, since the increase in cross section is from a resonance (new particle), and the second is called ``non-resonant", since it is a new Feynman diagram but not a new particle causing an increase in the cross section.}\else{In the SM, the cross section for the production of two \PH bosons in pp collisions at 8\TeV is $10.0 \pm 1.4\unit{fb}$
 for the gluon-gluon fusion process~\cite{deFlorian:2013jea,Baglio:2012np}, which lies beyond the reach of analyses based on the first run of the CERN LHC. }\fi
+
+%We consider di-Higgs production where both Higgs decay to b-quarks, as this state has the highest branching fraction and has been found by ATLAS to be the best channel to search for di-Higgs production with a small amount of data. 
+
 \\
 \ifdefined\THESIS{\section{Resonant Production\label{ss:resprod}}}\else{}\fi
 
@@ -87,29 +90,34 @@ Searches for narrow particles decaying to two Higgs bosons have already been per
 
 %The production of two Higgs bosons provides a good channel for studying the SM Higgs potential and the Higgs self-coupling. 
 
-The non resonant production of two Higgs bosons has not been observed yet, as it is a rare process with a small cross section of $33.45^{+4.3}_{-6.0} \pm 2.1 \pm 2.3$ fb~\cite{MelladoGarcia:2150771,deFlorian:2013jea,Dawson:1998py,Borowka:2016ehy,deFlorian:2015moa} in p-p collisions at $\sqrt{s}$ = 13 TeV for $m_{H}$ = 125 \GeV. It would take ${\cal O}(1)ab^{-1}$ of data to observe a process with a cross section this small and a large irreducible background. However, both ATLAS~\cite{Aad:2015xja,Aaboud:2016xco} and CMS~\cite{Khachatryan:2016sey} have set upper limits on the cross section. These limits can be improved with more data, and parameter space related BSM couplings can be further probed. The parametrization and search strategy detailed by the LHC Higgs Cross Section Working Group can be found in~\cite{CarvalhoAntunesDeOliveira:2130724}.
+%The non resonant production of two Higgs bosons has not been observed yet, as it is a rare process with a small cross section of $33.45^{+4.3}_{-6.0} \pm 2.1 \pm 2.3$ fb~\cite{MelladoGarcia:2150771,deFlorian:2013jea,Dawson:1998py,Borowka:2016ehy,deFlorian:2015moa} in p-p collisions at $\sqrt{s}$ = 13 TeV for $m_{H}$ = 125 \GeV. It would take ${\cal O}(1)ab^{-1}$ of data to observe a process with a cross section this small and a large irreducible background. However, both ATLAS~\cite{Aad:2015xja,Aaboud:2016xco} and CMS~\cite{Khachatryan:2016sey} have set upper limits on the cross section. These limits can be improved with more data, and parameter space related BSM couplings can be further probed. The parametrization and search strategy detailed by the LHC Higgs Cross Section Working Group can be found in~\cite{CarvalhoAntunesDeOliveira:2130724}.
 
-We consider di-Higgs production where both Higgs decay to b-quarks, as this state has the highest branching fraction and has been found by ATLAS to be the best channel to search for non resonant production with a small amount of data. In the SM, pair production occurs primarily through gluon-gluon fusion via an internal fermion loop, which is dominated by the top quark. In the absence of new light states, the gluon fusion higgs boson pair production at the LHC can be described by five parameters, to leading order: $\kappa_{\lambda}$, $\kappa_{t}$, $c_g$, $c_{2g}$, and $c_2$. The Higgs boson tri-linear coupling ($\lambda_{SM}=m_h^2/2v^2$, where $v$ is the vacuum-expectation value of the Higgs field) and the top Yukawa interaction exist in the SM Lagrangian. Any deviations from the SM value for these two quantities is parametrized by $\kappa_{\lambda}$ and $\kappa_{t}$, respectively. However, the contact interaction of the Higgs and gluons, as well as two Higgs and two gluons or \ttbar, are not predicted by the SM. These are instead paramterized by the absolute couplings $c_g$, $c_{2g}$, and $c_2$. Extending the SM with operator of mass dimension $4<D\leq6$ in the framework of an effctive field theory, the Lagrangian follows as
+In the SM, non resonant pair production occurs primarily through gluon-gluon fusion via an internal fermion loop, which is dominated by the top quark, as can be seen in Figure~\ref{fig:SMdia}. 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{F2/dihiggs.png}
+\caption{SM Feynman diagrams that contribute to Higgs boson pair production by gluon-gluon fusion at leading order.  \label{fig:SMdia}}
+\end{figure}
+Assuming there are no new light states that we have not discovered yet, the gluon fusion Higgs boson pair production at the LHC can be described by five parameters, to leading order: $\kappa_{\lambda}$, $\kappa_{t}$, $c_g$, $c_{2g}$, and $c_2$. The Higgs boson tri-linear coupling ($\lambda_{SM}=m_h^2/2v^2$, where $v$ is the vacuum-expectation value of the Higgs field), and the top Yukawa interaction exist in the SM Lagrangian. Any deviations from the SM value for these two quantities is parametrized by $\kappa_{\lambda}$ and $\kappa_{t}$, respectively. However, the interaction of Higgs and gluons, as well as two Higgs and two gluons or $t\bar{t}$, are not predicted by the SM. These are instead parametrized by the absolute couplings $c_g$, $c_{2g}$, and $c_2$. 
 
+We can then write out the Lagrangian describing all of these SM interactions and potential BSM interactions, assuming no other light states besides for SM particles, as an effective field theory:
 \begin{eqnarray}
 {\cal L}_h = 
 \frac{1}{2} \partial_{\mu}\, h \partial^{\mu} h - \frac{1}{2} m_h^2 h^2 -
-  {\kappa_{\lambda}}\,  \lambda_{SM} v\, h^3 
-- \frac{ m_t}{v}(v+   {\kappa_t} \,   h  +  \frac{c_{2}}{v}   \, h\,  h ) \,( \bar{t_L}t_R + h.c.) \nonumber  \\ 
+  {\kappa_{\lambda}}\,  \lambda_{SM} v\, h^3 \nonumber  \\ 
+- \frac{ m_t}{v}(v+   {\kappa_t} \,   h  +  \frac{c_{2}}{v}   \, h\,  h ) \,( \bar{t_L}t_R + h.c.) 
 + \frac{1}{4} \frac{\alpha_s}{3 \pi v} (   c_g \, h -  \frac{c_{2g}}{2 v} \, h\, h ) \,  G^{\mu \nu}G_{\mu\nu}\,,
 \label{eq:lag}
 \end{eqnarray}
-
-where we assume an absence of any other light state in addition to SM particles and CP-violating BSM effects are not considered. This Lagrangian encodes the effects of new heavy states currently beyond experimental reach. If electroweak symmetry breaking is linearly realized, then $c_{2g} = - c_g$~\cite{Giudice:2007fh,BUCHMULLER1986621}. Additionaly, the bottom quark Yukawa coupling is constrained in the effective field theory to $0.75<\kappa_b<1.25$ from previous LHC data~\cite{Corbett:2015ksa}, which excludes large enhancements, and therefore is omitted in this framework. The Feynman diagrams contributing to HH signal at leading order can be found in Fig.~\ref{fig:dia}.
-
+where the first two terms are the kinetic and mass term respectively for the Higgs, the third term is related to SM Higgs self-interactions (parametrized by $\kappa_{\lambda}$), the fourth term is related to both SM Higgs-top-antitop interactions (parametrized by $\kappa_{t}$) and BSM Higgs-Higgs-top-antitop interactions (parametrized by $c_2$), and the last term is related to BSM Higgs-gluon-gluon interactions (parameterized by $c_g$) and BSM Higgs-Higgs-gluon-gluon interactions (parameterized by $c_{2g}$). In the SM, $\kappa_{\lambda}$=$\kappa_{t}$=1.0 and the other three parameters are set to 0. Assuming electroweak symmetry is linearly realized, it turns out $c_{2g} = - c_g$~\cite{Giudice:2007fh,BUCHMULLER1986621}. The Feynman diagrams contributing to the di-Higgs signal at leading order can be found in Figure ~\ref{fig:dia}.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.85]{F2/translation.pdf}
-\caption{\small Feynman diagrams that contribute to Higgs boson pair production by gluon-gluon fusion at leading order. Diagrams (a) and (b) correspond to SM-like processes, while diagrams (c), (d), and (e) correspond to pure BSM effects: (c) and (d) describe contact interactions between the Higgs boson and gluons, and (e) exploits the contact interaction of two Higgs bosons with top quarks.   \label{fig:dia}}
+\caption{SM Feynman diagrams that contribute to Higgs boson pair production by gluon-gluon fusion at leading order. Diagrams (a) and (b) correspond to SM-like processes, while diagrams (c), (d), and (e) correspond to pure BSM effects: (c) and (d) describe contact interactions between the Higgs boson and gluons, and (e) exploits the contact interaction of two Higgs bosons with top quarks.   \label{fig:dia}}
 \end{figure}
-Translation of this parametrization to the flavour-diagonal Higgs basis is documented in~\cite{Falkowski:2015fla}.
 
-The phase space for the Higgs boson couplings in the BSM scenario has 5 parameters, where constraints come from measurements of single Higgs boson production and other theoretical considerations. While this phase space is large, the kinematics of HH also depend on these five parameters. In particular, the distribution of the di-Higgs invariant mass and the modulus of the cosine of the polar angle of one Higgs boson with respect to the beam axis, are similar across many different parameter combinations. A statistical approach was developed to identify twelve clusters of models with similar distribution in both kinematic variables, described in full in~\cite{Carvalho2016}. Twelve benchmarks, one from each cluster, were chosen to as the model that best represents each cluster. These are described in Tab.~\ref{tab:benchmarks}.
+This shows that the phase space for the Higgs boson couplings in the BSM scenario has 5 parameters, where constraints come from measurements of single Higgs boson production and other theoretical considerations. While this phase space is large, the kinematics of di-Higgs production also depend on these five parameters. In particular, the distribution of the di-Higgs invariant mass and the modulus of the cosine of the polar angle of one Higgs boson with respect to the beam axis (modulus of the direction the protons come from), are similar across many different parameter combinations. 
+A statistical approach was developed to identify twelve clusters of models with similar distribution in both kinematic variables, described in full in~\cite{Carvalho2016}. Twelve benchmarks, one from each cluster, were chosen to as the model that best represents each cluster. These are described in Table ~\ref{tab:benchmarks}, along with the SM values of the parameters. The invariant mass distributions of the twelve BSM scenarios can be found in Figure~\ref{Fig:MHHClusters}, while the modulus of the cosine of the polar angle of one Higgs boson with respect to the beam axis ($|\text{cos}\theta^{\ast}|$) can be found in Figure~\ref{Fig:CosClusters}.
 
 \begin{table}[htb]
 \begin{center}
@@ -135,3 +143,17 @@ SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
 \caption{Parameter values of the final benchmarks selected with number of clusters $N_{clus}$ = 12.}
 \label{tab:benchmarks}
 \end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{F2/MHHClusters.png}
+\caption{The invariant mass of the two Higgs for Monte Carlo simulation of different parameter combinations, clustered into 12 classes of shapes. The red distributions correspond to the benchmark model, while the blue distributions are the other parameter combinations similar to the benchmark that are part of that cluster.}
+\label{Fig:MHHClusters}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{F2/CosClusters.png}
+\caption{The modulus of the cosine of the polar angle of one Higgs boson with respect to the beam axis for Monte Carlo simulation of different parameter combinations, clustered into 12 classes of shapes. The red distributions correspond to the benchmark model, while the blue distributions are the other parameter combinations similar to the benchmark that are part of that cluster.}
+\label{Fig:CosClusters}
+\end{figure}
