@@ -1,59 +1,66 @@
 \chapter{Searching for New Particles}\label{Sec:CMS}
-In order to probe the SM further and have a chance at discovering new BSM particles, we must smash SM particles together 
-
-While particle physics has come a long way in the last century, the basic discovery mechanism hasn't changed: to get a new particle, smash known particles together. In the early days, this was achieved by simply waiting for cosmic rays\footnote{Charged particles ejected from the sun which strike our atmosphere} to enter our detectors.
-
-For example, a positron might be accelerate by the Sun's tumultuous electromagnetic fields to very high energy and it might collide with an atom in our atmosphere. The positron might annihilate with one of the electrons in that atom (through the process in Figure \ref{Fig:Intro:Vertex1}). Even if the electron was at rest, the positron carried sufficient energy that the resulting photon could decay into something heavier than the electron: a pair of muons for example. This is exactly how muons are produced in the atmosphere, and in fact, at sea level every square meter is showered with about a hundred muons per second.
-
-Other particles should be accessible this way, but as can be seen in Figure \ref{Fig:Detect:Rates}, their rates are considerably lower than the muon. We would need to wait a very long time to have enough $W$s pass through our detector to have any hope of making a reasonable measurment.
-\begin{figure}[h!]
-    \centering
-        \includegraphics[width=\textwidth]{F3/atmodepth}
-        \caption{Fluxes of common particles created in the atmosphere by cosmic rays. Note that muons are the most common charged particles produced in these interactions.}
-        \label{Fig:Detect:Rates}
-\end{figure}
-The muon is relatively long-lived, while the bosons and heavier quarks would decay in flight. The muon only makes it to our detectors because it is moving near the speed of light and benefits from the effects of time dilation\footnote{The faster something goes, the slower time runs for it}.
-
-Clearly then we need to force positron and electrons to collide on our terms, preferably at very high energies.
-
-The most basic collider is a long, straight tunnel which fires a beam of electrons at a beam of positrons. Most of the positron and electrons will pass by each other, with only a few actually interacting. Because of this, it makes more sense to build circular rings spinning the particles in opposite directions. This way a bunch\footnote{this is a technical term, as we'll discuss later} of electrons isn't wasted if it doesn't produce any interesting interactions with the positrons: it'll whip around the ring for a second pass, and a third, until it's depleted.
-
-The \textit{Large Electron-Positron} Collider at CERN was precisely such a machine, and was able to produce collisions with a center of mass energy of 206 GeV. More than enough energy to produce Z and W bosons (then the heaviest particles around). There are however some drawbacks to electron-positron colliders: charged particles radiate energy when they are bent by an electro-magnetic field, according to the following formula:
+One of the most effective ways to probe the SM further and have a chance at discovering new BSM particles is to smash SM particles together at high energies in hopes of discovering something new. One of the easiest colliders to imagine is an electron-positron collider. Many have existed over time and account for many of the precision SM measurements. High energy collisions allow for a greater chance of something new and massive appearing, and allow for more precise measurements. However, it is hard to produce high energy collisions with electrons and positrons. Charged particles radiate energy when they are traveling through an electromagnetic field, where the power radiated is given by
 \begin{equation}\label{Eq:SynchRad}
-    P = \frac{e^4}{6\pi m^4c^5}E^2B^2
+   P = \frac{e^4}{6\pi m^4c^5}E^2B^2
 \end{equation}
-For the E (electric) and B (magnetic) fields at the LEP collider, this was equivalent to $P \approx 0.2$mW \textit{per electron}. This may not seem like much, but even before LEP was opperating at its full potential the total synchrotron radiation output measured around thirteen megawatts\footnote{For reference, a modern locomotive produced about 6MW of power}. Such losses can quickly become overwhelming, especially if we plan on detecting particles several orders of magnitude heavier than the Z boson.
+Due to the low mass of electrons and positrons, they radiate much more energy than a heavier particle would. In order to reach high energies, then, colliding protons provides the most effective solution to date, and this is exactly what the Large Hadron Collider at CERN was built to do.
+\vspace{5mm}
+%For example, a positron might be accelerate by the Sun's tumultuous electromagnetic fields to very high energy and it might collide with an atom in our atmosphere. The positron might annihilate with one of the electrons in that atom (through the process in Figure \ref{Fig:Intro:Vertex1}). Even if the electron was at rest, the positron carried sufficient energy that the resulting photon could decay into something heavier than the electron: a pair of muons for example. This is exactly how muons are produced in the atmosphere, and in fact, at sea level every square meter is showered with about a hundred muons per second.
 
-Fortunately, the radiated power depends not just on the E and B fields, but on the mass of the particles being accelerated: from Equation \ref{Eq:SynchRad} we can see that this dependence is $\sim 1/m^4$. If we accelerated protons instead of electrons, we decrease the radiated power by a factor of $10^{13}$.
+%Other particles should be accessible this way, but as can be seen in Figure \ref{Fig:Detect:Rates}, their rates are considerably lower than the muon. We would need to wait a very long time to have enough $W$s pass through our detector to have any hope of making a reasonable measurment.
+%\begin{figure}[h!]
+  %  \centering
+ %       \includegraphics[width=\textwidth]{F3/atmodepth}
+ %       \caption{Fluxes of common particles created in the atmosphere by cosmic rays. Note that muons are the most common charged particles produced in these interactions.}
+%        \label{Fig:Detect:Rates}
+%\end{figure}
+%The muon is relatively long-lived, while the bosons and heavier quarks would decay in flight. The muon only makes it to our detectors because it is moving near the speed of light and benefits from the effects of time dilation\textbf{The faster something goes, the slower time runs for it}.
+
+%Clearly then we need to force positron and electrons to collide on our terms, preferably at very high energies.
+
+%The most basic collider is a long, straight tunnel which fires a beam of electrons at a beam of positrons. Most of the positron and electrons will pass by each other, with only a few actually interacting. Because of this, it makes more sense to build circular rings spinning the particles in opposite directions. This way a bunch\textbf{this is a technical term, as we'll discuss later} of electrons isn't wasted if it doesn't produce any interesting interactions with the positrons: it'll whip around the ring for a second pass, and a third, until it's depleted.
+
+%The \textit{Large Electron-Positron} Collider at CERN was precisely such a machine, and was able to produce collisions with a center of mass energy of 206 GeV. More than enough energy to produce Z and W bosons (then the heaviest particles around). There are however some drawbacks to electron-positron colliders: charged particles radiate energy when they are bent by an electro-magnetic field, according to the following formula:
+%\begin{equation}\label{Eq:SynchRad}
+ %   P = \frac{e^4}{6\pi m^4c^5}E^2B^2
+%\end{equation}
+%For the E (electric) and B (magnetic) fields at the LEP collider, this was equivalent to $P \approx 0.2$mW \textit{per electron}. This may not seem like much, but even before LEP was opperating at its full potential the total synchrotron radiation output measured around thirteen megawatts\textbf{For reference, a modern locomotive produced about 6MW of power}. Such losses can quickly become overwhelming, especially if we plan on detecting particles several orders of magnitude heavier than the Z boson.
+
+%Fortunately, the radiated power depends not just on the E and B fields, but on the mass of the particles being accelerated: from Equation \ref{Eq:SynchRad} we can see that this dependence is $\sim 1/m^4$. If we accelerated protons instead of electrons, we decrease the radiated power by a factor of $10^{13}$.
 
 \section{The Large Hadron Collider}
-The Large Hadron Collider (LHC)\cite{lhcbrochure} is the premier proton collider in the world. It is the largest machine ever built, and has produced more particle data than all other experiments combined\footnote{To the tune of 300 gigabytes of data a second, necessitating the largest computing grid in the world to handle. During its entire lifetime, LEP produced 400 TB of data. The LHC has already produced 130 PB.}. It is where we look for new particles.
+The Large Hadron Collider (LHC)~\cite{lhcbrochure} is the largest collider ever built, colliding protons at the highest energy produced inside a collider, and producing more data than all other experiments combined. The LHC is located in a tunnel on the border of Switzerland and France, near Geneva, Switzerland. It has been running since 2007, colliding protons at a center of mass energy 7 TeV from 2007-2011, 8 TeV from 2011-2015, and now at 13 TeV. 
 
-The LHC is built in the same tunnel as the LEP, which it replaced, and turned on in 2007, initially colliding protons with a center of mass energy of 7 TeV. This energy was upgraded to 8 TeV in 2012, and it now operates with a center of mass energy of 13 TeV. A schematic of the LHC is shown in Figure \ref{Fig:Detect:LHC}.
+In order to create the proton beams used for collision in the LHC, the energy of the protons used for collisions is ramped up slowly. Hydrogen is stripped of electrons and fed into a linear accelerator, and then a succession of increasingly large circular synchrotrons. A schematic of the LHC can be found in Figure \ref{Fig:Detect:LHC}.
 \begin{figure}[h!]
     \centering
         \includegraphics[width=0.49\textwidth]{F3/LHC}
         \includegraphics[width=0.49\textwidth]{F3/LHC2}
-        \caption{(left) Schematic of the LHC and the smaller accelerators which feed it. (right) True size of the LHC. The main ring has a circumference of 27 km. Lake Geneva can be seen in the top right of the picture.}
+        \caption{(left) Schematic of the LHC and the smaller accelerators which feed into the LHC. (right) Aerial view of Geneva. The larger circle marks the location of the LHC, safely underneath the ground.}
         \label{Fig:Detect:LHC}
 \end{figure}
-Protons are accelerated in stages, initially in a linear accelerator and then through a series of increasingly large circular synchrotrons until they can be injected into the LHC's main rings. The two proton beams are identical other than the direction they travel in. The main rings are outfitted with 1,232 dipole magnets\footnote{a bar magnet is an example of a dipole magnet} which keep the protons moving along the beam direction (and accelerate them) and 392 quadrupole magnets (which are used to focus the beam, see Figure \ref{Fig:Detect:QuadPole}). The enormous 7 Tesla magnetic fields necessary to handle these ultra-high-energy protons can only be achieved with superconducting magnets which must be cooled to below 2 Kelvin. The LHC requires almost 100 tonnes of superfuild liquid helium to remain operational.
-\begin{figure}[h!]
-    \centering
-        \includegraphics[width=\textwidth]{F3/quadpole}
-        \caption{Quadrupole magnetic field, with the direction of the force felt by a charged particle in the field shown in blue. Alternating the N and S faces of the magnets allows the fields to focus a particle beam in both the vertical and horizontal directions.}
-        \label{Fig:Detect:QuadPole}
-\end{figure}
-At its current collision energy, the protons reach a top speed of 99.99999999$\%$ the speed of light\footnote{which is significantly faster than a Ferrari}. The beams are not continuous, but rather are composed of \textit{bunches} of protons, each bunch containing roughly 115 billion protons.
+Once the two beams of protons enter the LHC, they are accelerated to collision energies (currently 13 TeV, or 6.5 TeV per beam). These beams travel in opposite directions around the ring, which contains 1,232 dipole magnets to direct and accelerate the beams and 392 quadrupole magnets to focus the beams. The superconducting magnets are cooled to less than 2 K and produce a 7 T field. The protons travel in bunches of roughly 115 billlion each, with a spacing of 25 nanoseconds between crossings, barreling along at 99.99999999$\%$ the speed of light to collide within four detectors.
 
-The beams are made to cross at four experiments along the ring (see Figure \ref{Fig:Detect:LHC}. The spacing between bunches leaves 25 nanoseconds between crossings, equivalent to a collision rate of 40 MHz.
+% The LHC requires almost 100 tonnes of superfuild liquid helium to remain operational.
+%\begin{figure}[h!]
+  %  \centering
+     %   \includegraphics[width=\textwidth]{F3/quadpole}
+        %\caption{Quadrupole magnetic field, with the direction of the force felt by a charged particle in the field shown in blue. Alternating the N and S faces of the magnets allows the fields to focus a particle beam in both the vertical and horizontal directions.}
+        %\label{Fig:Detect:QuadPole}
+%\end{figure}
+%At its current collision energy, the protons reach a top speed of 99.99999999$\%$ the speed of light\textbf{which is significantly faster than a Ferrari}. The beams are not continuous, but rather are composed of \textit{bunches} of protons, each bunch containing roughly 115 billion protons.
+%The beams are made to cross at four experiments along the ring (see Figure \ref{Fig:Detect:LHC}. The spacing between bunches leaves 25 nanoseconds between crossings, equivalent to a collision rate of 40 MHz.
+\vspace{5mm}
 
 \subsection{A \textbf{proton-proton} Collision}
-Collision between electrons and positrons are easy to describe because both are point particles. Protons on the other hand, are composite. We usually talk about protons (and other hadrons like the neutron) as being composed of three quarks. This however is not strictly true: when we say that the proton is made up of two up and one down quarks, we are naming the \textit{valence} quarks of the proton. The proton is actually a complicated, ongoing interaction between those three quarks. The interaction is mediated by a web of gluons whose energy makes up the majority of the mass of the proton. And it's not one gluon per quark pair: the gluons interact with each other, spontaneously produce pairs of quarks from every generation, which decay back to gluons. As such, when we do smash two protons together with as much energy as the LHC provides, we aren't colliding protons, but rather, quarks or gluons (collectively called \textit{partons}).
+Because protons are composite particles, their collisions are not simple. While we speak of protons as being comprised of two up quarks and one down quark, these are in reality the valence quarks of the proton. The inner-workings of a proton are actually a complication, ongoing interaction between these three valence quarks, where this interaction involves gluons. These gluons also interact with each other, spontaneously producing different quarks which interact to become gluons again. Therefore, when protons are collided at the energy scales of a machine such as the LHC, we are actually colliding quarks and gluons, rather than protons. We call these quarks and gluons partons.
 
-This can make measurements particularly difficult, as it's almost impossible to know what actually collided. Instead, we rely on the \textit{Parton Distribution Function} (usually abbreviated as PDF\footnote{which makes google searches for them very difficult})\cite{Bourilkov:2006cj,Ball:2014uwa} for a statistical understanding of what to expect. While we can never know, collision per collision, what actually interacted with what, we can simulate the collisions and create good models of what we expect to see.
+%Alice start here (first paragraph is yours)
 
-Two example PDFs at different collision energies are shown in Figure \ref{Fig:Detect:PDFset}. The 10 TeV collision PDF is representative of what we might see at the LHC\footnote{currently opperating at 13 TeV}. The plots are read as follows: each curve represents a particle parton in a proton, and tells us the probability density\footnote{a quantum mechanical quantity easily converted to a probability} of finding that parton carrying \textit{momentum fraction} $x$. The momentum fraction is the fraction of the (longitudinal) momentum of the proton carried by that parton, so at the LHC $x=1$ would mean that parton with energy 6.5 TeV, $x=0.1$ would be a parton with energy 0.65 TeV, and so forth\footnote{the beams at the LHC have combined energy of 13 TeV, so 6.5 TeV per beam.}.
+This makes it much more difficult to know what has actually been collided each collision. We rely on Parton Distribution Functions~\cite{Bourilkov:2006cj,Ball:2014uwa} for a statistical understanding of what may be happening. Figure \ref{Fig:Detect:PDFset} shows two different simulated 
+
+
+Two example PDFs at different collision energies are shown in Figure \ref{Fig:Detect:PDFset}. The 10 TeV collision PDF is representative of what we might see at the LHC\textbf{currently opperating at 13 TeV}. The plots are read as follows: each curve represents a particle parton in a proton, and tells us the probability density\textbf{a quantum mechanical quantity easily converted to a probability} of finding that parton carrying \textit{momentum fraction} $x$. The momentum fraction is the fraction of the (longitudinal) momentum of the proton carried by that parton, so at the LHC $x=1$ would mean that parton with energy 6.5 TeV, $x=0.1$ would be a parton with energy 0.65 TeV, and so forth\textbf{the beams at the LHC have combined energy of 13 TeV, so 6.5 TeV per beam.}.
 \begin{figure}[h!]
     \centering
         \includegraphics[width=\textwidth]{F3/PDFset}
@@ -71,6 +78,7 @@ In two protons there are all the ingredients to create any particle in the stand
         \caption{The Compact Muon Solenoid.}
         \label{Fig:CMS:cms}
 \end{figure}
+
 \section{The Compact Muon Solenoid}
 The LHC collides protons at four experiments, each one-hundred meters below ground. Our analysis is performed on data collected by the Compact Muon Solenoid (CMS)\cite{Bayatian:922757}. Weighing in at 14,000 tons and run by a crew of almost 4,000 scientists, CMS may not seem compact, but it is the smaller (in volume) of the two main detectors on the LHC ring. A full description of its operation would easily fill an encyclopedia sized book, so we will just give a cursory overview: enough to understand how our analysis reconstructs collisions.
 
@@ -94,7 +102,7 @@ Where $\theta$ is the angle usually used alongside $\phi$ in spherical coordinat
         \caption{$\eta$ and it's relation to $\theta$.}
         \label{Fig:CMS:eta}
 \end{figure}
-We use $\eta$ instead of $\theta$ because differences in rapidity are Lorenz Invariant\footnote{A Lorenz Invariant quantity is independent of the reference frame it is measured in.}, with the pseudorapidity being approximately so. This is very useful property, for while the protons in each beam have the same energy, and are therefore symmetric in the laboratory rest frame, the partons which actually collide likely do not.
+We use $\eta$ instead of $\theta$ because differences in rapidity are Lorenz Invariant\textbf{A Lorenz Invariant quantity is independent of the reference frame it is measured in.}, with the pseudorapidity being approximately so. This is very useful property, for while the protons in each beam have the same energy, and are therefore symmetric in the laboratory rest frame, the partons which actually collide likely do not.
 
 When we measure a particle in the CMS detector, we report three values: its radial angle, $\phi$, pseudorapidity $\eta$ and transverse momentum $p_{T}$. The transverse momentum is the momentum perpendicular to the walls of the cylinder. We rarely have cause to leave these coordinates, but we could recover Cartesian coordinates through the following transformations:
 \begin{equation}
@@ -122,7 +130,7 @@ The Hadronic Calorimeter (HCAL) (shown in Figure \ref{Fig:CMS:Hadronic}) consist
         \label{Fig:CMS:Hadronic}
 \end{figure}
 \subsubsection{The Solenoid}
-All three of these detectors are contained within a large solenoid\footnote{basically a really big electromagnet}. This provides a field of 3.8 Tesla\footnote{this is a powerful field! A bar magnet usually has strength measured in millietesla.} This field causes charged particle tracks to bend. The degree of this effect is dependent on the particle energy, which allows us to use the silicon tracker to measure the momentum of particles. The field is powerful enough to shift the alignment of the detector, an effect which must be properly accounted for. Brass is non-magnetic, explaining the choice to use it in the HCAL. 
+All three of these detectors are contained within a large solenoid\textbf{basically a really big electromagnet}. This provides a field of 3.8 Tesla\textbf{this is a powerful field! A bar magnet usually has strength measured in millietesla.} This field causes charged particle tracks to bend. The degree of this effect is dependent on the particle energy, which allows us to use the silicon tracker to measure the momentum of particles. The field is powerful enough to shift the alignment of the detector, an effect which must be properly accounted for. Brass is non-magnetic, explaining the choice to use it in the HCAL. 
 \subsubsection{The Muon Chambers}
 The final detector layers are the Muon Chambers. Muons are too heavy to be stopped by the ECAL but not heavy enough to be stopped by the HCAL. Special detectors are instead used to detect them. There are three kinds of muon chambers, all of which operate on the same principle: as the muon traverses them, it knocks electrons off of gas atoms. These electrons are collected by the detector to measure the energy: the more electrons, the more energetic the muon.
 \subsection{The Particle Flow Algorithm}
