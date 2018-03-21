@@ -1,0 +1,93 @@
+\chapter{Looking for New Physics}\label{Sec:BSM}
+
+In the previous chapters we learned about the Standard Model, interesting new physics that we can test for at the LHC related to the Higgs boson, and the design of the LHC and CMS. Armed with all of this information, we can now understand how to go about finding this new physics (or proving that it doesn't exist in a certain phasespace).
+\vspace{5mm}
+
+\section{Signal Signature}
+
+We are looking for events in CMS data that have two Higgs boson. Inside the detector, the Higgs boson immediately decays, and we observe its decay products rather than the Higgs itself. The most common decay mode for a Higgs boson is into two b quarks, so this is what we choose to look at in our analysis. Since there are two Higgs bosons, we are looking for events with four b-quarks. B-quarks show up in the CMS detector as jets. However, the number of jets we expect to see is dependent upon how much momentum each Higgs boson has. The more momentum a particle has, the more collimated its decay products tend to be. In Figure~\ref{Fig:lorentzboost}, we see that if a particle is produced with no momentum, its decay products will be scattered in the detector. However, as a particle is produced with higher and higher momentum, this Lorentz boost causes the decay products to become collimated. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.8\textwidth]{F4/boost.png}
+        \caption{Drawing of decay products with varying degrees of Lorentz boost.}
+        \label{Fig:lorentzboost}
+\end{figure}
+
+Since we are looking for events with two Higgs bosons, we expect that the total energy E from the pp collision must be at minimum 2$\text{M}_{H}$ = 250 GeV. If the total energy E $\sim$ 250 GeV or slightly greater, then we expect each Higgs boson to be produced with little momentum. This means that the decay products of each Higgs will not be collimated. Therefore, we would expect to see an event with four distinct AK4 (small) jets, most likely paired off but not too close to any other jet. We would expect the event signature to look something like that of Figure~\ref{Fig:threecases1}. This analysis, called the resolved case, is important, but is being performed by other CMS collaborators, so we will only refer to this analysis when speaking about combining results across the different scenarios.
+\begin{figure}[h!]
+    \centering
+       \includegraphics[width=0.7\textwidth]{F4/resolved.png}
+        \caption{Signature for resolved two Higgs to four b-quarks.}
+        \label{Fig:threecases1}
+\end{figure}
+
+On the other hand, it is also possible that two protons come in and smash with a combined energy E $>>$ 2$\text{M}_{H}$. Both Higgs bosons would have considerable momentum in this case, and we would expect the decay products to be collimated. Rather than two distinct AK4 jets per Higgs, we would expect these AK4 jets to merge into one AK8 (large) jet. This means that these events would have two large jets, each representing one Higgs, similar to Figure~\ref{Fig:threecases2}. These events are called merged events.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.7\textwidth]{F4/merged.png}
+        \caption{Signature for merged two Higgs to four b-quarks.}
+        \label{Fig:threecases2}
+\end{figure}
+
+Lastly, given these two extremes, we expect some events to have an energy E in the middle such that one Higgs boson is produced with enough momentum to collimate two AK4 jets into one big AK8 while the other Higgs boson does not have enough momentum and is reconstructed as two small AK4 jets (Figure~\ref{Fig:threecases3). We then expect one AK8 jet which is far away from two AK4 jets which are close to each other, but not so close as to have merged into one AK8 jet. We call these events semi-resolved since one half of the event looks like the merged case and the other half looks like the resolved case. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.7\textwidth]{F4/semiresolved.png}
+        \caption{Signature for semi-resolved two Higgs to four b-quarks.}
+        \label{Fig:threecases3}
+\end{figure}
+In this thesis, we will focus on the semi-resolved case and its combination with the merged case.
+\vspace{5mm}
+
+\section{Distinguishing Signal from Background}
+The main background for any hadronic analysis such as this one is multi-jet events caused by random hadronic events. This is quite common at the LHC, and comprises the majority of events observed. Signal, or two Higgs decaying to four b quarks (HH$\rightarrow$bbbb) is quite rare. In order to be able to make a discovery or rule out phasespace related to this analysis, we must find ways to distinguish signal from background. In this section, we will cover several different tools that provide a good way to reduce background events while retaining as many signal events as possible.
+
+%Alice start here
+\subsection{The Soft-Drop Mass Algorithm}
+Tops and Ws have large masses (170 and 90 GeV respectively). Heavy particles tend to hadronize into wider cones. To see why this is the case, consider a W boson at rest. Ws decaying hadronically do so through a pair of quarks. These quarks, in the rest frame of the W, are emitted back to back and travel away from each other. In The frame of the detector, the angle between the two quarks is dependent only on the velocity the W had. Low energy Ws will produce two separate quark-jets, while high energy ones (which we call \textit{boosted}) will have their decay products merged into single jets. 
+
+To maximize our chance of collecting all the decay products in a single jet, we use the wider AK8 jets to reconstruct Ws (and tops). Ws with transverse momentum above 200 GeV and tops above 400 GeV have sufficient energy to collimate their decay products into a single AK8 jet. Our analysis restricts itself to finding these boosted Ws and tops, as the large masses of the $Z^\prime$ and $T^\prime$ lend themselves to high energies for their decay products.
+
+The mass of an AK8 jet is found by summing the momentum vectors of all its constituent particles into one combined object. The mass of a jet from a top or from a W should be large compared to the average light flavor jet. However, due to the pileup at CMS, jets from background QCD processes may appear to have large masses as well. Several \textit{grooming} algorithms exist to better define the mass of a jet. We use on in particular: the \textit{Soft-Drop Mass Algorithm}\cite{Larkoski:2014wba}.
+
+The algorithm works by unclustering the jet, following the reverse order of the algorithm used to create it (in our case, the AK algorithm). At each stage the two pseudo-jets (labeled 1 and 2 in hte following equation) are evaluated in the condition:
+\begin{equation}
+   \frac{\textrm{min}(p_{T,1},p_{T,2})}{p_{T,1} + p_{T,2}} > z
+\end{equation}
+where $z$ determines the strength of the cut. We use $z=0.1$ in our analysis. If the condition is met, then the jet is kept as is. Otherwise the lower energy subjet is discarded and the procedure continues. The condition is meant to emulate the behavior of a jet arising from real decays from a heavy particle, rather than the scattered constituents of a background jet. The effect of applying this algorithm to jets can be seen in Figure \ref{Fig:Tag:SD}.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F4/JetMassChange}
+        \caption{The mass of ungroomed jets (left) is a poor choice for differentiating jets from real top decays. The Soft Drop algorithm (right) allows the W and top peaks to be identified and reduces the mass of most background jets. The peak around 100 GeV is the W, while the peak around 200 is the top.}
+        \label{Fig:Tag:SD}
+\end{figure}
+We will use the Soft Drop mass as a tagging variable to identify W and top jets.
+\subsection{The N-subjetiness Algorithm}
+Despite the gains of a grooming algorithm for jet mass, the large cross-sections of background processes compared to our signal oblige us to use further tagging requirements for our jets. For top-tagging, we use a variable called the \textit{n-subjetiness}\cite{Thaler:2010tr,Thaler:2011gf}. The N-subjetiness algorithm defines variables $\tau_N$, where N is the number of subjet axes,
+ as follows:
+\begin{equation}
+\tau_N = \frac{1}{d_0}\sum_i p_{T_i}\times min(\Delta R_{1,i},\Delta R_{2,i},...,\Delta R_{N,i})
+\end{equation}
+Where $\Delta R_{j,i}$ is the distance between the subjet axis $j$ and the PF candidate $i$. $d_0$ is a normalizing term which takes $p_T$ into account, with $d_0 = \sum p_{T_i} R_0$. The quantity $\tau_3/\tau_2$ is indicative of how likely a jet is to originate from a top (with three subjets). This variable is shown for top jets and background jets in Figure \ref{Fig:Tag:Tau32}
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.66\textwidth]{F4/Tau32}
+        \caption{N-subjetiness variable $\tau_3/\tau_2$ for top jets and background jets. A cut can be made that keeps only jets with low values of $\tau_3/\tau_2$, thus reducing the background.}
+        \label{Fig:Tag:Tau32}
+\end{figure}
+\subsection{B-Tagging}
+\subsubsection{Deep CSV Algorithm}
+The N-subjetiness can also be used to identify W jets using the ratio $\tau_2/\tau_1$, however, we forgo this in our analysis. The $\tau_2/\tau_1$ has a dependence not just on mass, but on the momentum of the jet, which complicates its use in background estimation. In addition, the separation between signal and background is not as strong. We will only use the soft-drop mass to tag Ws.
+
+We will complement this relatively weak requirement with a tag on potential b jets. b quarks are an order of magnitude lighter than the W, and therefore cannot be identified by their mass. Instead, we rely on a different property: the long decay time of the B-meson.
+
+If we recall the CKM Matrix (equation \ref{Eq:CKM}), we note that the decay rates from $b$ to $u$/$c$ are smaller than the rates for the other quarks (excluding of course the top). This means that B-mesons (two-quark pairs which contain a b-quark) have a longer decay time than most other constituents (about $1.5$ps, enough time to travel hundreds of $\mu$m). When this meson eventually decays, it creates a new vertex (called the \textit{secondary vertex}) which is significantly displaced from the primary vertex.
+
+The CSV Algorithm is a multi-variate measurement of jets with a displaced vertex, which takes into account a number of kinematic factors of the jet constituents and the displacement of the vertex to compute a discriminant variable which is in turn a function of the likelihoods of the jet originating from a b, c or other parton. This discriminator is shown in Figure \ref{Fig:Tag:Btag}, as can be seen in the figure, the CSV discriminator separates the b jets from background jets.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{F4/Btag}
+        \caption{CSV (version 2) discriminator for jets from a light (dashed line), charm (dotted line) and b (solid line) partons. The discriminator peaks sharply at 1 for jets originating from a b parton.}
+        \label{Fig:Tag:Btag}
+\end{figure}
+\subsubsection{Double b Algorithm}

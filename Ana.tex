@@ -1,0 +1,436 @@
+\chapter{Semi-resolved Analysis}\label{Sec:Ana}
+
+jet kinematics (pt, eta, dR, deltaEta between jets)
+
+masses
+
+deep CSV, double b-tagger
+
+puppi tau21
+
+reduced mass
+
+lepton veto 
+
+triAK4jet mass
+
+\subsection{Trigger and event cleaning\label{ss:trigger}}
+
+The same dataset, triggers, and trigger efficiency calculations used for the boosted analysis ~\cite{CMS-PAS-B2G-16-026} (documented in AN-16-300) are used in this analysis. The trigger algorithms used in this analysis place requirements on the scalar sum of jet transverse energy, \HT, jet \pt, the jet groomed mass, or \PQb-tagging. The trigger paths used are listed in Table~\ref{tab:trigpaths}. The L1 $\HT$ trigger paths in the later run periods were observed to have an inefficiency that is recovered using the jet $\pt$ based triggers. The \texttt{HLT\_PFHT800} trigger was prescaled in Run2016H and hence the path \texttt{HLT\_PFHT900} was added to compensate for this.
+
+\begin{table} [htbH]\tiny
+  \begin{center}
+    \topcaption{The HLT paths used and the corresponding L1 seeds.}\label{tab:trigpaths}
+    \begin{tabular}{l|l}
+      \hline
+      HLT path & L1 seeds \\
+      \hline
+       \texttt{PFHT650\_WideJetMJJ900DEtaJJ1p5}              & \texttt{HTT160/300/320/270/280/240/220/200/255} \\  
+       \texttt{AK8PFHT650\_TrimR0p1PT0p03Mass50}             & \texttt{HTT240/255/270/280/300/320} \\  
+       \texttt{AK8PFHT700\_TrimR0p1PT0p03Mass50}             & \texttt{HTT240/255/270/280/300/320} \\
+       \texttt{PFHT800}                                      & \texttt{HTT160/300/320/270/280/240/220/200/255} \\  
+       \texttt{PFHT900}                                      & \texttt{HTT160/300/320/270/280/240/220/200/255} \\  
+       \texttt{AK8PFJet360\_TrimMass30}                      & \texttt{SingleJet180/200} \\  
+       \texttt{AK8DiPFJet280\_200\_TrimMass30\_BTagCSV\_p20} & \texttt{SingleJet180/200} \\   
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+The trigger requirement is applied to both the data and the MC (signal and \ttbar). In order to compensate for the difference in trigger response between the data and the simulation, trigger efficiency scale factors, defined as the ratio of the trigger efficiency as measured in the data to that in the MC, are applied to the simulated events. A baseline trigger of \textsc{HLT\_PFJet260} is used to select events for the measurement of the trigger efficiency. This trigger is prescaled over much of the run period, yet provides enough events for measurement of the efficiencies and the scale factors. Events passing the baseline trigger are further required to pass selection criteria close to the signal selection in the actual analysis:
+\begin{itemize}
+ \item At least one AK8 jet in the event with $\pt > 300\GeV$ and $|\eta| < 2.4$;
+ \item At least two AK4 jets with $\pt > 30\GeV$ and $|\eta| < 2.4$, with a deep CSV value $>$ 0.6324;
+ \item Out of the AK8 and AK4 jets that satisfy the above requirements, one AK8 jet and two AK4 jets are chosen to be the three signal jets. The highest $\pt$ AK8 jet with $M_{\rm soft\,drop} > 40$ \GeV that is $\Delta R$ $>$ 0.8 away from two AK4 jets that are within $\Delta R$ $<$ 1.5 of each other is chosen. If there are more than two AK4 jets that satisfy this criteria, the two AK4 jets with the highest deepCSV value are chosen.
+ \item The soft drop mass of the AK8 jet is $105 < M_{\rm soft\,drop} < 135\GeV$, with all necessary jet mass corrections applied;
+ \item The combined mass of the two AK4 jet is $90 < M_{dijet} < 140\GeV$;
+% \item The AK8 jet is $\Delta R$ $>$ 0.8 away from each AK4 jet, and the two AK4 jets are within $\Delta R$ $<$ 1.5,
+ %      and if more than one AK8 + two AK4 triplet is found, the triplet with highest $\pt$ AK8 jet and then the highest AK4 deep CSV values is chosen;
+ \item Reduced mass, introduced in Eqn.~\ref{eq:Mjjs}, $>$ 750 GeV, since the analysis has little sensitivity below this value;
+ \item $\Delta\eta$ = $|AK8\eta - (AK4jet1 + AK4jet2)\eta| < 2.0$;
+%and if more than one AK8 + two AK4 triplet is found, the triplet with the |lowest M_{\rm soft\,drop} - 120| and the highest AK4 deep CSV values is chosen.
+ \item Lepton veto.
+\end{itemize}
+In addition to the selection, the trigger efficiency is calculated separately for events with $\Delta\eta < 1.0$ and events with $1.0 \leq \Delta\eta < 2.0$. The details of these variables and selections are later described in Secs.~\ref{ss:JetSel},~\ref{ss:EvtSelMass}, and~\ref{ss:HTag}. To reiterate, first we pick out AK4 jets that have $p_{T}$ $>$ 30, $|\eta| <$ 2.4, and deep CSV $>$ 0.6324. Out of this group we find all AK4 jet pairs where each AK4 jet is at least $\Delta R >$ 0.8 away from the highest $p_{T}$ AK8 jet, and within $\Delta R$ of 1.5 of each other. If there are more than one pair, we pick the pair with the highest deepCSV values. If there are no pairs, we repeat this second step for the second highest $p_{T}$ AK8 jet and check if we get a pair of AK4 jets that match the criteria. Once again, if there are more than one pair, we pick the pair with the highest deepCSV values, and if there are none, the event is rejected. The process by which we choose AK4 and AK8 jets has been optimized (App.~\ref{app:AK8AK4choice}), as well as the $p_{T}$ cuts (App.~\ref{app:pt}) and deep CSV cuts (App.~\ref{app:deepCSV}). A study on what $\Delta\eta$ cuts were optimal is documented in App.~\ref{app:deta}. 
+
+Trigger efficiency is measured as a function of the ``reduced mass'' introduced in Eqn.~\ref{eq:Mjjs} of Section~\ref{sss:DijetMassDef}. The efficiency is shown in Fig.~\ref{fig:trigeEffvsMjj_JetHT_DetaBins}. Trigger efficiency was also examined in $H_{T}$, and efficiency as a function of $\Delta\eta$ between the two AK4 jets and the AK8 jet is examined; both studies can be found in App.~\ref{app:trigger}, along with a study of how the trigger paths were chosen, individual trigger path efficiencies, and trigger efficiency below 750 GeV. The trigger efficiency at low mass in the high $\Delta\eta$ region is higher than expected due to the inefficiency of \textsc{HLT\_PFJet260} at low mass. A detailed study of this feature can be found in App.~\ref{app:trigger}. In addition to these studies, the use of HLT\_AK8DiPFJet280\_200\_TrimMass30\_BTagCSV\_p20 with respect to online b-tagging requirements and the flavour composition of the trigger preselection sample is examined in App.~\ref{app:trigger}.
+%The $\Delta\eta_{jj}$ variable if quite different for the signal and the background, and hence the efficiency is measured in three $\Delta\eta_{jj}$ regions: 0.0--0.434, 0.434--0.868, and 0.868--1.3. The efficiencies are shown in Fig.~\ref{fig:trigeEffvsMjj_JetHT_DetaBins}. 
+
+\begin{figure}[h]
+  \begin{center}  
+    \includegraphics[width=0.45\textwidth]{F5/trigefDeta0v2.pdf} 
+    \includegraphics[width=0.45\textwidth]{F5/trigefDeta1v2.pdf} 
+ %   \includegraphics[width=0.45\textwidth]{F5/JetHT_QCD_mjjred_py0_trigEff.pdf} 
+
+ %   \includegraphics[width=0.45\textwidth]{F5/JetHT_QCD_mjjred_py1_trigEff.pdf} 
+ %   \includegraphics[width=0.45\textwidth]{F5/JetHT_QCD_mjjred_py2_trigEff.pdf} 
+  \end{center}
+  \caption{The trigger efficiency, as a function of $\mjjs \equiv \mjj - (\mj^{1}-\mH) - (\mj^{2}-\mH)$, defined in Section~\ref{sss:DijetMassDef}, in the data and QCD MC, where $\mj^{1}$ is the AK8 softdrop mass, $\mj^{2}$ is the combined AK4 dijetmass, and $\mH$ is 125. Efficiency is defined for different $\Delta\eta$ regions: 0.0--1.0 (left), 1.0--2.0 (right).%, 0.434--0.868 (lower left), and 0.868--1.3 (lower right). 
+ The 23Sep2016 re-reco for Runs2016B-G and PromptReco for Run2016H are used, totalling to an integrated luminosity of \intLumi.}
+  \label{fig:trigeEffvsMjj_JetHT_DetaBins}
+\end{figure}
+
+%The combined set of triggers reaches full efficiciency for $\mjjs > 1000\GeV$ over all the $\Delta\eta$ ranges. 
+For $\mjjs < 1000\GeV$, the trigger efficiencies are higher for smaller $\Delta\eta$, where most of the signal lie, and are smaller at larger values of $\Delta\eta_{jj}$. Furthermore, the data/MC scale factor too varies depending on $\Delta\eta_{jj}$. Since we begin the search from $\mjjs$ well below 1000\GeV, one needs to be especially careful of the modelling of the trigger efficiency turn-on curves in the data and the simulations. Since the baseline trigger \textsc{HLT\_PFJet260} too has some inefficiency for low \mjjs, we measure it in the MC and assign an uncertainty to the trigger efficiency scale factor based on this. 
+
+\begin{figure}[h]
+  \begin{center}  
+    \includegraphics[width=0.45\textwidth]{F5/QCDDeta0v2.pdf} 
+    \includegraphics[width=0.45\textwidth]{F5/QCDDeta1v2.pdf} 
+  \end{center}
+  \caption{The trigger efficiency for the baseline trigger \textsc{HLT\_PFJet260}, as a function of $\mjjs \equiv \mjj - (\mj^{1}-\mH) - (\mj^{2}-\mH)$, defined in Section~\ref{sss:DijetMassDef}, for different $\Delta\eta$ regions: 0.0-1.0 (left) and 1.0-2.0 (right).%, for different $\Delta\eta_{jj}$ regions: 0.0--1.3, 0.0--0.434, 0.434--0.868, and 0.868--1.3. 
+The percentage difference between one and these turn-on curves are taken as an uncertainty on the trigger efficiency scale factor.}
+  \label{fig:trigeEffvsMjj_QCDHT_HLTPFJet260_DEtabins}
+\end{figure}
+
+Figure~\ref{fig:trigeEffvsMjj_QCDHT_HLTPFJet260_DEtabins} shows the \textsc{HLT\_PFJet260} trigger turn-on curves for different $\Delta\eta$ regions in MC, %for different $\Delta\eta_{jj}$ in MC, 
+w.r.t. only the event selection. The difference between unity and the trigger efficiency is propagated to the scale factor as a systematic uncertainty. 
+The scale factor and errors are shown in Fig.~\ref{fig:trigSF}. %~\ref{fig:trigeEffSFvsMjj_JetHT_DetaBins}. 
+%The trigger efficiency is also measured in different run periods separately in ~\cite{CMS-PAS-B2G-16-026}. 
+The boosted analysis~\cite{CMS-PAS-B2G-16-026} presents a study measuring the trigger efficiency in different run periods separately.
+
+%The efficiency turn-on curves are shown in Fig.~\ref{fig:Mjj_trigeEffvsMjj_JetHT} of Appendix~\ref{app:TrigEffs}.
+
+\begin{figure}[h]
+  \begin{center}  
+    \includegraphics[width=0.45\textwidth]{F5/SFdEta0v2.pdf} 
+    \includegraphics[width=0.45\textwidth]{F5/SFdEta1v2.pdf} 
+%    \includegraphics[width=0.33\textwidth]{F5/c_gsftrigger_0p0To0p434} 
+%    \includegraphics[width=0.33\textwidth]{F5/c_gsftrigger_0p868To1p3} 
+  \end{center}
+  \caption{The trigger efficiency scale factors, as a function of $\mjjs$, defined in Section~\ref{sss:DijetMassDef}. The error bars are the combined statistical and systematic errors. The 23Sep2016 re-reco for Runs2016B-G and PromptReco for Run2016H are used, totalling to an integrated luminosity of \intLumi.}
+  \label{fig:trigSF}
+  \end{figure} 
+%  \caption{The trigger efficiency scale factors, as a function of $\mjjs \equiv \mjj - (\mj^{1}-\mH) - (\mj^{2}-\mH)$, defined in Section~\ref{sss:DijetMassDef}, for different $\Delta\eta_{jj}$ regions: 0.0--0.434 (left), 0.434--0.868 (centre), and 0.868--1.3 (right). The error bars are the combined statistical and systematic errors. The 23Sep2016 re-reco for Runs2016B-G and PromptReco for Run2016H are used, totalling to an integrated luminosity of \intLumi.}
+%  \label{fig:trigeEffSFvsMjj_JetHT_DetaBins}
+%\end{figure}
+
+
+%%%%%%%%%%%%%%%%
+
+%\begin{figure}[h]
+%  \begin{center}  
+%    \includegraphics[width=0.45\textwidth]{F5/SingleMu_RunsBtoH_mjj_all_pass.pdf} 
+%    \includegraphics[width=0.45\textwidth]{F5/SingleMu_RunsBtoH_trigeff_mjj.pdf} 
+
+%    \includegraphics[width=0.45\textwidth]{F5/SingleMuon_RunsBtoH_mjjred_MJSel_all_pass} 
+%    \includegraphics[width=0.45\textwidth]{F5/SingleMuon_RunsBtoH_trigeff_mjjred_MJSel} 
+%  \end{center}
+%  \caption{The dijet mass distribution used to derive the efficiency in data (upper left) and the trigger efficiency as measured in data (upper right)  using the \texttt{SingleMuon} dataset. The same distributions as a function of $\mjjs \equiv \mjj - (\mj^{1}-\mH) - (\mj^{2}-\mH)$, defined in Section~\ref{sss:DijetMassDef}, is shown in the bottom F5. The 23Sep2016 re-reco for Runs2016B-G and PromptReco for Run2016H are used, totalling to an integrated luminosity of \intLumi. }
+%  \label{fig:Mjj_trigeEffvsMjj_SingleMu}
+%\end{figure}
+
+Earlier the boosted analysis measured the trigger efficiency using an orthogonal trigger path \texttt{HLT\_Mu50} in bins of 20\GeV in the dijet mass distribution. {\bf However, this is no longer used, since our event selection vetoes events with isolated leptons, and hence this selection is completely orthogonal to our signal region.} The details of this study can be found in ~\cite{CMS-PAS-B2G-16-026}, along with a study comparing our trigger efficiency to the SingleMu in B2G-16-026 in App.~\ref{app:trigger}.
+%The dijet mass distribution used to derive the efficiency using this old strategy in data can be found in Fig.~\ref{fig:Mjj_trigeEffvsMjj_SingleMu} (upperleft) and the trigger efficiency measured in data can be found in Fig.~\ref{fig:Mjj_trigeEffvsMjj_SingleMu} (top right). An efficiency of $> 99\%$ is reached for dijet mass above 1.1\TeV. The efficiency turn-on curves for the Run periods B--H individually are shown in Fig.~\ref{fig:Mjj_trigeEffvsMjj_SingleMu_RunPeriods} of Appendix~\ref{app:TrigEffs}. The same figure also shows the trigger turn-on as a function of $\mjjs \equiv \mjj - (\mj^{1}-\mH) - (\mj^{2}-\mH)$, defined in Section~\ref{sss:DijetMassDef}. This is the variable that we use for the search for a di-Higgs resonance.
+
+%\textcolor{red}{Is this still true?}
+After passing the trigger, events are required to have at least one reconstructed $\Pp\Pp$ collision vertex satisfying the following criteria:
+\begin{itemize}
+  \item Vertex number of degrees of freedom $> 4$;
+  \item Absolute displacement from the beamspot position along the $z$ direction $< 24$~\cm;
+  \item Absolute displacement from the beamspot position along the transverse direction $< 2$~\cm.
+\end{itemize}
+Many additional vertices, corresponding to other overlapping $\Pp\Pp$ collisions (pileup), are usually reconstructed in an event using charged particle tracks. We assume that the primary interaction vertex (PV) corresponds to the one that maximizes the sum in $\pt^2$ and the magnitude of $\sum{\pt}$ from the associated physics objects. 
+
+A lepton veto is applied. Events are vetoed if they contain one (with tight ID) or two (with loose ID) opposite-sign same-flavour isolated electrons or muons with $\pt$ in excess of 20 GeV. No veto on the presence of isolated photons is applied. The muon loose and tight IDs are defined in the muon twiki and the isolation used is pfreliso $<$ 0.15. For electrons, we use MVA IDs (Spring16). Electron and muon scale factors are not applied as the percent of signal events lost due to the lepton veto is less than 1\%.
+
+\subsection{Jet kinematics selection\label{ss:JetSel}}
+
+Individual particles are reconstructed using a particle flow (PF) algorithm~\cite{PFPAS2009, CMS-PAS-PFT-10-001}, that combines the information from all the CMS detector components. Each such particle is referred to as a PF candidate. The five classes of PF candidates are  muons, electrons, photons, charged hadrons, and neutral hadrons. 
+
+The anti-$k_{t}$ algorithm~\cite{antiKtAlgorithm}, implemented in \textsc{FastJet}~\cite{Cacciari:2011ma}, clusters PF candidates~\cite{PFPAS2009, CMS-PAS-PFT-10-001} into jets using a distance parameter $R = 0.8$ (referred to as AK8 jets) and jets using a distance parameter $R = 0.4$ (referred to as AK4 jets). 
+In order to mitigate the effect of pileup on jet observables, we take advantage of pileup per particle identification (PUPPI) ~\cite{puppi} for AK8 jets. This method uses local shape information, event pileup properties and tracking information together in order to compute a weight describing the degree to which a particle is pileup-like. No additional pileup corrections are applied to AK8 jets clustered from these weighted inputs.
+
+The jet 4-momenta are corrected to account for the difference between the measured and the expected momentum at the particle level, using a standard CMS correction procedure described in Refs.~\cite{JINST6,CMS-DP-2013-011}. The \texttt{Summer16\_23Sep2016V4} jet energy corrections~\cite{JESUncertaintyTWiki} were used. The \texttt{Spring16\_25nsV10} jet energy resolutions are used.  All AK8 jets are further required to pass TightLepVeto jet identification requirements~\cite{JetID13TeVTWiki} provided by the JetMET POG, which was chosen over Tight to reject leptons more efficiently. These requirements are summarized in Table~\ref{tab:tightjetid}.
+
+\begin{table}[htb]
+  \begin{center}
+    \topcaption[The ``TightLepVeto'' PF jet identification quality criteria used in the analyses.]{TightLepVeto PF jet identification quality criteria used in the analyses.\label{tab:tightjetid}}
+    \begin{tabular}{l r}
+    \hline
+    \hline
+    Variable &  Cut \\
+    \hline
+    Neutral Hadron Fraction & $<0.90$  \\
+    Neutral EM Fraction     & $<0.90$  \\
+    Number of Constituents  & $>1$     \\
+    Muon Fraction           & $<0.8$   \\
+    Charged Hadron Fraction & $>0$     \\
+    Charged Multiplicity    & $>0$     \\
+    Charged EM Fraction     & $< 0.90$ \\
+    \hline
+    \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Figs.~\ref{fig:AK8pteta},~\ref{fig:AK41pteta},~\ref{fig:AK42pteta} show the $\pt$ and $\eta$ of the three selected jets. A preselection is applied to QCD MC, \ttbar MC, and signal points for masses 600, 800, 1000, and 1200 GeV as follows:
+
+\begin{itemize}
+ \item Passes trigger selection;
+ \item At least one AK8 jet in the event with $\pt > 300\GeV$ and $|\eta| < 2.4$;
+ \item At least two AK4 jets with $\pt > 30\GeV$ and $|\eta| < 2.4$, with a deep CSV value $>$ 0.2219;
+ \item Out of the AK8 and AK4 jets that satisfy the above requirements, one AK8 jet and two AK4 jets are chosen to be the three signal jets. The highest $\pt$ AK8 jet with $M_{\rm soft\,drop} > 40$ \GeV that is $\Delta R$ $>$ 0.8 away from two AK4 jets that are within $\Delta R$ $<$ 1.5 of each other is chosen. If there are more than two AK4 jets that satisfy this criteria, the two AK4 jets with the highest deepCSV value are chosen.
+% \item The AK8 jet is $\Delta R$ $>$ 0.8 away from each AK4 jet, and the two AK4 jets are within $\Delta R$ $<$ 1.5,
+ %      and if more than one AK8 + two AK4 triplet is found, the triplet with highest $\pt$ AK8 jet and then the highest AK4 deep CSV values is chosen;
+% \item Reduced mass, introduced in Eqn.~\ref{eq:Mjjs}, $>$ 700 GeV, since the analysis has little sensitivity below this value;
+% \item $\Delta\eta$ = $|AK8\eta - (AK4jet1 + AK4jet2)\eta| < 2.0$;
+%and if more than one AK8 + two AK4 triplet is found, the triplet with the |lowest M_{\rm soft\,drop} - 120| and the highest AK4 deep CSV values is chosen.
+ \item Lepton veto.
+  \item Fails selection of the fully boosted HH4b analysis~\cite{CMS-PAS-B2G-16-026} and the selection of the fully resolved analysis (HIG-17-009), which is documented in Sec.~\ref{ss:boostres}.
+\end{itemize}
+
+All F5 in this section have the same preselection, with QCD MC (yellow) and \ttbar (red) weighted by their cross section multiplied by the luminosity of the dataset and divided by the total number of events. The signal samples (different dashed lines) are weighted by 50 multiplied by the cross section multiplied by the luminosity of the dataset and divided by the total number of events, so that they are easy to see on the plots. The optimization of the $\pt$ cut is documented in App.~\ref{app:pt}, while the additional preselection cuts are used to choose a phase space similar to that of the signal region while remaining as general as possible to show the shape of each variable.
+
+The analysis is performed in two different $\Delta\eta$ regions, 0--1.0 and 1.0--2.0. This variable can be found in Fig.~\ref{fig:deta}. The peak in AK8 jet $p_{T}$ in QCD below 100 GeV goes away once the mass selection is applied (see Fig.~\ref{fig:dMCAK8pteta}).
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{F5/shapeptFJ.pdf}
+\includegraphics[scale=0.34]{F5/shapeetaFJ.pdf}\\
+\end{center}
+\caption{Left. The $\pt$ of the AK8 jet. Right. The $\eta$ of the AK8 jet.}
+\label{fig:AK8pteta}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{F5/shapeptJ1.pdf}
+\includegraphics[scale=0.34]{F5/shapeetaJ1.pdf}\\
+\end{center}
+\caption{Left. The $\pt$ of the highest $\pt$ selected AK4 jet. Right. The $\eta$ of the highest $\pt$ selected AK4 jet.}
+\label{fig:AK41pteta}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{F5/shapeptJ2.pdf}
+\includegraphics[scale=0.34]{F5/shapeetaJ2.pdf}\\
+\end{center}
+\caption{Left. The $\pt$ of the other selected AK4 jet. Right. The $\eta$ of the other selected AK4 jet.}
+\label{fig:AK42pteta}
+\end{figure} 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.34]{F5/shapedeta.pdf}
+\end{center}
+\caption{The absolute value of $\Delta\eta$ between the AK8 jet and the combined 4 vector of the AK4 jets. We require $|\Delta\eta| < 2.0$.}
+\label{fig:deta}
+\end{figure} 
+
+\subsection{\texorpdfstring{\PH}{H} mass selection\label{ss:EvtSelMass}}
+
+The mass of the AK8 jet can be used to suppress the multijet and \ttbar backgrounds. Underlying event (UE) activity and pileup energy are first removed from the AK8 jet through the implementation of a jet-grooming algorithm called Soft Drop~\cite{jetpruning1,jetpruning2}. 
+
+%The invariant mass $\mjj$ is calculated for the two leading jets. In Fig. the raw $\mjsd$ distribution of the two leading jets is shown for both simulated background and signal events. For jets initiated by a quark or a gluon, $\mjsd$ peaks around 15~\GeV, while jets from high-momentum $\PH$ boson decay usually have a soft-drop mass around 120~\GeV.  The difference of $\approx 5\GeV$ relative to the nominal $m_\PH$ value is related to the presence of neutrinos produced by the semileptonic decays of \PB~mesons, and the inherent nature of  the softdrop procedure \cite{CMS-AN-15-265}. A small peak near 15~\GeV is also observed for signal events, and corresponds mainly to asymmetric decays in which the softdrop algorithm removes the decay products of one of the two \PB~mesons.
+
+A dedicated jet energy energy calibration is applied to the softdrop mass as derived in Ref.~\cite{CMS-AN-16-235}. The correction is derived in two steps. First, a weight to account for a $\pt$ dependent softdrop jet mass shift introduced at generator level (``gen correction'') is computed. Second, to account for any residual $\pt$ and $\eta$ dependence, an additional weight is calculated based on the difference between the reconstructed and the generated softdrop mass (``reco correction'') after the ``gen correction'' calculated previously has been applied. The difference in reconstructed and generated softdrop mass is a 5-10\% effect. 
+Fig.~\ref{fig:AK8mass} shows the AK8 soft-drop corrected jet mass. The corrections applied to H-jets yield a mass stable with \pt and number of true interactions, peaking around the H mass. Distributions of AK8 uncorrected soft-drop jet mass and details relating to the uncorrected distributions can be found in ~\cite{CMS-PAS-B2G-16-026}.
+%, as well as soft-drop mass mean as a function of the number of true interactions.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{F5/shapejetmass.pdf}
+\end{center}
+\caption{The soft-drop mass of the AK8 jet. We require it to be between 105 and 135 \GeV.}
+\label{fig:AK8mass}
+\end{figure} 
+
+The combined mass of the two AK4 jets, defined as the mass of the two AK4 jet vectors added together, or the mass of (AK4jet1 + AK4jet2), can also be used to suppress the multijet and \ttbar backgrounds as well, shown in Fig.~\ref{fig:AK4dijetmass}. 
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{F5/shapedijetmass.pdf}
+\end{center}
+\caption{The dijet mass of the AK4 jet. We require it to be between 90 and 140 \GeV.}
+\label{fig:AK4dijetmass}
+\end{figure}
+
+The softdrop corrected mass, or $M_{\rm soft\,drop}$ signal mass window is restricted to between 105 and 135 \GeV, to avoid overlapping with other analyses targeting W and Z resonances. The AK4 dijet mass window is slightly larger, ranging from 90 to 140 \GeV, where the optimization of this window is documented in App.~\ref{app:mass}.
+
+\subsection{Identification of H candidates\label{ss:HTag}}
+
+\subsubsection{N-subjettiness selection\label{sec:EvtSelNsubjettiness}}
+
+The quantity N-subjettiness~\cite{Thaler:2010tr,Thaler:2011gf,Stewart:2010tn} $\tau_N$ is used to quantify the degree to which jet constituents can be arranged into N subjets. The ratio $\nsub = \tau_2/\tau_1$  is calculated for the AK8 jet. It is required to have $\nsub < 0.55$. We have chosen the loose working point supported from the POG~\cite{WTagTWikiWPs}, where the studies related to this choice are documented in App.~\ref{app:tau21}. 
+
+%A tighter working point was shown to reduce the expected sensitivity. 
+The $\nsub$ spectra for the AK8 jet is shown in Fig.~\ref{fig:tau21}.
+%The efficiency of the $\nsub$ selection is found to be uniform over the whole mass range of the signal, as shown in Fig.~\ref{fig:eff_comp_tau21}.
+
+\begin{figure}[th!b]
+\begin{center}
+\includegraphics[scale=0.5]{F5/shapeptau21.pdf}
+\end{center}
+\caption{$\nsub$ distribution for the AK8 jet. We require $\tau_{21} <$ 0.55.\label{fig:tau21}}
+\end{figure}
+
+%\begin{figure}[th!b]
+%\begin{center}
+%\includegraphics[scale=0.34]{F5/signaleff_t21_NoHMass_PreDBT.pdf}
+%\includegraphics[scale=0.34]{F5/signaleff_t21_not21_HMass_DBT.pdf}
+%\end{center}
+%\caption{Comparing the efficiency as a function of different bulk graviton signal masses: Of the $\nsub$ selection (without cut on the Higgs jet mass or the double b tagger) (left). The right figure compares the efficiency of the Higgs jet selection after the Higgs mass and the double b tagger selections, with and without the \nsub selection. The figure shows that the $\nsub$ selection has a uniform efficiency over the whole mass range.\label{fig:eff_comp_tau21}}
+%\end{figure}
+
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[scale=0.34]{F5/ShapeComparison_hJet1bbtag.pdf}
+%\includegraphics[scale=0.34]{F5/ShapeComparison_hJet2bbtag.pdf}
+%\end{center}
+%\caption{Double-b tagger discriminant for QCD background and different mass signals.}
+%\label{fig:schema1}
+%\end{figure}
+
+In order to identify the AK8 jet most likely to contain two b quarks, we use the double \cPqb-tagger discriminant~\cite{CMS-PAS-BTV-15-002}, shown in Fig.~\ref{fig:doubleb}.
+
+A brief description of the double b tagger is as follows: Tracks and secondary vertices associated to a jet is used, as for standard \cPqb-tagging. Tracks are used to calculate N-subjettiness axes of a jet. In the calculation of N-subjettiness, axes are defined for each prong which are used as input to the double-b tagger instead of the jet-direction. The two $\tau$-axis directions are used to resolve the two B-hadron decay chains we expect for a X to \bbbar signal. Secondary vertex observables are assigned to each axis independently of the subjet components. Then  b-tagging observables are computed using displaced  tracks, secondary vertex (SV) and two-SV system information. This dedicated tagger represents an alternative for boosted topologies to the subjet b-tag which relies on the subjet definition.
+
+We have studied the Medium 1 and Medium 2 operating points corresponding to the double b discriminator $>$ 0.6 and 0.8 and signal efficiencies of 65\% and 30\%, respectively, as measured in the bulk graviton samples. The Medium 2 operating point was shown to give the best signal-background discrimination, as described in App.~\ref{app:doubleb}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{F5/shapedoubleb.pdf}
+\end{center}
+\caption{Double-b tagger discriminant for the AK8 jet. We require double b tagger $>$ 0.8.}
+\label{fig:doubleb}
+\end{figure} 
+
+For the AK4 jets, we use the deep CSV tagger Medium working point to b-tag the jets, just as the resolved analysis does (HIG-17-009). The deep CSV tagger is a new tagger that performs better than the CSVv2 tagger and the CMVA tagger. The deep CSV tagger is similar to the CSVv2 tagger, but it uses up to six tracks in the training. Deep neural network training is used, where the nodes in the last layer use a normalized exponential function to interpret the output as a probability for a certain jet flavour class (exactly one b hadron, at least two b hadrons, exactly one c hadron, at least two c hadron, or none of the above), where each class is independent. We use the DeepCSV P(b) + P(bb) as our tagger, requiring this value be greater than 0.6324. The Medium working point corresponds to an efficiency of 68\%. Further documentation of the tagger can be found in (BTV-16-002). The DeepCSV P(b) + P(bb) for the two selected AK4 jets can be found in Fig.~\ref{fig:AK4btag}. The optimization for the choice of the medium working point can be found in App.~\ref{app:deepCSV}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.34]{F5/shapebtag1.pdf}
+\includegraphics[scale=0.34]{F5/shapebtag2.pdf}
+\end{center}
+\caption{Deep CSV P(b) + P(bb) tagger discriminant for the highest $\pt$ selected AK4 jet (left) and the other selected AK4 jet (right). We require deepCSV $>$ 0.6324.}
+\label{fig:AK4btag}
+\end{figure} 
+
+
+Lastly, we studied many variables related to unselected AK4 jets present in selected events to determine how to remove as much \ttbar as possible. These studies are documented in App.~\ref{app:AK4variables}. The variable that provided the most discriminating power was the invariant mass of the two AK4 selected AK4 jets combined with the AK4 jet closest to one of the selected AK4 jets, which we call the triAK4jet mass. This variable can be seen in Fig.~\ref{fig:triak4jetm}, where we place a cut requiring the value of the invariant mass to be larger than 200 GeV. For further documentation on the study of \ttbar and what events are passing full selection, see App.~\ref{app:ttbar}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{F5/shapeinvmsnAK4cl.pdf}
+\end{center}
+\caption{TriAk4jet mass: the invariant mass of the two selected AK4 jets and the nearest unselected AK4 jet. We require triAK4jet mass $>$ 200 \GeV.}
+\label{fig:triak4jetm}
+\end{figure} 
+
+%We have then optimized the operating point to use for this search separately for low and high \pt jets based on the expected sensitivity. The optimal choice results to be Tight for low and medium \pt regime while Loose for high \pt jets. An optimization of the double b tagger categories were done using a full event selection and expected limits based on the data. The Alphabet method, with signal region blinded, was used to obtain the background estimate in the signal region. Among the possible combinations taken into account the best sensitivity is achieved when we combine the following two categories:
+%\begin{itemize}
+%\item TT, both H-jets pass the tight operating point.
+%\item LL, both H-jets pass the loose operating point but both fail the tight operating point, i.e. not in the TT category. This also means that if one of the jets passes loose but failes tight, and the other passes the tight operating point, such an event is classified as LL.
+%\end{itemize} 
+
+\subsubsection{Invariant mass definition and ``reduced mass''\label{sss:DijetMassDef}}
+
+The invariant \mjj mass distribution of the AK8 jet and two AK4 jets in the event corresponds to the invariant mass of the resonance searched for. As documented in the boosted case ~\cite{CMS-PAS-B2G-16-026}, we use instead the reduced mass, defined
+% However, it is well known that techniques such as kinematic fit that constraint the mass of each Higgs candidate to $\mH$ improves the resonance resolution and ultimately the sensitivity~\cite{CMS-PAS-B2G-16-008}. This technique was well validated also in the resolved case~\cite{Khachatryan:2015year}. For the boosted case, we considered constraining either the groomed or the ungroomed mass of the Higgs-tagged jets to \mH to improve the resolution of \mjj. A systematic study was performed in Ref.~\cite{CMS-AN-15-265}. In some cases we observed an improvement of the resolution but an over-correction of $\mjj$, \textit{i.e.}, the average position of $\mjj$ shifted well above $\mx$.
+%It was found that the variable
+\begin{linenomath}
+\begin{equation}
+\mjjs \equiv \mjj - (\mj^{AK8}-\mH) - (\mj^{1AK4 + 2AK4}-\mH)
+\label{eq:Mjjs}
+\end{equation}
+\end{linenomath}
+since it provides resolution improvement and the mean position of \mjjs remains at $\approx \mx$, as can be seen in the study documented in App.~\ref{app:redm}. In this equation, $\mj^{AK8}$ is the softdrop corrected mass of the AK8 jet, $\mj^{1AK4 + 2AK4}$ is the dijet mass of the two AK4 jets, and $\mH$ is 125 GeV. The reduced mass can be found in Fig.~\ref{fig:redm}.
+
+We require the reduced mass $>$ 750 GeV because this analysis has little sensitivity below this level.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{F5/shaperedmass.pdf}
+\end{center}
+\caption{Reduced mass of the two selected AK4 jets and the AK8 jet.}
+\label{fig:redm}
+\end{figure} 
+
+The cut flow is given in Table~\ref{tab:sigeff} for bulk gravitons and radions. %and in Table~\ref{tab:RadionCutFlowEff} for radions. 
+The main difference in the efficiencies of the spin-2 and the spin-0 models stems from the different $\Delta\eta_{jj}$ distributions, that for the bulk graviton being more central. Thus the bulk gravitions have a higher efficiency than the radions.
+
+\begin{table}[h]
+\topcaption{Fraction of signal events left after cuts for resonant bulk graviton and radion. Preselection is the second column (excluding the trigger), trigger is the third column, AK4 Deep CSV Medium tag is the fourth, AK4 dijetmass requirement is the fifth, AK8 puppi $\tau_{21}$ is the sixth, triAk4jet mass is the seventh, AK8 softdrop corrected mass is the eigth, AK8 double-b tag is the ninth, reduced mass is the tenth, $\Delta\eta$ is the eleventh. Full selection efficiency is represented by the eleventh column, selection efficiency after full selection and rejecting events that pass the boosted selection is the twelfth, and selection efficiency after full selection and rejecting events that pass the resolved selection events is the last.}\label{tab:sigeff}
+\scalebox{0.55}{
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & Presel & Trig & AK4btag & AK4dijetM & $\tau_{21}$ & TriAK4JetM & AK8M & AK8btag & Reduced M & $\Delta\eta$& Boosted & Resolved\\ \hline
+%500 & 0.068 & 0.046 & 0.029 & 0.013 & 0.01 & 0.008 & 0.003 & 0.001 & 0.001 & 0.001\\
+%550 & 0.112 & 0.064 & 0.04 & 0.021 & 0.016 & 0.014 & 0.005 & 0.003 & 0.003 & 0.001\\
+%600 & 0.188 & 0.093 & 0.059 & 0.032 & 0.026 & 0.022 & 0.01 & 0.005 & 0.005 & 0.002\\
+%650 & 0.292 & 0.132 & 0.082 & 0.048 & 0.04 & 0.034 & 0.017 & 0.009 & 0.009 & 0.004\\
+%750 & 0.466 & 0.347 & 0.218 & 0.14 & 0.123 & 0.108 & 0.063 & 0.039 & 0.029 & 0.013\\
+%800 & 0.516 & 0.446 & 0.277 & 0.179 & 0.159 & 0.141 & 0.085 & 0.052 & 0.03 & 0.014\\
+%900 & 0.578 & 0.554 & 0.334 & 0.218 & 0.193 & 0.174 & 0.108 & 0.065 & 0.031 & 0.016\\
+%1000 & 0.614 & 0.603 & 0.357 & 0.235 & 0.209 & 0.192 & 0.122 & 0.072 & 0.032 & 0.017\\
+%1200 & 0.624 & 0.622 & 0.354 & 0.237 & 0.213 & 0.199 & 0.132 & 0.078 & 0.036 & 0.023\\
+%1600 & 0.39 & 0.39 & 0.181 & 0.106 & 0.094 & 0.089 & 0.059 & 0.033 & 0.023 & 0.021\\
+%2000 & 0.252 & 0.251 & 0.09 & 0.042 & 0.037 & 0.036 & 0.024 & 0.014 & 0.012 & 0.012\\
+BG 750 & 0.202 & 0.323 & 0.204 & 0.168 & 0.149 & 0.12 & 0.074 & 0.046 & 0.043 & 0.043 & 0.033 & 0.022\\
+BG 800 & 0.236 & 0.425 & 0.265 & 0.22 & 0.196 & 0.161 & 0.101 & 0.062 & 0.061 & 0.061 & 0.039 &0.032\\
+BG 900 & 0.279 & 0.541 & 0.326 & 0.276 & 0.245 & 0.208 & 0.133 & 0.08 & 0.08 & 0.08 & 0.043 &0.044\\
+BG 1000 & 0.302 & 0.596 & 0.353 & 0.3 & 0.267 & 0.232 & 0.149 & 0.088 & 0.088 & 0.087 & 0.046 &0.051\\
+BG 1200 & 0.311 & 0.619 & 0.352 & 0.298 & 0.267 & 0.239 & 0.158 & 0.093 & 0.093 & 0.092 & 0.047 &0.064\\
+BG 1600 & 0.195 & 0.39 & 0.182 & 0.135 & 0.121 & 0.112 & 0.074 & 0.041 & 0.041 & 0.039 & 0.028 &0.037\\
+BG 2000 & 0.127 & 0.254 & 0.091 & 0.055 & 0.049 & 0.046 & 0.031 & 0.017 & 0.017 & 0.015 & 0.014 &0.015\\ \hline
+Rad 750 & 0.14 & 0.213 & 0.133 & 0.108 & 0.096 & 0.078 & 0.047 & 0.03 & 0.027 & 0.027 & 0.021 &0.014\\
+Rad 800 & 0.169 & 0.291 & 0.181 & 0.15 & 0.134 & 0.11 & 0.068 & 0.041 & 0.041 & 0.04 & 0.026 &0.022\\
+Rad 1000 & 0.237 & 0.457 & 0.273 & 0.231 & 0.206 & 0.178 & 0.112 & 0.067 & 0.067 & 0.067 & 0.038 &0.039\\
+Rad 1200 & 0.263 & 0.516 & 0.291 & 0.243 & 0.215 & 0.189 & 0.12 & 0.069 & 0.069 & 0.066 & 0.037 & 0.046\\
+Rad 1400 & 0.241 & 0.476 & 0.257 & 0.211 & 0.189 & 0.168 & 0.108 & 0.063 & 0.063 & 0.056 & 0.037 & 0.046 \\
+Rad 1600 & 0.205 & 0.407 & 0.2 & 0.157 & 0.14 & 0.127 & 0.079 & 0.044 & 0.044 & 0.035 & 0.027 &0.031\\
+\hline
+\end{tabular}
+}
+\end{table}
+
+A study on why so few full selection events pass the boosted selection at high mass is documented in App.~\ref{app:boostsel}.
+
+\subsection{Boosted and Resolved Selection Rejection\label{ss:boostres}}
+
+This analysis is meant to bridge the gap between the fully resolved HH4b selection, aimed at lower mass resonances, and the fully boosted HH4b selection, by combining elements of both and adding some of its own. Below, the selection for these two analyses is documented, where rejecting events from either analysis means rejecting events that pass either of these selections. 
+
+\subsubsection{Boosted Analysis\label{sss:boost}}
+
+This analysis is documented in~\cite{CMS-PAS-B2G-16-026}.
+
+Selection is as follows:
+\begin{itemize}
+\item Passes triggers described in Table~\ref{tab:trigpaths};
+\item Two AK8 jets, $\pt > 300$ GeV, $|\eta| < 2.4$, tight ID;
+\item $|\Delta\eta| < 1.3$ between two AK8 jets;
+\item $\tau_{21}$ $<$ 0.55 for both AK8 jets;
+\item $M_{jj}$ $>$ 750 GeV;
+\item The soft drop mass of both AK8 jets is $105 < M_{\rm soft\,drop} < 135\GeV$, with all necessary jet mass corrections applied;
+\item Falls into one of the following categories: both AK8 jets have double-b $>$ 0.8, one AK8 jet has double-b $>$ 0.8 and the other has 0.3 $<$ double-b $<$ 0.8, both AK8 jets have 0.3 $<$ double-b $<$ 0.8.
+\end{itemize}
+
+It should be noted, however, that this is only the events in the signal region. Because the boosted analysis uses the same background estimate method as this analysis, when calculating limits we must also reject any event used in the mass sideband and anti-tag regions, which are used to estimate the background. This way, we prevent any overlap of events, whether in the data signal region or in a region of data used to estimate the QCD background contribution. This set of events is as follows:
+\begin{itemize}
+\item Passes triggers described in Table~\ref{tab:trigpaths};
+\item Two AK8 jets, $\pt > 300$ GeV, $|\eta| < 2.4$, tight ID;
+\item $|\Delta\eta| < 1.3$ between two AK8 jets;
+\item $\tau_{21}$ $<$ 0.55 for both AK8 jets;
+\item $M_{jj}$ $>$ 750 GeV;
+\item The soft drop mass of \textbf{only the subleading AK8 jet} is required to be between $105 < M_{\rm soft\,drop} < 135\GeV$, with all necessary jet mass corrections applied;
+\item The double-b of \textbf{only the subleading AK8 jet} is required to satisfy double-b $>$ 0.3.
+\end{itemize}
+We note that since the entire mass spectrum and double-b spectrum of the leading AK8 jet is used either in the signal region or as part of the background estimate, we cannot place any restrictions on these values. Then this selection defined directly above is the selection rejected when limits are calculated to be combined with the fully boosted 
+analysis. 
+
+The switch from rejecting only boosted events in the signal region to rejecting any boosted event used in the background estimate was made post-unblinding, and is documeneted in Sec.~\ref{sec:BkgEst}.
+
+\subsubsection{Resolved Analysis\label{sss:resolve}}
+This analysis is documented in (HIG-17-009). The overlap between the documented analysis and this analysis can be found in App.~\ref{app:overlap}.
+
+Selection is as follows:
+\begin{itemize}
+\item Passes HLT\_QuadJet45\_TripleBTagCSV\_p087 and/or HLT\_DoubleJet90\_Double30\_TripleBTagCSV\_p087;
+\item Four AK4 jets, with regression applied, $\pt > 30$ GeV, $|\eta| < 2.4$;
+\item All AK4 jets pass deep CSV medium tag;
+\item Each dijet pair has $\Delta R$ $<$ 1.5;
+\item The pair that minimizes $(\frac{MH1 - 120}{20})^{2} + (\frac{MH2 - 120}{20})^{2}$ is chosen, and the square root of this quantity must be $<$ 1;
+\item Alternatively, if a pair minimizes $(\frac{MH1 - 125}{20})^{2} + (\frac{MH2 - 125}{20})^{2}$, this pair can also be chosen, where the square root of this quantity must be $<$ 1.
+
