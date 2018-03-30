@@ -1,0 +1,411 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+%
+% If you have never used LaTeX before, talk you your advisor about
+% how to compile this into a PDF.
+
+%\documentclass[letterpaper,10pt]{article}
+
+%\usepackage{xcolor}
+
+%\usepackage{hyperref}
+%\usepackage[hmargin=2.4cm,vmargin=2.4cm]{geometry}
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+%\usepackage[T1]{fontenc}
+%\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Alice A. Cocoros}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+%\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+%\hypersetup{
+%  colorlinks = false,
+%  linkbordercolor = cyan,
+%  pdfauthor = {\name},
+%  pdfkeywords = {CV, physics},
+%  pdftitle = {\name: Curriculum Vitae},
+%  pdfsubject = {Curriculum Vitae},
+ % pdfpagemode = UseNone,
+%  pdfborderstyle={/S/U/W 1}
+%}
+
+%\geometry{
+%  body={6.5in, 8.5in},
+%  left=1in,
+%  top=1in
+%}
+
+% Customize page headers
+%\pagestyle{myheadings}
+%\markright{\name}
+%\thispagestyle{empty}
+
+% Custom section fonts
+%\usepackage{sectsty}
+%\sectionfont{\rmfamily\mdseries\Large}
+%\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+%\setlength\parindent{0em}
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+%  \begin{list}{}{
+%    \setlength{\leftmargin}{1.5em}
+%  }
+%}{
+%  \end{list}
+%}
+
+%\begin{document}
+
+% Place name at left
+\center
+{ \huge Alice A. Cocoros}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.10in}
+
+\begin{minipage}{\linewidth}
+\center
+%JHU Dept Physics and Astr., 3701 San Martin Dr., Baltimore, MD 21218, \href{mailto:asady1@jhu.edu}{\tt asady1@jhu.edu}\\
+2 Somerville Ct. Apt. G, Parkville, MD 21234, \href{mailto:asady1@jhu.edu}{\tt asady1@jhu.edu}, 775-781-7336
+\end{minipage}
+
+\section*{Education and Honors}
+
+\begin{itemize}
+\item
+\begin{tabular}[t]{@{}l}
+Ph.D., Physics and Astronomy\\
+M.A., Physics and Astronomy\\
+B.A. with Honors, Astrophysics
+\end{tabular}
+\hfill
+\begin{tabular}[t]{l@{}}
+\href{http://physics-astronomy.jhu.edu/}{The Johns Hopkins University}, expected June 2018\\
+\href{http://physics-astronomy.jhu.edu/}{The Johns Hopkins University}, 2014, 4.00 \\
+\href{http://physics.williams.edu}{Williams College}, 2013, 3.50
+\end{tabular}
+\\
+% \item \textbf{Ph.D., Physics and Astronomy}, \href{http://physics-astronomy.jhu.edu/}{The Johns Hopkins University}, expected June 2018\\
+ %\textbf{Masters of Arts, Physics and Astronomy}, \href{http://physics-astronomy.jhu.edu/}{The Johns Hopkins University}, 2014 \\
+ %\textbf{B.A. with Honors, Astrophysics}, \href{http://physics.williams.edu}{Williams College}, 2013 \\
+      \item 
+   \href{http://nsfgrfp.org/}{National Science Foundation Graduate Research Fellow} \\
+ \href{http://www.hluce.org/cblprogram.aspx}{Clare Boothe Luce Fellow} \\
+   \href{http://www.mmuf.org/}{Mellon Mays Undergraduate Fellow} \\
+  %Sigma Xi \\
+% Howard P. Stabler Prize in Physics, Williams College \\
+ %William W. Kleinhandler Prize for Excellence in Music, Williams College\\
+ %Spring 2012 in \href{http://physics.bu.edu/sites/geneva-program/}{Boston University Geneva Physics Program}
+\end{itemize}
+
+\section*{ Research Experience}
+\begin{itemize}
+\item{\textbf{CMS Experiment at CERN}, \href{http://physics-astronomy.jhu.edu/research/particle-physics/}{JHU Dept. Physics \& Astronomy}, Baltimore, MD; June 2013 - present\\
+%\item{--Working with Professor Petar Maksimovic (JHU) on a search for semileptonic R-parity violating SUSY gluino pair that decays into a top pair and stop pair, with the stop decaying into two jets}
+%HH(bbbb) boosted search 
+%FastSim development
+%double b-tagger validation
+--\textit{Thesis: Search for New Physics in the Two Higgs to Four b-quark Final State} \\
+--Designed, developed, and implemented data processing for a search for new particles and processes that decay to two Higgs bosons which each decay to two b quarks, using data taken with the Compact Muon Solenoid (CMS) detector on the Large Hadron Collider (LHC) at CERN in 2016 and Monte Carlo (MC) simulation produced at CERN. Compared signal MC and background MC to optimize signal to background ratio, using numerical methods and data visualization. Performed data driven background estimate to compare with signal region data to look for any significant deviations in the expected Standard Model distribution.\\
+--Wrote simulation software which was added to an existing CMS detector simulation to model the merging of hits in the pixel detector, which will improve the performance of the simulation in high energy environments. Aided in the update of the current pixel detector simulation to make the framework more adaptable to changes, using plugins for each process instead of hard-coding everything.\\
+--Performed calibration testing on the double b-tagger, a machine-learning variable  used to identify the likeliness of a jet containing two b-quarks. Evaluated the difference in performance between data and MC for a multivariate analysis variable designed to identify a jet with two b-quarks.\\
+--Designed a novel variable that distinguishes signals with a lepton inside a jet from multijet QCD background. Advisor: Professor Petar Maksimovic (JHU)\\
+}
+%\item{``Search for heavy resonances decaying to a pair of Higgs bosons in four b quark final state in proton-proton collisions at $\sqrt{s}$=13 TeV," Tech. Rep. \href{http://cds.cern.ch/record/2202811?ln=en}{CMS-PAS-B2G-16-008} and \href{http://cds.cern.ch/record/2264684?ln=en}{CMS-PAS-B2G-16-026}, CERN, Geneva, 2016-2017.}
+%\item``Identification of double-b quark jets in boosted event topologies," Tech. Rep. \href{http://cds.cern.ch/record/2195743?ln=en}{CMS-PAS-BTV-15-002}, CERN, Geneva, 2016.
+%\item C. Brust, P. Maksimovic, A. Sady et al. Identifying Boosted New Physics With Non-Isolated Leptons. Paper. \href{https://arxiv.org/abs/1410.0362}{1410.0362}. 2014.
+%\item \textit{``Search for heavy resonances decaying to a pair of Higgs bosons in the four b quark final state in proton-proton collisions at $\sqrt{s}$ = 13 TeV".} Talk. APS April Meeting 2017, Washington D.C., January 2017.
+%\item \textit{``HH(bbbb) Analysis".} Talk. B2G Days, Fermilab, April 2016.
+%\item \textit{``Identifying Boosted New Physics With Non-Isolated Leptons".} Talk. APS April Meeting 2015, Baltimore, April 2015.
+%\item \textit{``Leptons in Boosted Jets".} Talk. CMS SUSY Event at the LPC, Fermilab, November 2014.
+\item{\textbf{Exploring a Theory of Dark Matter}, \href{http://physics.williams.edu}{Williams College}, Williamstown, MA; June 2012 - June 2013\\
+--\textit{Senior Honors Thesis: Exploring a Theory of Dark Matter}\\
+--Developed a new theory that could explain the nature of dark matter. Examined an extension to the Standard Model that includes a dark matter candidate, a new particle called Z' that mediates interactions between the Standard Model particles and dark matter particles, and an additional new particle that explains how the Z' has mass. Ran relic abundance simulations, produced Monte Carlo simulations of new physics, studied dark matter direct detection limits and Z' detection limits from current experiments to place constraints on the model. Advisor: Professor David Tucker-Smith (Williams)\\}
+ %\item \textit{``Exploring a Theory of Dark Matter''.} Poster. Joint Fall 2012 Meeting of the American Physical Society New England Section and the American Association of Physics Teachers, Williams College, November 2012.
+ %\item{--Worked with Professor David Tucker-Smith in particle phenomenology, examining an extension to the Standard Model that includes a Dirac spin-$\frac{1}{2}$ fermion as dark matter candidate, a Z' boson that mediates interaction between the Standard Model and dark matter sector, and a Higgs-like scalar that gives mass to the Z'}
+ %\item{--Standard Model of particle physics only describes 5\% of energy density of universe, examining an extension to the Standard Model to account for the existence of dark matter (20\% of universe)}
+ %\item{--Extension includes a Dirac spin-$\frac{1}{2}$ fermion as dark matter candidate, a Z' boson that mediates interaction between the Standard Model and dark matter sector, and a Higgs-like scalar that gives mass to the Z', in addition to Standard Model particles}
+%\item{-- After taking into account the relic abundance, current direct detection limits, and collider constraints on Z' detection, as well as examining how future results could affect the parameter space, we found this extension to be a viable model for dark matter as long as the dark matter was light, annihilated resonantly to Z' in the early universe, or annihilated to Z' Z' in the early universe}
+
+\item{\textbf {ATLAS Experiment at CERN}, \href{http://www.bu.edu/abroad/programs/geneva-physics-program/}{Boston University}, Geneva, Switzerland; Jan-Aug 2012\\
+% \item{--ATLAS (A Toroidal LHC ApparatuS) detector, Large Hadron Collider (LHC) at CERN: general-purpose detector that records products of proton-proton collisions in LHC}
+--Measured properties of the Standard Model with the Top Quark Pair Differential Cross Section Group within A Toroidal LHC Apparatus (ATLAS) Collaboration.\\
+--Searched for new particles using data taken by ATLAS on the LHC, comparing Monte Carlo (MC) simulation of new physics signals with Standard Model background to achieve a more comprehensive understanding of kinematic phasespace for new physics models and determine which variables improve the ratio of signal to background.\\
+--Research performed as part of a study abroad program, \href{http://physics.bu.edu/sites/geneva-program/}{Boston University Geneva Physics Program}, Spring 2012. Advisor: Professor Kevin Black (BU)\\ }
+ %\item {``Measurement of top quark pair differential cross section with ATLAS in pp collisions at $\sqrt{s}=$ 7 TeV." Tech. Rep. \href{https://cds.cern.ch/record/1470588/}{ATL-COM-PHYS-2012-1137}, CERN, Geneva, 2012.}
+%  \item{--Worked with Professor Kevin Black (Boston University) with the Top Quark Pair Differential Cross Section Group within ATLAS Collaboration, aidied in data analysis related to measuring top quark pair differential cross section}
+%\item{--Studied the $H_{t}$ and effective mass spectrums of three Monte Carlo simulated new particle signals (Z', Kaluza Klein gluon, and fourth generation up-type quark) at several different masses in comparison with Standard Model and $t\bar{t}$ background, found that introducing a cut on effective mass increased the significance of new physics in comparison with background}
+%\item{--Implemented two kinematic variables in analysis, $H_{t}$ and effective mass, scalar sums of energies of particles, generating 1D and 2D histograms, and examined three Monte Carlo simulated new particle signals (Z', Kaluza Klein gluon, and fourth generation up-type quark) at several different masses in comparison with Standard Model and $t\bar{t}$ background to achieve a more comprehensive understanding of kinematic phasespace for new physics models}
+%  \item{--Introduced a cut on effective mass to increase significance of new physics in comparison with background in hopes that this preliminary analysis could be used to examine new physics at reconstructed (detector) and truth (theory) level in the future}
+ % \item{ The ATLAS (A Toroidal LHC ApparatuS) detector at the Large Hadron Collider (LHC) at CERN is a general-purpose detector that records the products of proton-proton collisions within the LHC. I have been working with Professor Kevin Black of Boston University and the top quark pair differential cross section group, studying events that involve top quarks, looking for evidence of physics that has yet to be discovered. We examine samples of new physics in comparison with Standard Model background and $t \bar{t}$ signal in two kinematic variables, $H_{t}$, the scalar sum of all transverse energies of final state particles, and effective mass, the scalar sum of all transverse energies of final state particles and missing transverse energy. Because these distributions are influenced by detector resolution and acceptance, we use singular value decomposition (SVD) to unfold the measured spectrum. We generate migration matrices from Monte Carlo simulations, using them to examine the measured events at the truth (independent of detector errors) level and reconstructed (measured) level, allowing us to form a detailed comparison between theory and data. We examine the cross section and uncertainty of three Monte Carlo simulated new particle signals, Z', Kaluza Klein gluon, and fourth generation up-type quark, at various masses to achieve a more comprehensive understanding of kinematic phasespace for new physics models.} 
+\item{\textbf{Photoionization Models of Planetary Nebulae in M31}, \href{http://physics.williams.edu}{Williams College}, Williamstown, MA; June-Dec 2011\\
+
+%\item\textbf {Williams College} \\ 
+% \href{http://www.mmuf.org/}{Mellon Mays Undergraduate Fellowship} : Williamstown, MA; June 2011 - June 2013
+%\item{June 2012 - June 2013: Senior Honors Thesis}
+% \begin{itemize}
+% \item{--Working with Professor David Tucker-Smith (Williams) on honors thesis in particle phenomenology}
+% \item{--Standard Model of particle physics only describes 5\% of energy density of universe, examining an extension to the Standard Model to account for the existence of dark matter (20\% of universe)}
+% \item{--Extension includes a Dirac spin-$\frac{1}{2}$ fermion as dark matter candidate, a Z' boson that mediates interaction between the Standard Model and dark matter sector, and a Higgs-like scalar that gives mass to the Z', in addition to Standard Model particles}
+%\item{-- After taking into account the relic abundance, current direct detection limits, and collider constraints on Z' detection and examining the remaining parameter space to explore how future results from direct detection experiments could further constrain the parameter space, we found this extension to be a viable model for dark matter}
+% \end{itemize}
+%\item{Spring 2012: Studied Griffiths Introduction to Elementary Particles with help of Professor Tucker-Smith and audited BU class at CERN in particle physics, taught by BU Professor Tulika Bose, attended conference Planck 2012, Warsaw, Poland}
+ %\item{June 2011 - Dec. 2011: Worked with Professor Karen Kwitter, analyzing spectra and modeling 16 nebulae in M31 to determine conditions and chemical makeup of the gas, attended 218th AAS Meeting, Boston MA}
+--Analyzed spectra and modeled 16 planetary nebulae in M31 to learn about the properties of both the nebula and its central star, helping us understand how they are formed and how material originally created in the star is recycled. Advisor: Professor Karen Kwitter (Williams)\\}
+%\item{\textbf {NSF-EPSCoR Climate Change Grant}, \href{http://www.wnc.edu/waterfall/}{Waterfall Fire Interpretive Trail}, Reno, NV; June-Aug 2009\\
+%--Gathered and organized plant samples, surveyed plant sites, and created graphics for demonstration for a study on postfire sagebrush and forest communities in the Great Basin}
+%\item{\textbf {Western Nevada College}, \href{http://www.nvspacegrant.org/}{Nevada NASA Space Grant Consortium}, Carson City, NV; Jan-June 2009\\
+%--Developed curricula material in telescope operation and the study of variable stars}
+ 
+ %\item\textbf {NSF-EPSCoR Climate Change Grant Summer 2009 Fellowship} \\ \href{http://www.wnc.edu/waterfall/}{Waterfall Fire Interpretive Trail} : Reno, NV; June-Aug 2009, 5 hrs/week
+% \begin{itemize}
+% \item{--Volunteer research assistant, helped gather and organize plant samples, survey plant sites, and create graphics for demonstrations for a grant led by Michael Sady, John Arnone III, and Ann Bollinger, given to study postfire sagebrush and forest communities in the Great Basin} 
+%\end{itemize}
+
+%\item\textbf {Western Nevada College} \\ \href{http://www.nvspacegrant.org/}{Nevada NASA Space Grant Consortium}
+ %\begin{itemize}
+  %\item{Carson City, NV; Jan-June 2009; } 
+  %\item{I was hired alongside three other students under the Nevada NASA Space Grant Consortium, mentored by Professor Robert Collier of Western Nevada College, to help develop curricula in applied astrophysics. I helped test out instructions for various models of go-to and manually-operated telescopes as well as writing instructions and background information for taking pictures of variable stars and creating light curves with the data gathered using Maxim 4 and 5 DL, CCD Soft, CCD Stack, and AIT 4 WIN Software 2.0.} 
+%\end{itemize}
+
+ %\item \textit{``Photoionization Models of Planetary Nebulae in M31''.} Talk and publication (along with M. Hosek and A. King). Keck Northeast Astronomy Consortium Student Research Symposium, Wellesley College, September 2011.
+%  \item{Professor David Tucker-Smith, a theoretical particle physicist, is my thesis advisor and current Mellon mentor. During the summer of 2012 as well as through out the year, I will be working on my thesis, focused on examining a model of dark matter. The Standard Model (SM) of particle physics only describes about 5\% of the energy density of the universe. Our model aims to describe another 20\% by including a dark matter extension to the SM. In addition to the particles in the SM, we introduce a Higgs-like scalar, a Dirac fermion as a dark matter candidate, and a Z' boson that mediates interaction between the SM and dark matter sector. Within the parameter space allowed after taking into account the relic abundance, current direct detection limit, and collider constraints on Z' detection, we hope to further explore our model by examining possibilities of future direct detection, indirect detection, and ability to detect a resonance of our Z' at a collider such as the LHC.
+%\newline In the spring of 2012, I studied Griffiths \emph{Introduction to Elementary Particles} under Professor Tucker-Smith's tutelage while auditing Boston University Professor Tulika Bose's "Introduction to Particle Physics" at CERN, allowing me to achieve a better foundation in particle physics.
+%\newline During the summer and fall of 2011, I did research under Professor Karen Kwitter, who works with planetary nebulae. We studied the spectra of 16 nebulae in M31 to determine conditions and chemical makeup of the gas. We used programs to analyze spectra and model nebulae to learn more about the properties of both the nebula and its central star. Gathering information from nebulae helps us understand how they are formed and how material originally created in the star is recycled.} 
+\end{itemize}
+
+\section*{ Sample Publications and Talks}
+\begin{itemize}
+\item{--A. Cocoros and the CMS Collaboration. Search for heavy resonances decaying to a pair of Higgs bosons in four b quark final state in proton-proton collisions at $\sqrt{s}$=13 TeV. Paper. CERN, Geneva, 2017. \href{https://arxiv.org/abs/1710.04960}{arxiv:1710.04960}. Submitted to Physics Letters B.\\
+%--``Search for heavy resonances decaying to a pair of Higgs bosons in four b quark final state in proton-proton collisions at $\sqrt{s}$=13 TeV," Tech. Rep. \href{http://cds.cern.ch/record/2202811?ln=en}{CMS-PAS-B2G-16-008} and \href{http://cds.cern.ch/record/2264684?ln=en}{CMS-PAS-B2G-16-026}, CERN, Geneva, 2016-2017. Submitted to Physics Letters B. \\
+--\textit{``Search for heavy resonances decaying to a pair of Higgs bosons in the four b quark final state in proton-proton collisions at $\sqrt{s}$ = 13 TeV".} Talk. APS April Meeting 2017, Washington, D.C., 2017.\\
+--A. Cocoros and the CMS Collaboration. Identification of double-b quark jets in boosted event topologies. Paper. CERN, Geneva, 2017. \href{https://arxiv.org/abs/1712.07158}{arxiv:1712.07158}. Submitted to Journal of Instrumentation.\\
+%--``Identification of double-b quark jets in boosted event topologies," Tech. Rep. \href{http://cds.cern.ch/record/2195743?ln=en}{CMS-PAS-BTV-15-002}, CERN, Geneva, 2016. \href{https://arxiv.org/abs/1712.07158}{Submitted to Journal of Instrumentation.}\\
+%--C. Brust, P. Maksimovic, A. Sady (Cocoros) et al. Identifying Boosted New Physics With Non-Isolated Leptons. Paper. \href{https://arxiv.org/abs/1410.0362}{1410.0362}. 2014.\\
+--\textit{``Identifying Boosted New Physics With Non-Isolated Leptons".} Talk. APS April Meeting 2015, Baltimore, MD, 2015.\\
+--C. Brust, P. Maksimovic, A. Sady (Cocoros) et al. Identifying Boosted New Physics With Non-Isolated Leptons. Paper. Baltimore, MD, 2014. \href{https://link.springer.com/article/10.1007\%2FJHEP04\%282015\%29079}{10.1007/JHEP04(2015)079}. \\
+%\item \textit{``HH(bbbb) Analysis".} Talk. B2G Days, Fermilab, April 2016.
+%\item \textit{``Leptons in Boosted Jets".} Talk. CMS SUSY Event at the LPC, Fermilab, November 2014.
+--\textit{``Exploring a Theory of Dark Matter''.} Poster. Joint Fall 2012 Meeting of the American Physical Society New England Section and the American Association of Physics Teachers, Williams College, 2012.\\
+--{``Measurement of top quark pair differential cross section with ATLAS in pp collisions at $\sqrt{s}=$ 7 TeV." Tech. Rep. \href{https://cds.cern.ch/record/1470588/}{ATL-COM-PHYS-2012-1137}, CERN, Geneva, 2012.}\\
+--\textit{``Photoionization Models of Planetary Nebulae in M31''.} Talk and publication (along with M. Hosek and A. King). Keck Northeast Astronomy Consortium Student Research Symposium, Wellesley College, 2011.
+}
+ \end{itemize}
+
+\section*{ Teaching Experience}
+ \begin{itemize}
+ \item  {\href{http://cer.jhu.edu/teaching-academy/pff}{\textbf{Preparing Future Faculty Certificate Recipient}, October 2017}\\ 
+--Three stage program designed to introduce graduate students and postdocs to pedagogy and effective teaching practices. \\
+--Workshops through \href{https://www.cirtl.net/}{CIRTL} (first stage): Creating Effective Learning Communities in Teaching and Research, Reaching and Teaching Diverse Learners, Developing Work-Life Resilience, and Writing an Effective Teaching Philosophy Statement. \\
+--\href{http://cer.jhu.edu/teaching-academy/ti}{Johns Hopkins Teaching Institute} (second stage): Three-day intensive exploring the benefits of active learning, ongoing assessment, and responsiveness to diversity, examining a variety of teaching practices and principles and participating in peer-evaluated micro-teaching exercises. \\
+--Taught winter intersession course, ``Exploring the Building Blocks of the Universe" (third stage).}
+ \item{\href{http://e-catalog.jhu.edu/departments-program-requirements-and-courses/arts-sciences/physics-astronomy/#undergraduateprogramstext}{\textbf{Electricity and Magnetism I Teaching Assistant}}, Johns Hopkins University, Spring 2017, 4 credits\\
+--Aided in active learning style lectures, answering questions about practice problems, guiding students to the answer in the time allotted. \\
+--Taught a problem solving section every week, directing small groups of students to solve practice problems, managing group dynamics to ensure all students are learning the material. \\
+--Held office hours and counseled students in best test-taking strategies.}
+ \item{\href{http://intersession.jhu.edu/icourses/courses/acad_courses.asp?de=32}{\textbf{Intersession Instructor}}, Johns Hopkins University, January 2016, January 2017, 1 credit\\
+--Designed and taught ``Exploring the Building Blocks of the Universe", a three week Winter Intersession physics course for non-majors.\\
+--Wrote and delivered lectures on particle physics, incorporated demonstrations and audio-visual aids, designed and guided labs on how to analyze LHC data, wrote and delivered and graded a final exam.\\ 
+--Adjusted Jan. 2017 curriculum based on Jan. 2016 student reviews, adding demos, shortening lecture material, and lengthening the amount of time for labs.\\}
+\item{\href{http://astronomy.williams.edu}{\textbf{Observatory TA}}, Williams College, September 2010 - June 2011, 5 hrs/week\\
+--Directed students in introductory astronomy courses in night sky observing involving constellation, binocular, 70 mm telescope visual, and .6 m telescope CCD camera projects, answered homework questions.}
+\item{\href{http://cty.jhu.edu/index.html}{\textbf{Johns Hopkins University Center For Talented Youth Teaching Assistant}}, Santa Cruz, CA, June-July 2010, 40 hrs/week\\
+--Center for Talented Youth Teaching Assistant for Introduction to Astronomy, aided instructor in teaching a basic course on astronomy for gifted students grades 7-12 enrolled in CTY program in Santa Cruz, CA. 
+--Designed and taught several lessons in basic physics and astronomy.}
+\end{itemize}
+
+%\clearpage
+ 
+ \section*{Leadership and Outreach}
+\begin{itemize}
+\item{\href{http://sites.krieger.jhu.edu/pags/community/diversity/}{\textbf{Chair JHU Physics/Astronomy Diversity Group:}} \\
+--Restarted the Physics and Astronomy Diversity Group, served as chair for four years.\\
+--Started and maintained a mentorship program, aimed at pairing students, postdocs, and junior faculty with volunteer mentors to foster relationships and support outside of traditional academic relationships (such as advisors, teachers), took on several undergraduate mentees through the program, helping them address a range of issues, such as difficulty in classes, securing internships, and fitting into the social network of physicists at JHU. \\
+--Organized and conducted meetings several times a year, ranging from planning meetings of the committee to meetings for underrepresented groups to network. \\
+--Scheduled biannual diversity speakers, on a range of subjects as they pertain to the physics community, including issues related to LGBTQ folks, disabilities, gender, race, and mentorship.}
+%--\texbtf{Member JHU Physics/Astronomy Outreach:} Taught physics to Baltimore high school students and made a portable planetarium for Baltimore elementary school students (2 years)\\
+\item{\href{http://sites.krieger.jhu.edu/pags/outreach/}{\textbf{Member JHU Physics/Astronomy Graduate Students Outreach:}} \\
+--Taught physics to Baltimore high school students with fellow Outreach members through a partnership with a local school, bringing demonstrations of simple physics concepts. \\
+--Constructed a portable planetarium for Baltimore elementary school students and brought the planetarium to the elementary school, teaching an all-day unit on space with fellow Outreach members.}
+\item{\href{http://web.jhu.edu/dlc}{\textbf{Member Johns Hopkins Diversity Leadership Council:}} \\
+--Attended regular monthly meetings of the Diversity Leadership Council, focused on addressing widespread issues of diversity across the institution. \\
+--Participated in two subcommittees, one related to STEM diversity and the other related to faculty diversity. Documented existing STEM pipeline recruitment and retention activities at JHU Krieger School of Arts and Sciences. Aided in efforts to examine faculty recruitment and retention on a university-wide level. }
+\item{\href{http://sites.williams.edu/sps/}{\textbf{Creator/Co-President Society for Physics Students at Williams:}}\\ 
+--Co-started the SPS group at Williams. Created infrastructure for a mentorship program, to help younger students gain access to older students. Designed a website and gathered alumni advice on applying to graduate school, applying to jobs, senior thesis projects, summer research, etc.. Started an outreach program with a local rural elementary school, bringing demonstrations to teach them more about physics.}
+\end{itemize}
+ 
+% \section*{Programming Experience}
+%\begin{itemize}
+%\item {\textbf{Python:} 5 years experience, pruning large datasets to optimize signal to background ratio, performing statistical comparison of data to Monte Carlo simulation, producing graphical representations of research}
+%\item\textbf{C++/C}: 5 years experience, modifying detector simulations, validating tools used in data analysis,  pruning large datasets to optimize signal to background ratio, performing statistical comparison of data to Monte Carlo simulation, producing graphical representations of research\\
+%\item \textbf{Other Skills:} Multivariate analysis, Monte Carlo simulation, GitHub, UNIX, Mathematica, Root, \LaTeX{}
+%\end{itemize}
+ 
+ \section*{Skills and Interests}
+\begin{itemize}
+%\item {\textbf{Python:} 5 years experience, pruning large datasets to optimize signal to background ratio, performing statistical comparison of data to Monte Carlo simulation, producing graphical representations of research}
+%\item\textbf{C++/C}: 5 years experience, modifying detector simulations, validating tools used in data analysis,  pruning large datasets to optimize signal to background ratio, performing statistical comparison of data to Monte Carlo simulation, producing graphical representations of research\\
+\item \textbf{Programming Skills:} Python, C++/C, multivariate analysis, Monte Carlo simulation, GitHub, UNIX, Mathematica, Root, \LaTeX{}
+\item{\textbf{Interests:} fluent in French, 20 years classical piano, 18 years classical ballet, 8 years vocal training, 7 years performing in community musical theatre}
+%\item{\textbf{Fluent in French}}
+\end{itemize}
+%\href{http://music.williams.edu}{Piano Accompanist} : Sep 2010 - June 2011, 5 hrs/week 
+% \begin{itemize}
+%  \item{--Employed as piano accompanist for vocal and instrumental students, accompanied lessons and performances} 
+%\end{itemize}
+
+%\item\textbf {Johns Hopkins University} \\ \href{http://cty.jhu.edu/index.html}{Center For Talented Youth} : Santa Cruz, CA; June-July 2010, 40 hrs/week
+ %\begin{itemize}
+  %\item{ --Center for Talented Youth Teaching Assistant for Introduction to Astronomy, aided instructor in teaching a basic course on astronomy for gifted students grades 7-12 enrolled in CTY program in Santa Cruz, CA, produced and taught many of my own lessons plans in basic physics and astronomy} 
+%\end{itemize}
+
+
+%\item\textbf {Jack C. Davis Observatory} \\ \href{http://www.wnas-astronomy.org/}{Western Nevada Astronomical Society}
+% \begin{itemize}
+%  \item{Carson City, NV; Jan-June 2009; } 
+%  \item{I volunteered with members of the Western Nevada Astronomical Society, taking pictures of astronomical objects and color-combining them and taking pictures of variable stars to produce light curves of their periods.} 
+%\end{itemize}
+
+  %\item \textbf{Simulations:}
+  %  \begin{itemize}
+   %   \item - Fantasy Football mock drafts.
+  %    \item - More experience goes here.
+  %  \end{itemize}
+
+
+%\end{itemize}
+
+%\section*{Publications}
+%\subsection*{Papers}
+%\begin{enumerate}
+%\item C. Brust, P. Maksimovic, A. Sady et al. Identifying Boosted New Physics With Non-Isolated Leptons.  http://arxiv.org/abs/1410.0362. 2014.
+%\item W. Bell, L. Bellagamba, A. Sady \textit{et al.} Measurement of top quark pair differential cross section with ATLAS in pp collisions at $\sqrt{s}=$ 7 TeV: Measurement of top quark pair differential cross section with ATLAS using 5/fb of data collected in 2011 and the rel.17 version of the ATLAS software. Technical Report ATL-COM-PHYS-2012-1137, CERN, Geneva, Jul 2012.
+%\item A. Sady, K. Black, C. Bernard. Search for Z', Kaluza Klein gluon, and fourth generation up-type quark in the $t\bar{t}$ channel at ATLAS with $\sqrt{s} =$ 7 TeV. Technical Report ATL-COM-PHYS-2012-1828, CERN, Geneva, Dec 2012.
+%\item Me \textit{et al.} Paper about my research that is really important and a little older. Phys. Rev. Lett. 2009.
+%\item Me \textit{et al.} Paper about someone else's research where I am somehow an author. Phys. Rev. Lett. 2008.
+%\end{enumerate}
+%\subsection*{Talks and Posters}
+
+%\begin{itemize}
+%\item \textit{"HH(bbbb) Analysis".} Talk. B2G Days, Fermilab, April 2016.
+%Alice Cocoros et al., BTV-15-002 Preapproval Talk, BTV Working Group Meeting, Video, March 23 2016, Oral.
+%Alice Cocoros et al., Pixel Hit Resolution and Merging, FastSim Days, Video, February 15-16 2016, Oral.
+%\item \textit{"Identifying Boosted New Physics With Non-Isolated Leptons".} Talk. APS April Meeting 2015, Baltimore, April 2015.
+%\item \textit{"Leptons in Boosted Jets".} Talk. CMS SUSY Event at the LPC, Fermilab, November 2014.
+%\item \textit{"Exploring a Theory of Dark Matter".} Talk. Physics and Astronomy Honors Thesis Defenses, Williams College, May 2013.
+%\item \textit{"Exploring a Theory of Dark Matter''.} Poster. Joint Fall 2012 Meeting of the American Physical Society New England Section and the American Association of Physics Teachers, Williams College, November 2012.
+%\item \textit{"Exploring a Theory of Dark Matter".} Talk. Physics and Astronomy Honors Thesis Fall Presentations, Williams College, November 2012.
+%\item \textit{"To the Standard Model and Beyond''.} Talk. Mellon Mays Senior Fall Presentations, Williams College, September 2012.
+%\item \textit{"Exploring a Theory of Dark Matter''.} Poster. Williams College Summer Science Research Poster Session, Williams College, August 2012.
+%\item \textit{"Photoionization Models of Planetary Nebulae in M31''.} Talk and publication (along with M. Hosek and A. King). Keck Northeast Astronomy Consortium Student Research Symposium, Wellesley College, September 2011.
+%\item \textit{"Photoionization Models of Planetary Nebulae in M31".} Poster (along with Hosek and King.) Williams College Summer Science Research Poster, Williams College, August 2011.
+%\item \textit{"Andromeda's Next Top Model''.} Talk. Mellon Mays Final Summer Presentations, Williams College, August 2011.
+%\end{itemize}
+
+%\section*{Honors}
+%\begin{itemize}
+%  \item \textbf{Mellon Mays Undergraduate Fellowship, 2011} \\
+%  Taken from the MMUF website mission statement: "The fundamental objectives of MMUF are to reduce, over time, the serious underrepresentation on faculties of individuals from minority groups, as well as to address the consequences of these racial disparities for the educational system itself and for the larger society that it serves.  These goals can be achieved...by increasing the number of students from underrepresented minority groups who pursue PhDs."
+%\newline The first summer of the program is spent at a six week Summer Research Colloquium at Williams College, learning advanced research skills and discussing issues of diversity in academia, culminating in a presentation of research done during the colloquium. The last four weeks are spent continuing work on the research project. During junior year, the summer after, and senior year, research is continued and refined as the student prepares herself for graduate school.
+ 
+%  \item \textbf{College Board National Hispanic Scholar, 2009}
+%  \item \textbf{College Board AP Scholar, 2009}
+%\end{itemize}
+
+%\section*{Teaching Experience}
+%\begin{itemize}
+%  \item \textbf{Teaching Assistant.} Introductory Physics Recitation, Summer 2007. 
+ % \item \textbf{Teaching Assistant.} Astronomy Laboratory, Fall Semester 2005 - Spring Semester 2007.
+%\end{itemize}
+
+%\section*{Professional Service}
+%\begin{itemize}
+% \item \textbf{Graduate Representative}, Physics Graduate Studies Committee, W\&M, 2009-2010.
+% \item \textbf{President}, Physics Graduate Student Association, W\&M, 2002-2003.
+%\end{itemize}
+
+%\section*{Professional Development}
+%\begin{itemize}
+ %\item \textbf{Generic Physics Summer School}, Fermilab, Summer 2002.
+%\end{itemize}
+%\section*{Related Coursework}
+%\begin{itemize}
+%\item \textbf{--Physics:} Honors Senior Thesis, Statistical Mechanics and Thermodynamics, Independent Study in General Relativity, Tutorial in Classical Mechanics, Electrodynamics II*, Quantum Mechanics I*, Directed Research* (Research at CERN), Computation for Experimental Particle Physics*, Quantum Physics, Math Methods for Scientists, Vibrations Waves and Optics, Electricity and Magnetism, Foundation of Modern Physics, Mechanics and Waves
+%\item \textbf{--Astronomy:} Observational Cosmology, Introduction to Astrophysics
+%\item \textbf{--Mathematics:} Introduction to Complex Analysis, Abstract Algebra, Linear Algebra
+%\item *indicates course taken abroad (Quantum Mechanics I and Electrodynamics II in French) - Quantum Mechanics I abroad and Quantum Physics at Williams were different enough to merit full credit in both
+%\end{itemize}
+%\begin{itemize}
+%\item \textbf{Western Nevada College}
+%\begin{itemize}
+%\item - Courses taken to augment high school education: Differential Equations, Calculus I, II, III
+%\end{itemize}
+%\end{itemize}
+
+%\section*{Leadership and Skills}
+%%\begin{itemize}
+%\item{Leader of JHU Physics/Astronomy Diversity Committee (4 years); Member of JHU Physics/Astronomy Outreach group; Two year member of Johns Hopkins Diversity Leadership Council; Started working chapter/served as Co-President of Society for Physics Students at Williams}
+%\item {Competent in python, C++/C, ROOT, MadGraph, FeynRules, Microsoft Office Products, Mathematica, \LaTeX{}, fluent in French}
+%\end{itemize}
+
+
+%\section*{Professional Memberships}
+%\begin{itemize}
+%\item {American Physical Society}
+%\end{itemize}
+
+%\section*{Participation in Conferences}
+%\begin{itemize}
+%\item \textbf{Planck 2012}, Warsaw Poland, May 2012.
+%\item \textbf{218th American Astronomical Society Meeting}, Boston MA, May 2011.
+%\end{itemize}
+
+%\section*{Other Extracurricular Activities}
+%\begin{itemize}
+%\item \textbf{Music}
+%\begin{itemize}
+% \item{--Studied piano for 19 years and continue to do so in college under Doris Stevenson}
+% \item{--Competed in the Berkshire Concerto Competition, played in many recitals, accompanied Contemporary Dance Ensemble, held my own recital in the fall of my junior year (including pieces by Bach, Beethoven, Brahms, and Chopin), part of jazz ensemble led by Avery Sharpe, taken many music classes}
+% \end{itemize}
+%\item \textbf{Dance}
+%\begin{itemize}
+%\item{--Danced for 19 years; at Wiliams, member of Contemporary Dance Ensemble for first two years and Ritmo Latino, Latin dance company, for last two years}
+%\end{itemize}
+%\end{itemize}
+
+%\vspace{0.03 in}
+% Footer
+%\begin{center}
+%  \begin{footnotesize}
+ %   Last updated: \today \\
+    %\href{\footerlink}{\texttt{\footerlink}}
+ % \end{footnotesize}
+%\end{center}
+
+%\end{document}
