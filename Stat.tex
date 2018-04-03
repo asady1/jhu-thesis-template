@@ -1,33 +1,34 @@
 \chapter{Statistical Interpretation}\label{Sec:Stat}
 
+Before we can understand the final results of this analysis, we must consider the error analysis. This involves accounting for errors related to data, signal MC, tt MC, and the background estimation method. We must also consider how to interpret the results of our background estimation. 
+
 \section{Systematic uncertainties\label{sec:Systematics}}
 
-The following sources of systematic uncertainty affect the expected signal and \ttbar efficiencies in this analysis. The background estimation of QCD is unaffected by them because it is computed entirely from data, which brings with it different procedural sources of systematic uncertainty as described in the following text. We first present the uncertainties that impact the normalization of the signal and \ttbar, followed by those which impact the background estimate.
+The following sources of systematic uncertainty affect the expected signal and tt efficiencies in this analysis, as well as the background estimate. The background estimation of QCD is unaffected by them because it is computed entirely from data, which brings with it different procedural sources of systematic uncertainty as described in the following text. We first present the uncertainties that impact the normalization of the signal and tt, followed by those which impact the background estimate.
 
 \begin{itemize}
 
-\item \textbf{Luminosity}: An uncertainty of 2.5\%~\cite{CMS-PAS-LUM-17-001} is applied.
+\item \textbf{Luminosity}: An uncertainty of 2.5\%~\cite{CMS-PAS-LUM-17-001} is applied to account for the uncertainty in the total luminosity in this dataset. This uncertainty is treated as an overall normalization uncertainty.
 
-\item \textbf{Pileup}: An uncertainty up to 5\% for signal and 1\% for \ttbar is associated with pileup impact on $\mjjs$ by varying the estimated minimum bias cross section of pp collisions at 13~\TeV (= 69.2\unit{mb}) by $\pm 4.6\%$~\cite{PileupTWiki}.
+\item \textbf{Pileup}: Each event is reweighted as a function of the number of primary vertices in the event in order to mimic the amount of pileup based off of what is observed in data. An uncertainty up to 5\% for signal and 1\% for tt is associated with pileup impact on $M_{jjj}^{red}$ by varying the estimated minimum bias cross section of pp collisions at 13 TeV (= 69.2 mb) by $\pm 4.6\%$~\cite{PileupTWiki}. This uncertainty is treated as an overall normalization uncertainty.
 
-\item \textbf{PDF and scale hypotheses impact}: The impact of the signal acceptance due to the uncertainties on the PDF is estimated to be up to 0.7\% in the simulated samples used, depending on the resonance mass. For \ttbar, we also consider this uncertainty, which is less than 2\%.
+\item \textbf{PDF and scale hypotheses impact}: The impact of the signal acceptance due to the uncertainties on the PDF is estimated to be up to 0.7\% in the simulated samples used, depending on the resonance mass. For tt, we also consider this uncertainty, which is less than 2\%.
 
-\item \textbf{\ttbar Cross Section Uncertainty}: The total uncertainty, calculated as the sum in quadrature of the scale uncertainty and the PDF+alphaS uncertainty on the cross section of \ttbar is applied, amounting to 6\%, as prescribed by the TOP PAG group: Cross section = 831.76 +19.77-29.20 (scale) +35.06-35.06 (PDF+alpha s) pb. 
+\item \textbf{tt Cross Section Uncertainty}: The total uncertainty, calculated as the sum in quadrature of the scale uncertainty and the PDF+alphaS uncertainty on the cross section of tt is applied, amounting to 6\%, as prescribed by the TOP PAG group: Cross section = 831.76 +19.77-29.20 (scale) +35.06-35.06 (PDF+alpha s) pb. 
 
-\item \textbf{Trigger efficiency uncertainty}: The trigger strategy is described in Section~\ref{ss:trigger}. We have evaluated the trigger scale factor using JetHT and QCD HT-binned MC samples. An additional uncertainty is applied to the SF, as stated above. We then assign an additional uncertainty since the baseline trigger \texttt{HLT\_PFJet260} too has inefficiency in the turn-on region, but this cannot be measured definitively in the data. This is measured in the Monte Carlo against offline event selection that is close to the final signal region selection. The scale factors with these uncertainties, as shown in Fig.~\ref{fig:trigSF}, are applied to the signal and \ttbar MC as a function of \mjjs. This trigger uncertainty is treated as a shape-based uncertainty.
+\item \textbf{Trigger efficiency uncertainty}: The trigger strategy is described in Chapter~\ref{Sec:Ana}. We have evaluated the trigger scale factor (SF) using JetHT and QCD HT-binned MC samples. An additional uncertainty is applied to the SF, as stated above. We then assign an additional uncertainty since the baseline trigger \texttt{HLT\_PFJet260} too has inefficiency in the turn-on region, but this cannot be measured definitively in the data. This is measured in the Monte Carlo against offline event selection that is close to the final signal region selection. The scale factors with these uncertainties are applied to the signal and tt MC as a function of $M_{jjj}^{red}$. This trigger uncertainty is treated as a shape-based uncertainty, which means that both the difference in shape and normalization are taken into account.
 %For $\Mjjs > 1100\GeV$ the trigger efficiency is $\ge 99\%$ with negligible uncertainty. For $\Mjjs < 1100\GeV$ the trigger efficiency is between 60--99\% and has a dependence on the $\Delta\eta(j1,j2)$ as shown in Figs.~\ref{fig:trigeEffvsMjj_JetHT_DetaBins} and \ref{fig:trigeEffvsMjj_QCDHT_HLTPFJet260_DEtabins}. Thus, below the turn-on region, we have evaluated the trigger scale factor using JetHT and QCD HT-binned MC samples. An additional uncertainty is applied to the SF, as stated above. We have also decided to evaluate the trigger efficiency scale factor in three bins of $\Delta\eta(j1,j2)$. We then assign an additional uncertainty since the baseline trigger \texttt{HLT\_PFJet260} too has inefficiency in the turn-on region, but this cannot be measured definitively in the data. This is measured in the Monte Carlo against offline event selection that is close to the final signal region selection. The scale factors with these uncertainties, as shown in Fig.~\ref{fig:trigeEffSFvsMjj_JetHT_DetaBins}, are applied to the signal MC.
   
-\item \textbf{Double-b-tagging}: Scale factors for the double-b tagger are computed in an enriched gluon splitting to \bbbar data sample. Details on the derivation of this SF are provided in Ref.~\cite{DoubleBSFTWiki}. The corresponding uncertainty is about 3-7\% per event. The mistag SFs are applied to \ttbar, corresponding to an uncertainty of 3.6\%.
+\item \textbf{Double-b-tagging and Deep CSV b-tagging}: Scale factors for the double-b and deep CSV tagger are computed in an enriched gluon splitting to \bbbar data sample. These two quantities are considered correlated since the samples used to measure the SFs are similar, and the taggers use similar inputs. Details on the derivation of these SF are provided in Ref.~\cite{DoubleBSFTWiki}. The corresponding uncertainty is about 3-9\% per event. The mistag SFs are applied to tt, corresponding to an uncertainty of 13\%.
 
-\item \textbf{DeepCSV b-tagging}: Scale factors for the deep CSV tagger have a corresponding uncertainty of about 3-5\% per event for signal, and 7\% for \ttbar. The double-b tagger uncertainty and the deepCSV uncertainty are taken to be 100\% correlated.
+%\item \textbf{DeepCSV b-tagging}: Scale factors for the deep CSV tagger have a corresponding uncertainty of about 3-5\% per event for signal, and 7\% for tt. The double-b tagger uncertainty and the deepCSV uncertainty are taken to be 100\% correlated.
 
-\item \textbf{\nsub scale factor}: The scale factor for $\tau_{21}$ selection is measured using semi-leptonic \ttbar sample that is a generous source of boosted hadronic $\PW$ bosons~\cite{CMS-AN-17-051}. We correct the signal and \ttbar yield by the SF as recommended from the POG~\cite{Wtagging}: SF$(\nsub < 0.55) = 1.03 \pm 0.14$ for each jet. Additional uncertainty due to the difference bewteen Higgs jets and $\PW$ jets are determined as described below.
+\item \textbf{$\tau_{21}$ scale factor}: The scale factor for $\tau_{21}$ selection is measured using semi-leptonic tt sample that is a generous source of boosted hadronic W bosons~\cite{CMS-AN-17-051}. We correct the signal and tt yield by the SF as recommended from the POG~\cite{Wtagging}: SF$(\tau_{21} < 0.55) = 1.03 \pm 0.14$ for each jet. Additional uncertainty due to the difference between Higgs jets and W jets are determined as described below.
   
-\item \textbf{Higgs Tagging}: Similar to the \nsub scale factor uncertainty above, the jet mass correction is also evaluated using $\PW$ jets in semileptonic \ttjets events, amounting to $1 \pm 0.0094$. A jet mass resolution scale factor of $1 \pm 0.20$ is also obtained using the above measurement. These are propagated to the Higgs-tagged jets along with the uncertainties, for both signal and \ttbar
-
-The main differences between the Higgs jets and $\PW$ jets are the different mass scales and jet flavour compositions, leading to a different shower profile in the jets. The procedure for measuring the scale factor to account for this for Higgs-tagged signal jets is described in~\cite{CMS-PAS-B2G-16-026}.
+\item \textbf{Higgs Tagging}: Similar to the $\tau_{21}$ scale factor uncertainty above, the jet mass correction is also evaluated using W jets in semileptonic tt+jets events, amounting to $1 \pm 0.0094$. A jet mass resolution scale factor of $1 \pm 0.20$ is also obtained using the above measurement. These are propagated to the Higgs-tagged jets along with the uncertainties for signal.
+The main differences between the Higgs jets and W jets are the different mass scales and jet flavour compositions, leading to a different shower profile in the jets. The procedure for measuring the scale factor to account for this for Higgs-tagged signal jets is described in~\cite{CMS-PAS-B2G-16-026}.
 %There is no way to measure the scale factor for Higgs-tagged jets using the data. The main differences between the Higgs jets and $\PW$ jets are the different mass scales and jet flavour compositions, leading to a different shower profile in the jets. The efficiency ratios measured using the two parton shower+hadronization model gives a reasonable estimate on the differences between the Higgs jets and $\PW$ jets. Thus the scale factor derived for $\PW$ jets are used and a additional systematic uncertainty is applied as follows: The ratio of Higgs-tagging to the $\PW$-tagging efficiency is measured is \PYTHIA and \HERWIG samples, using samples of ${\rm bulk graviton}\to\PW\PW$ and ${\rm bulk graviton}\to\HH$. We choose a mass window for the $\PW$ and the $\PH$. Then we calculate the double ratio $R_{\HERWIG}/R_{\PYTHIA}$ of efficiency ratio. The double ratio provides an estimate of how different showering algorithms handle the difference between hadronically decaying $\PW$ and $\PH$. These corresponded to uncertainties of \textcolor{red}{amount} per jet. See Table~\ref{tab:WideWindow}. There is a $\pt$ dependence of the uncertainty that is evaluated by comparing Higgs tagged jets in \PYTHIA and \HERWIG and propagated to the overall uncertainty, this is the same as that used for the VH resonance search B2G-17-002~\cite{AN-2016-377}. 
-This is not applied to \ttbar, since it has hadronically decaying $\PW$. This uncertainty corresponds to .5-8.8\% depending on signal mass.
+This is not applied to tt, since it has hadronically decaying W. This uncertainty corresponds to .5-8.8\% depending on signal mass.
 
 %\begin{sidewaystable}[!htb]
 %  \begin{center}
@@ -48,7 +49,7 @@ This is not applied to \ttbar, since it has hadronically decaying $\PW$. This un
 %\end{center}
 %\end{sidewaystable}
 
-\item \textbf{Jet Energy Scale}: We have accounted for .2-4\% effect on the yield for signal and up to 1\% for \ttbar. %The JEC uncertainty on the signal shape is about $\pm 1\%$ on the mean and the width, as shown in Fig.~\ref{fig:singalMeanWidthChange_JECUncert}.
+\item \textbf{Jet Energy Scale}: We have accounted for .2-4\% effect on the yield for signal and up to 1\% for tt due to the jet energy correction factors which account for difference in jet energies between data and MC. %The JEC uncertainty on the signal shape is about $\pm 1\%$ on the mean and the width, as shown in Fig.~\ref{fig:singalMeanWidthChange_JECUncert}.
 
 %\begin{figure}[h]
 %\centering
@@ -58,7 +59,7 @@ This is not applied to \ttbar, since it has hadronically decaying $\PW$. This un
 %\label{fig:singalMeanWidthChange_JECUncert}
 %\end{figure}
 
-\item \textbf{Jet Energy Resolution}: We have accounted for up to 1.8\% effect on the yield for signal, and up to .7\% for \ttbar, using gaussian smearing when the jet has no match to a generator level jet, as prescribed by the Jet Energy Corrections and Resolution Subgroup.
+\item \textbf{Jet Energy Resolution}: We have accounted for up to 1.8\% effect on the yield for signal, and up to .7\% for tt, using gaussian smearing when the jet has no match to a generator level jet, as prescribed by the Jet Energy Corrections and Resolution Subgroup. This accounts for the difference in jet energy resolution between data and MC. 
 %The JER uncertainty on the signal shape is negligible, and is about $\pm 1\%$ on the width, as shown in Fig.~\ref{fig:singalMeanWidthChange_JERUncert}.
 
 %\begin{figure}[h]
@@ -73,15 +74,15 @@ This is not applied to \ttbar, since it has hadronically decaying $\PW$. This un
 %\begin{itemize}
 %\item \textbf{Alphabet}: 
 %We only apply these uncertainties to the estimate for $\mjjs < 1200\GeV$, which uses the Alphabet Method. 
-The main source of uncertainty for the non-top background is propagated directly from the error of the fit in mass-sidebands from which we have estimated the transfer factor. This uncertainty can be treated as a shape based uncertainty. 
+As mentioned in the previous chapter, the main source of uncertainty for the QCD background estimate comes from the error of the fit on $R_{p/f}$ in the mass sidebands, used to determine the value of $R_{p/f}$ in the mass window . This uncertainty can be treated as a shape based uncertainty. We also account for the statistical uncertainty in the anti-tag region which is propagated to the estimated signal region.
 %While this uncertainty is the dominant uncertainty in the entire estimate, it is fully correlated between all bins of a particular estimate. 
-We must further account for the statistical uncertainty in the anti-tag region which is propagated to the signal region when the estimate is made. 
+%We must further account for the statistical uncertainty in the anti-tag region which is propagated to the signal region when the estimate is made. 
 %This uncertainty is small compared to the fit uncertainty, but is uncorrelated from bin to bin. 
-The Barlow-Beeston Lite~\cite{BBLite} method is used to treat the bin-by-bin statistical uncertainty. 
+The Barlow-Beeston Lite~\cite{BBLite} method is used to treat this bin-by-bin statistical uncertainty. 
 
-\item \textbf{TriAK4jet Mass Cut}: The systematic for this cut was calculated by comparing the cut efficiency for the Pythia and Herwig Bulk Graviton 1000 GeV samples, documented in~\ref{app:AK4variables}, and is equivalent to 0.5\% systematic. 
+\item \textbf{TriAK4jet Mass Cut}: The systematic for this cut was calculated by comparing the cut efficiency for the Pythia and Herwig Bulk Graviton 1000 GeV samples and is equivalent to 0.5\% systematic. 
 
-%\item \textbf{Top \pt reweighting}: As prescribed by the top group~\cite{CMS-PAS-TOP-16-011,CMS-PAS-TOP-16-008}, \ttbar is reweighting by the generator \pt using the following formula:
+%\item \textbf{Top \pt reweighting}: As prescribed by the top group~\cite{CMS-PAS-TOP-16-011,CMS-PAS-TOP-16-008}, tt is reweighting by the generator \pt using the following formula:
 %\begin{equation}
 %e^{0.0615 - 0.005(generator HT)/2)}
 %\label{eq:ptreweight}
@@ -93,7 +94,7 @@ The Barlow-Beeston Lite~\cite{BBLite} method is used to treat the bin-by-bin sta
 %\item \textbf{AABH}: For the remaining  phase-space in \mjjs, we use errors from the AABH method. In this case, the uncertainty in the $R_{p/f}$ ratio is used as a Gaussian constraint on the conversion from the antitag region to the Signal region. We further measure the dependence of $R_{p/f}$ on the \mjjs variable. The uncertainty in this dependence is also provided as a  Gaussian constraint. With these constraints in place, the uncertainty in the AABH background estimate is simply the uncertainty in the simultaneous fit function. As the linear dependence of $R_{p/f}$ is a parameter of the fit, uncertainty in this value is part of the overall error shapes. The datacards provided below show how these constraints are passed to combine.
 %\end{itemize}
 
-%\end{itemize}
+\end{itemize}
 
 
 %\begin{figure}[h]
@@ -124,12 +125,33 @@ The Barlow-Beeston Lite~\cite{BBLite} method is used to treat the bin-by-bin sta
 %\label{fig:nuianceImpact}
 %\end{figure}
 
-We have also included a datacard that is used as input for the CMS Higgs Combination Tool in Figure.~\ref{fig:datacard} as an example, for Bulk Graviton mass 1000 and selection rejecting boosted events for $\Delta\eta$ 0-1. Lastly, a documentation of the nuisance parameters can be found in App.~\ref{app:background}.
+%We have also included a datacard that is used as input for the CMS Higgs Combination Tool in Figure.~\ref{fig:datacard} as an example, for Bulk Graviton mass 1000 and selection rejecting boosted events for $\Delta\eta$ 0-1. Lastly, a documentation of the nuisance parameters can be found in App.~\ref{app:background}.
 
-\begin{figure}[thb!]
-\begin{center}
-\includegraphics[scale=0.5]{F5/datacardForNote.pdf}
-\end{center}
-\caption{Datacard for Bulk Graviton 1000 GeV rejecting boosted events for $\Delta\eta$ 0-1.}
-\label{fig:datacard}
-\end{figure} 
+%\begin{figure}[thb!]
+%\begin{center}
+%includegraphics[scale=0.5]{F5/datacardForNote.pdf}
+%\end{center}
+%\caption{Datacard for Bulk Graviton 1000 GeV rejecting boosted events for $\Delta\eta$ 0-1.}
+%\label{fig:datacard}
+%\end{figure} 
+
+\section{Limit setting procedure}
+
+There exists a difference between data and the estimated background shown in the figures in the previous chapter. We must understand how to perform this comparison in a meaningful way. In particle physics, this is most often done using confidence levels to quantify the agreement between data and a background-only hypothesis versus a background+signal hypothesis. We once again examine the comparison between data and the background estimation in $M_{jjj}^{red}$, as well as signal in $M_{jjj}^{red}$ in Figure~\ref{fig:databoost2}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{F5/HH4b2p1SR_Fit_NRv1_unB1_boost_dEta2.pdf}
+\includegraphics[width=0.45\textwidth]{F5/HH4b2p1_Plot_NRv1_unB1_boost_dEta2.pdf}
+\caption{Signal region in data for a selection rejecting boosted events.}
+\label{fig:databoost2}
+\end{figure}
+We define the likelihood $\mathcal{L}$, which is computed for each $i$th bin in the $M_{jjj}^{red}$ distribution, as 
+\begin{equation}
+\mathcal{L} = \product_{i} \frac{\lambda_{i}^{n_{i}} e^{-\lambda_{i}}}{n_{i}!},
+\end{equation}
+where $n_{i}$ is the number of data events in that bin, $\lambda_{i}=\mu (\nu(N_{i}(S)) + N_{i}(B))$, $\nu$ scales the amount of signal, $\mu$ scales signal + background, $N_{i}(S)$ is the number of signal events in that bin, $N_{i}(B)$ is the number of background events in that bin. This likelihood is maximized as a function of $M_{jjj}^{red}$ while $\mu$ and $\nu$ are left floating. The log of this likelihood 
+
+
+
+
+asymptotic approximation of the modified frequentist approach for confidence levels
