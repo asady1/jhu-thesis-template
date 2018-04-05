@@ -542,13 +542,25 @@ We note that since the entire mass spectrum and double-b spectrum of the leading
 analysis. 
 
 \subsubsection{Resolved Analysis\label{sss:resolve}}
-The fully resolved non-resonant and resonant analysis have different selections. However, in this thesis, we only talk about combining with the fully resolved non-resonant analysis, so this is the only relevant selection.
+The fully resolved non-resonant and resonant analysis have different selections. While no combination is performed with these analyses, the sensitivity of the semi-resolved analysis is compared with these analyses to better understand the impact of the semi-resolved channel.
 
-Selection is as follows:
+The non-resonant selection is as follows:
 \begin{itemize}
 \item Passes the triggers HLT\_QuadJet45\_TripleBTagCSV\_p087 \\and/or HLT\_DoubleJet90\_Double30\_TripleBTagCSV\_p087;
 \item Four AK4 jets, $p_{T} > 30$ GeV, $|\eta| < 2.4$, and CMVA $>$ 0.4432 (a b-tagger similar to deepCSV)
 \end{itemize}
 
 This selection is relatively loose because they optimize events differently, using a boosted decision tree (type of machine learning) to decide which events to keep.
+
+The resonant selection is as follows:
+\begin{itemize}
+\item Passes HLT\_QuadJet45\_TripleBTagCSV\_p087 \\
+and/or HLT\_DoubleJet90\_Double30\_TripleBTagCSV\_p087;
+\item Four AK4 jets, with regression applied, $p_{T} > 30$ GeV, $|\eta| < 2.4$;
+\item All AK4 jets pass deep CSV medium tag;
+\item Each dijet pair has $\Delta R$ $<$ 1.5;
+\item The pair that minimizes $(\frac{MH1 - 120}{20})^{2} + (\frac{MH2 - 120}{20})^{2}$ is chosen, and the square root of this quantity must be $<$ 1;
+\item Alternatively, if a pair minimizes $(\frac{MH1 - 125}{20})^{2} + (\frac{MH2 - 125}{20})^{2}$, this pair can also be chosen, where the square root of this quantity must be $<$ 1.
+\end{itemize}
+
 

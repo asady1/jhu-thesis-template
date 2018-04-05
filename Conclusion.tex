@@ -1,38 +1,29 @@
-\chapter{Conclusion}\label{Sec:Ana}
+\chapter{Results}\label{Sec:Results}
 
-\section{Results\label{sec:Results}}
+%We use the CMS Higgs Combination Tool to compute the limit at 95\% confidence for the production cross section of $\sigma(pp\to\XHbbHbb)$. 
+%The Asymptotic $\mathrm{CL_S}$ method of the Higgs Combination Tool is used to compute the expected upper limits on the signal cross sections at 95\% confidence level. 
 
-We use the CMS Higgs Combination Tool to compute the limit at 95\% confidence for the production cross section of $\sigma(pp\to\XHbbHbb)$. 
-The Asymptotic $\mathrm{CL_S}$ method of the Higgs Combination Tool is used to compute the expected upper limits on 
-the signal cross sections at 95\% confidence level. 
+Our final results place a limit on the production cross section multiplied by the branching ratio of Higgs to bb for different sccenarios. We consider the semi-resolved results alone, as well as the combination of semi-resolved results and boosted results. The boosted results are obtained by using the selection described in Chapter~\ref{Sec:Ana} for the boosted analysis. This analysis also uses Alphabet as a background estimate. Results are presented for bulk graviton signal, radion signal, and non-resonant signal.
 
-The unblinded limits for the selection rejecting boosted events can be found in Fig~\ref{fig:BGblindboost}.
+\section{Bulk Graviton Results}
+
+The unblinded semi-resolved limits for the selection rejecting boosted events can be found in Fig~\ref{fig:BGblindboost}. The dashed line represents the expected value of the cross section as a function of $M_{jjj}^{red} \sim M_{\text{resonance}}$ if no signal is observed. The green band represents the 1 sigma deviation from this expectation, or a 68\% chance that SM background will be within this band. Similarly, the yellow band represents the 2 sigma deviation from this expectation, or a 95\% chance that SM background will be within this band. The solid black line represents the observation, which is within this 2 sigma band, suggesting that no new physics was found. Lastly, the blue line represents the cross section of the bulk graviton signal studied in the analysis. This signal cross section is lower at every mass point than the observed cross section, therefore we do not yet have enough sensitivity to rule out any of these mass points for this particular model, and will need more data.
 
 \begin{figure}[thb!]
 \begin{center}
 \includegraphics[scale=0.5]{F5/brazilianFlag_2p1BGboost_HH4b2p1_HH4b2p1_13TeV.pdf}
 \end{center}
-\caption{Blinded limits for bulk graviton for the selection rejecting boosted events.}
+\caption{Limits for bulk graviton for the semi-resolved selection rejecting boosted events.}
 \label{fig:BGblindboost}
 \end{figure} 
 
-The unblinded limits for the selection rejecting boosted events can be found in Fig~\ref{fig:radblindboost}.
-
-\begin{figure}[thb!]
-\begin{center}
-%\includegraphics[scale=0.5]{F5/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radboostv2.pdf}
-\includegraphics[scale=0.5]{F5/brazilianFlag_Rad_2p1boost_HH4b2p1_HH4b2p1_13TeV.pdf}
-\end{center}
-\caption{Blinded limits for radion for the selection rejecting boosted events.}
-\label{fig:radblindboost}
-\end{figure} 
-
-We compare the case where we reject boosted events to the boosted limits themselves, for both observed and expected in Tab.~\ref{tab:boostcompareBG} and~\ref{tab:boostcompareRad}.
+We can also present these limits in the form of a table. In order to better understand the sensitivity of the semi-resolved and boosted analyses, we compare the case where the semi-resolved analysis rejects boosted events to the boosted limits themselves, for both observed and expected limits in Table~\ref{tab:boostcompareBG}.
 
 \begin{table}[h]
+\begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-Mass & \multicolumn{2}{c}{Semi-Boosted} & \multicolumn{2}{c}{Boosted}\\ \hline \hline
+Mass & \multicolumn{2}{|c|}{Semi-Resolved} & \multicolumn{2}{|c|}{Boosted}\\ \hline
 & Obs & Exp & Obs & Exp\\ \hline
 750 & 42.19 & 59.77 & 79.4 & 50.2\\
 800 & 21.75 & 36.72 & 59.9 & 29.9\\
@@ -41,49 +32,27 @@ Mass & \multicolumn{2}{c}{Semi-Boosted} & \multicolumn{2}{c}{Boosted}\\ \hline \
 1200 & 8.98 & 11.64 & 7.6 & 6.9\\
 1600 & 7.01 & 9.26 & 3.8 & 3.2\\
 2000 &  12.83 & 16.95 & 2.4 & 2.0\\
+2500 & -- & -- & 1.4 & 1.4\\
+3000 & -- & -- & 1.1 & 1.7 \\
 \hline
 \end{tabular}
-\caption{Comparison of semi-boosted (rejecting boosted events) and boosted limits, both expected and observed, for bulk graviton.}
+\end{center}
+\caption{Comparison of semi-resolved (rejecting boosted events) and boosted limits, both expected and observed, for bulk graviton.}
 \label{tab:boostcompareBG}
 \end{table}
 
-\begin{table}[h]
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Mass & \multicolumn{2}{c}{Semi-Boosted} & \multicolumn{2}{c}{Boosted}\\ \hline \hline
-& Obs & Exp & Obs & Exp\\ \hline
-750 & 64.99 & 89.69 & 125.9 & 81.6 \\
-800 & 34.79 & 61.72 & 90.4 & 46.4 \\
-1000 & 58.79 & 29.61 & 14.2 & 20.4 \\
-1200 & 14.33 & 18.05 & 11.4 & 10.4 \\
-1400 & 8.38 & 12.07 & 6.0 & 6.3 \\
-1600 & 8.88 & 11.45 & 5.5 & 4.7 \\
-\hline
-\end{tabular}
-\caption{Comparison of semi-boosted (rejecting boosted events) and boosted limits, both expected and observed, for radion.}
-\label{tab:boostcompareRad}
-\end{table}
-
-
-These limits can also be combined with the fully boosted results for bulk graviton and radion to achieve a combined expected limit, depicted in Fig.~\ref{fig:1p12p1BG} and~\ref{fig:1p12p1Rad}, and documented in Tab.~\ref{tab:1p12p1BG} and~\ref{tab:1p12p1Rad}, for both observed and expected limits.
+Since the semi-resolved and boosted analysis are statistically independent, we can combine these results to gain sensitivity. These combined limits for the bulk graviton are shown in Figure~\ref{fig:1p12p1BG} and printed in Table~\ref{tab:1p12p1BG}, for both observed and expected limits. Even with the combined results, more data is needed to set limits on this particular model.
 
 \begin{figure}[thb!]
 \begin{center}
-\includegraphics[scale=0.5]{F5/brazilianFlag_2p1BG1p1_HH4b2p1_HH4b2p1_13TeV.pdf}
+\includegraphics[scale=0.5]{F5/bulk.pdf}
 \end{center}
-\caption{Unblinded limits for bulk graviton for the selection rejecting boosted events, combining boosted selection and semi-boosted selection.}
+\caption{Limits for bulk graviton combining boosted selection and semi-resolved selection (rejecting boosted events).}
 \label{fig:1p12p1BG}
 \end{figure} 
 
-\begin{figure}[thb!]
-\begin{center}
-\includegraphics[scale=0.5]{F5/brazilianFlag_Rad_2p11p1_HH4b2p1_HH4b2p1_13TeV.pdf}
-\end{center}
-\caption{Unblinded limits for radion for the selection rejecting boosted events, combining boosted selection and semi-boosted selection.}
-\label{fig:1p12p1Rad}
-\end{figure} 
-
 \begin{table}[h]
+\begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 Mass &Obs Combined Lim & Exp Combined Lim & +1$\sigma$ & -1$\sigma$\\ \hline
@@ -108,13 +77,148 @@ Mass &Obs Combined Lim & Exp Combined Lim & +1$\sigma$ & -1$\sigma$\\ \hline
 1.2 & 5.56 & 5.96 & 3.99 & 9.35\\
 1.6 & 3.11 & 3.0 & 1.91 & 4.93\\
 2.0 & 2.29 & 2.08 & 1.31 & 3.56\\
+2.5 & 1.4 & 1.4 & 0.8 &2.5\\
+3.0 & 1.1 & 1.7 & 1.1 & 3.9\\
 \hline
 \end{tabular}
-\caption{Combined expected and observed limits of boosted and semi-boosted channels for bulk graviton, where the semi-boosted channel retains resolved events but rejects boosted events.}
+\end{center}
+\caption{Combined expected and observed limits of boosted and semi-resolved channels for bulk graviton, where the semi-resolved channel rejects boosted events.}
 \label{tab:1p12p1BG}
 \end{table}
+ 
+%The unblinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:BGblindboth}.
+%
+%\begin{figure}[thb!]
+%\begin{center}
+%\includegraphics[scale=0.5]{F5/brazilianFlag_2p1BGboostres_HH4b2p1_HH4b2p1_13TeV.pdf}
+%\end{center}
+%\caption{Blinded limits for bulk graviton for the selection rejecting boosted and resolved events.}
+%\label{fig:BGblindboth}
+%\end{figure} 
+%
+The unblinded limits for the semi-resolved selection retaining boosted events can be found in Fig~\ref{fig:BGblindnone}.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{F5/brazilianFlag_2p1BGretain_HH4b2p1_HH4b2p1_13TeV.pdf}
+\end{center}
+\caption{Limits for bulk graviton for the semi-resolved selection retaining boosted events.}
+\label{fig:BGblindnone}
+\end{figure} 
+
+The impact of the resolved (green), semi-resolved (aqua), and boosted (royal blue) analyses, where no shared events have been rejected for any of the selections, can be seen in Fig.~\ref{fig:limcompare}, for bulk graviton. Semi-resolved does best between roughly 1 and 1.4 TeV.
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{F5/bg_compare.pdf}
+\caption{Bulk graviton expected limits for all three channels, resolved (green), semi-resolved (aqua), boosted (royal blue), where no channel rejects the events of another channel.}
+\label{fig:limcompare}
+\end{figure}
+
+%Fig.~\ref{fig:combinedlimit} shows the limits for bulk graviton and radion for the three different cases (rejecting boosted events, rejecting boosted and resolved events, only applying full selection), and Tabs.~\ref{tab:comblimBG} and ~\ref{tab:comblimRad} detail the exact numbers. The overlap between the resolved resonant analysis and the semi-boosted case is documented in App.~\ref{app:overlap}.
+
+%\begin{figure}[thb!]
+%\begin{center}
+%\includegraphics[scale=0.35]{F5/BGLim_v5.pdf} 
+%\includegraphics[scale=0.35]{F5/RadLim_v5.pdf} 
+%\end{center}
+%\caption{The expected limits for the full selection + boosted rejection, full selection + boosted + resolved rejection, and full selection for bulk graviton (left) and radion (right).}
+%\label{fig:combinedlimit}
+%\end{figure} 
+
+%\begin{table}[h]
+%\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+%\hline
+%Mass & \multicolumn{2}{c}{No Reject} & \multicolumn{2}{c}{Rejecting Boosted} & \multicolumn{2}{c}{Rejecting Both} \\ \hline
+%Mass & No Reject & Rejecting Boosted & Rejecting Both \\ \hline
+%750 & 21.01 & 27.42 & 56.09\\
+%800 & 18.20 & 29.60 & 57.96\\
+%900 & 12.85 & 25.39 & 45.93\\
+%1000 & 8.78 & 20.23 & 34.21\\
+%1200 & 4.78 & 10.78 & 15.15\\
+%1600 & 4.58 & 6.81 & 7.40\\
+%2000 & 7.01 & 8.24 & 8.78\\
+%750 & 40.78 & 59.76 & 125.00\\
+%800 & 24.29 & 36.71 & 74.53\\
+%900 & 14.10 & 26.17 & 48.28\\
+%1000 & 9.57 & 21.64 & 36.71\\
+%1200 & 4.98 & 11.64 & 15.85\\
+%1600 & 5.33 & 9.25 & 9.96\\
+%2000 & 12.85 & 16.95 & 17.57\\
+%\hline
+%\end{tabular}
+%\caption{Comparison of expected limits retaining events from the boosted and resolved selections, rejecting events from the boosted selection, and rejecting events from the boosted and resolved selections for bulk graviton.}\label{tab:comblimBG}
+%\end{table}
+
+%\begin{table}[h]
+%\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+%\hline
+%Mass & No Reject & Rejecting Boosted & Rejecting Both \\ \hline
+%750 & 49.53 & 44.53 & 92.81\\
+%800 & 28.82 & 46.40 & 90.93\\
+%1000 & 16.79 & 35.00 & 59.53\\
+%1200 & 7.89 & 16.79 & 23.98\\
+%1400 & 6.07 & 10.50 & 13.24\\
+%1600 & 6.19 & 8.63 & 10.03\\
+%750 & 64.06 & 89.68 & 199.53\\
+%800 & 40.15 & 61.71 & 124.06\\
+%1000 & 14.49 & 29.60 & 49.84\\
+%1200 & 8.32 & 18.04 & 25.62\\
+%1400 &6.34 & 12.07 & 15.27\\
+%1600 & 7.59 & 11.44 & 13.24\\
+%\hline
+%\end{tabular}
+%\caption{Comparison of expected limits retaining events from the boosted and resolved selections, rejecting events from the boosted selection, and rejecting events from the boosted and resolved selections for radion.}\label{tab:comblimRad}
+%\end{table}
+
+\section{Radion Results}
+
+The unblinded limits for the semi-resolved selection rejecting boosted events can be found in Fig~\ref{fig:radblindboost}. The observed limits are within 95\% of the expected limits, so no new physics was found. The cross section of the radion is too low to rule out the radion below a particular mass with the semi-resolved analysis alone.
+
+\begin{figure}[thb!]
+\begin{center}
+%\includegraphics[scale=0.5]{F5/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radboostv2.pdf}
+\includegraphics[scale=0.5]{F5/brazilianFlag_Rad_2p1boost_HH4b2p1_HH4b2p1_13TeV.pdf}
+\end{center}
+\caption{Limits for radion for the semi-resolved selection rejecting boosted events.}
+\label{fig:radblindboost}
+\end{figure} 
+
+In order to better understand the sensitivity of the semi-resolved and boosted analyses, we compare the case where the semi-resolved analysis rejects boosted events to the boosted limits themselves, for both observed and expected limits in Table~\ref{tab:boostcompareRad}. 
 
 \begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Mass & \multicolumn{2}{|c|}{Semi-Resolved} & \multicolumn{2}{|c|}{Boosted}\\ \hline
+& Obs & Exp & Obs & Exp\\ \hline
+750 & 64.99 & 89.69 & 125.9 & 81.6 \\
+800 & 34.79 & 61.72 & 90.4 & 46.4 \\
+1000 & 58.79 & 29.61 & 14.2 & 20.4 \\
+1200 & 14.33 & 18.05 & 11.4 & 10.4 \\
+1400 & 8.38 & 12.07 & 6.0 & 6.3 \\
+1600 & 8.88 & 11.45 & 5.5 & 4.7 \\
+2000 & -- & -- & 3.5 & 3.0\\
+2500 & -- & -- & 1.7 & 2.0\\
+3000 & -- & -- & 1.4 & 2.5 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Comparison of semi-resolved (rejecting boosted events) and boosted limits, both expected and observed, for radion.}
+\label{tab:boostcompareRad}
+\end{table}
+
+Since the semi-resolved and boosted analysis are statistically independent, we can combine these results to gain sensitivity. These combined limits for the bulk graviton are shown in Figure~\ref{fig:1p12p1Rad} and printed in Table~\ref{tab:1p12p1Rad}, for both observed and expected limits. Observed limits are within 95\% expected limits. The combination is sensitive enough to rule out this model below $\sim$ 1.5 TeV. If the radion were to have existed with a mass $<$ 1.5 TeV, we would have been sensitive enough to see this excess based off of the comparison of our observed cross section (black) with the expected cross section of the radion (blue), but there is no excess observed.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{F5/radion.pdf}
+\end{center}
+\caption{Limits for radion combining boosted selection and semi-resolved selection (rejecting boosted events).}
+\label{fig:1p12p1Rad}
+\end{figure} 
+
+\begin{table}[h]
+\begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 %750 & 51.71 \\
@@ -136,167 +240,87 @@ Mass &Obs Combined Lim & Exp Combined Lim & +1$\sigma$ & -1$\sigma$\\ \hline
 1.2 & 8.56 & 9.18 & 6.12 & 14.34\\
 1.4 & 4.44 & 5.63 & 3.66 & 8.99\\
 1.6 & 4.41 & 4.36 & 2.8 & 7.17\\
+2000 & 3.5 & 3.0 & 1.5 & 4.1\\
+2500 & 1.7 & 2.0 & 1.2 & 3.8\\
+3000 & 1.4 & 2.5 & 1.9 & 3.0\\
 \hline
 \end{tabular}
-\caption{Combined expected and observed limits of boosted and semi-boosted channels for radion, where the semi-boosted channel retains resolved events but rejects boosted events.}
+\end{center}
+\caption{Combined expected and observed limits of boosted and semi-resolved channels for radion, where the semi-resolved channel retains resolved events but rejects boosted events.}
 \label{tab:1p12p1Rad}
 \end{table}
 
-The semi-boosted limits can be found separately in Figs.~\ref{fig:BGblindboost}-~\ref{fig:radblindnone} for the case rejecting both boosted and resolved events, and retaining both boosted and resolved events, for both bulk graviton and radion, including observed limits.
-
-For bulk graviton:
- 
-The unblinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:BGblindboth}.
-
-\begin{figure}[thb!]
-\begin{center}
-\includegraphics[scale=0.5]{F5/brazilianFlag_2p1BGboostres_HH4b2p1_HH4b2p1_13TeV.pdf}
-\end{center}
-\caption{Blinded limits for bulk graviton for the selection rejecting boosted and resolved events.}
-\label{fig:BGblindboth}
-\end{figure} 
-
-The unblinded limits for the selection retaining boosted and resolved events can be found in Fig~\ref{fig:BGblindnone}.
-
-\begin{figure}[thb!]
-\begin{center}
-\includegraphics[scale=0.5]{F5/brazilianFlag_2p1BGretain_HH4b2p1_HH4b2p1_13TeV.pdf}
-\end{center}
-\caption{Blinded limits for bulk graviton for the selection retaining boosted and resolved events.}
-\label{fig:BGblindnone}
-\end{figure} 
-
-For radion:
-
-The unblinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:radblindboth}.
-
-\begin{figure}[thb!]
-\begin{center}
-%\includegraphics[scale=0.5]{F5/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radboth_v2.pdf}
-\includegraphics[scale=0.5]{F5/brazilianFlag_Rad_2p1retain_HH4b2p1_HH4b2p1_13TeV.pdf}
-\end{center}
-\caption{Blinded limits for radion for the selection rejecting boosted and resolved events.}
-\label{fig:radblindboth}
-\end{figure} 
-
-The unblinded limits for the selection retaining boosted and resolved events can be found in Fig~\ref{fig:radblindnone}.
+%The unblinded limits for the selection rejecting boosted and resolved events can be found in Fig~\ref{fig:radblindboth}.
+%
+%\begin{figure}[thb!]
+%\begin{center}
+%%\includegraphics[scale=0.5]{F5/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radboth_v2.pdf}
+%\includegraphics[scale=0.5]{F5/brazilianFlag_Rad_2p1retain_HH4b2p1_HH4b2p1_13TeV.pdf}
+%\end{center}
+%\caption{Blinded limits for radion for the selection rejecting boosted and resolved events.}
+%\label{fig:radblindboth}
+%\end{figure} 
+The unblinded limits for the semi-resolved selection retaining boosted events can be found in Fig~\ref{fig:radblindnone}.
 
 \begin{figure}[thb!]
 \begin{center}
 %\includegraphics[scale=0.5]{F5/brazilianFlag_HH4b2p1_HH4b2p1_13TeV_radnone_v2.pdf}
 \includegraphics[scale=0.5]{F5/brazilianFlag_Rad_2p1boostres_HH4b2p1_HH4b2p1_13TeV.pdf}
 \end{center}
-\caption{Blinded limits for radion for the selection retaining boosted and resolved events.}
+\caption{Limits for radion for the selection retaining boosted events.}
 \label{fig:radblindnone}
 \end{figure} 
 
-The impact of the resolved (green), semi-boosted (aqua), and boosted (royal blue), where no shared events have been rejected for any of the selections, can be seen in Fig.~\ref{fig:limcompare}, for bulk graviton and radion. Semi-boosted does best between roughly 1 and 1.4 TeV.
+The impact of the resolved (green), semi-resolved (aqua), and boosted (royal blue) analyses, where no shared events have been rejected for any of the selections, can be seen in Fig.~\ref{fig:limcompare2}, for radion. Semi-resolved does best between roughly 1 and 1.4 TeV.
 \begin{figure}
 \centering
-\includegraphics[scale=0.35]{F5/bg_compare.pdf}
-\includegraphics[scale=0.35]{F5/radion_compare.pdf}
-\caption{Bulk graviton (left) and radion (right) limits for all three channels, resolved (green), semi-boosted (aqua), boosted (royal blue), where no channel rejects the events of another channel.}
-\label{fig:limcompare}
+\includegraphics[scale=0.5]{F5/radion_compare.pdf}
+\caption{Radion expected limits for all three channels, resolved (green), semi-resolved (aqua), boosted (royal blue), where no channel rejects the events of another channel.}
+\label{fig:limcompare2}
 \end{figure}
 
-Fig.~\ref{fig:combinedlimit} shows the limits for bulk graviton and radion for the three different cases (rejecting boosted events, rejecting boosted and resolved events, only applying full selection), and Tabs.~\ref{tab:comblimBG} and ~\ref{tab:comblimRad} detail the exact numbers. The overlap between the resolved resonant analysis and the semi-boosted case is documented in App.~\ref{app:overlap}.
+\section{Non-resonant Results}
 
-\begin{figure}[thb!]
+%Systematics on the combined channels can be summarized as follows:
+
+%\begin{table}[h]
+  %\caption{Summary of systematic uncertainties in the signal and background yields.}
+  %\label{tab:Syst}
+  %\begin{center}
+   % \begin{tabular}{lc}
+     % \hline\hline
+    %  Source & Uncertainty (\%) \\
+    %  \hline
+    %  \multicolumn{2}{c}{Signal yield} \\
+    %  \hline
+    %  Trigger efficiency                    & 1--15        \\
+    %  $\PH$ jet energy scale and resolution & 1--3            \\
+     % $\PH$ jet mass scale and resolution   & 2            \\
+    %  $\PH$ jet $\nsub$ selection           & 14--30    \\
+   %   $\PH$-tagging correction factor       & 5--20        \\
+    %  Double-\cPqb\,tagger and deep CSV         & 2--9         \\
+%%      DeepCSV                               & 3--5
+    %  Pileup modelling                      & 1--2            \\
+     % PDF and scales                        & 0.1-3        \\
+      %Luminosity                            & 2.5          \\
+      %\hline
+     % \multicolumn{2}{c}{Background yield} \\
+     % \hline
+     % $R_\text{p/f}$ fit                    & 2--10 \\
+      %\hline\hline
+   % \end{tabular}
+  %\end{center}
+%\end{table}
+
+
+The observed and expected limits are in Table~\ref{tab:2p1lim} for semi-resolved (rejecting boosted events) and boosted selection. Observed limits are within 95\% expected limits. % and the 68\% and 95\% expected limits for the combined channel are in Tab.~\ref{tab:2p1limcomb}.
+
+\begin{table}[h]
 \begin{center}
-\includegraphics[scale=0.35]{F5/BGLim_v5.pdf} 
-\includegraphics[scale=0.35]{F5/RadLim_v5.pdf} 
-\end{center}
-\caption{The expected limits for the full selection + boosted rejection, full selection + boosted + resolved rejection, and full selection for bulk graviton (left) and radion (right).}
-\label{fig:combinedlimit}
-\end{figure} 
-
-\begin{table}[h]
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-%Mass & \multicolumn{2}{c}{No Reject} & \multicolumn{2}{c}{Rejecting Boosted} & \multicolumn{2}{c}{Rejecting Both} \\ \hline
-Mass & No Reject & Rejecting Boosted & Rejecting Both \\ \hline
-%750 & 21.01 & 27.42 & 56.09\\
-%800 & 18.20 & 29.60 & 57.96\\
-%900 & 12.85 & 25.39 & 45.93\\
-%1000 & 8.78 & 20.23 & 34.21\\
-%1200 & 4.78 & 10.78 & 15.15\\
-%1600 & 4.58 & 6.81 & 7.40\\
-%2000 & 7.01 & 8.24 & 8.78\\
-750 & 40.78 & 59.76 & 125.00\\
-800 & 24.29 & 36.71 & 74.53\\
-900 & 14.10 & 26.17 & 48.28\\
-1000 & 9.57 & 21.64 & 36.71\\
-1200 & 4.98 & 11.64 & 15.85\\
-1600 & 5.33 & 9.25 & 9.96\\
-2000 & 12.85 & 16.95 & 17.57\\
-\hline
-\end{tabular}
-\caption{Comparison of expected limits retaining events from the boosted and resolved selections, rejecting events from the boosted selection, and rejecting events from the boosted and resolved selections for bulk graviton.}\label{tab:comblimBG}
-\end{table}
-
-\begin{table}[h]
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-Mass & No Reject & Rejecting Boosted & Rejecting Both \\ \hline
-%750 & 49.53 & 44.53 & 92.81\\
-%800 & 28.82 & 46.40 & 90.93\\
-%1000 & 16.79 & 35.00 & 59.53\\
-%1200 & 7.89 & 16.79 & 23.98\\
-%1400 & 6.07 & 10.50 & 13.24\\
-%1600 & 6.19 & 8.63 & 10.03\\
-750 & 64.06 & 89.68 & 199.53\\
-800 & 40.15 & 61.71 & 124.06\\
-1000 & 14.49 & 29.60 & 49.84\\
-1200 & 8.32 & 18.04 & 25.62\\
-1400 &6.34 & 12.07 & 15.27\\
-1600 & 7.59 & 11.44 & 13.24\\
-\hline
-\end{tabular}
-\caption{Comparison of expected limits retaining events from the boosted and resolved selections, rejecting events from the boosted selection, and rejecting events from the boosted and resolved selections for radion.}\label{tab:comblimRad}
-\end{table}
-
-\section{Results Non resonant}
-\section{Results\label{sec:Results}}
-%Limits are reported in units of fb for v0 benchmark samples. This will be updated when v1 benchmark samples are available. 
-Systematics on the combined channels can be summarized as follows:
-
-\begin{table}[h]
-  \topcaption{Summary of systematic uncertainties in the signal and background yields.}
-  \label{tab:Syst}
-  \begin{center}
-    \begin{tabular}{lc}
-      \hline\hline
-      Source & Uncertainty (\%) \\
-      \hline
-      \multicolumn{2}{c}{Signal yield} \\
-      \hline
-      Trigger efficiency                    & 1--15        \\
-      $\PH$ jet energy scale and resolution & 1--3            \\
-      $\PH$ jet mass scale and resolution   & 2            \\
-      $\PH$ jet $\nsub$ selection           & 14--30    \\
-      $\PH$-tagging correction factor       & 5--20        \\
-      Double-\cPqb\,tagger and deep CSV         & 2--9         \\
-%      DeepCSV                               & 3--5
-      Pileup modelling                      & 1--2            \\
-      PDF and scales                        & 0.1-3        \\
-      Luminosity                            & 2.5          \\
-      \hline
-      \multicolumn{2}{c}{Background yield} \\
-      \hline
-      $R_\text{p/f}$ fit                    & 2--10 \\
-      \hline\hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
-The observed and expected limits are in Tab.~\ref{tab:2p1lim} for semi-boosted (rejecting boosted events) and boosted. The combined limit of the two channels is in Tab.~\ref{tab:2p1limcomb}. Observed limits are within 95\% expected limits. % and the 68\% and 95\% expected limits for the combined channel are in Tab.~\ref{tab:2p1limcomb}.
-
-\begin{table}[h]
-\topcaption{Expected and observed limits for semi-boosted (rejecting boosted events) and boosted separately for v1 benchmark model, SM.}\label{tab:2p1lim}
+\scalebox{0.8}{
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-Sample & \multicolumn{4}{c}{Semi-Boosted} & \multicolumn{4}{c}{Boosted}  \\  \hline \hline
+Sample & \multicolumn{4}{|c|}{Semi-Resolved} & \multicolumn{4}{|c|}{Boosted}  \\  \hline 
 & Obs & Exp & +1$\sigma$ &-1$\sigma$  & Obs &Exp & +1$\sigma$ &-1$\sigma$ \\ \hline
 1 & 491.82 & 466.25 & 321.35 & 694.84 & 578.26 & 333.75 & 210.86 & 570.55\\
 2 & 69.48 & 82.19 & 564 & 124.45& 48.45 & 48.13 & 29.7 & 84.19\\
@@ -313,6 +337,9 @@ Sample & \multicolumn{4}{c}{Semi-Boosted} & \multicolumn{4}{c}{Boosted}  \\  \hl
 SM & 1801.16 & 1962.5 & 1342.98 & 2955.97 & 3675.74 & 1672.5 & 1048.68 & 2859.16 \\
 \hline
 \end{tabular}
+}
+\end{center}
+\caption{Expected and observed limits for semi-resolved (rejecting boosted events) and boosted separately for v1 benchmark model, SM.}\label{tab:2p1lim}
 \end{table} 
 
 
@@ -345,8 +372,18 @@ SM & 1801.16 & 1962.5 & 1342.98 & 2955.97 & 3675.74 & 1672.5 & 1048.68 & 2859.16
 %box & 2042 & 2329 & 1592\\
 %SM & 1126.25 & 1765.0 & 1672.5 & 1205.0\\
 
+The combined limit of the two channels can be seen in Figure~\ref{fig:1p12p1NR}, as well as in Tab.~\ref{tab:2p1limcomb}. Observed limits are within 95\% expected limits.
+
+\begin{figure}[thb!]
+\begin{center}
+\includegraphics[scale=0.5]{F5/nonreslim.pdf}
+\end{center}
+\caption{Limits for non-resonant benchmark models and SM pair production, combining boosted selection and semi-resolved selection (rejecting boosted events).}
+\label{fig:1p12p1NR}
+\end{figure}
+
 \begin{table}[h]
-\topcaption{Observed and expected for the combined semi-boosted + boosted limit.}\label{tab:2p1limcomb}
+\begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 Sample & Observed & Expected & +1$\sigma$ & -1$\sigma$ & +2$\sigma$ & -2$\sigma$ \\ \hline
@@ -404,19 +441,29 @@ SM & 1983.98 & 1262.5 & 833.88 & 1972.07 & 589.33 & 3036.85\\
 %SM & 1205.0 & 787.85 & 1911.07 & 557.78 & 2965.7\\
 \hline
 \end{tabular}
+\end{center}
+\caption{Observed and expected for the combined semi-resolved + boosted limit.}\label{tab:2p1limcomb}
 \end{table} 
  
 %Tab.~\ref{tab:limNoRes} compares expected limits when rejecting events that pass the HIG-17-017 event selection. Because a significant amount of signal passes this selection while relatively little background passes this selection, we see a large difference in 2+1 sensitivity, and even in the combined sensitivity (calculated here assuming that no 1+1 events overlap with the HIG-17-017 selection, which based off of studies is an accurate estimation).
 
-Tab.~\ref{tab:limNoRes} reports the combined boosted + semi-boosted observed and expected limits when events passing the HIG-17-017 selection are also rejected.
+%Tab.~\ref{tab:limNoRes} reports the combined boosted + semi-boosted observed and expected limits when events passing the fully resolved selection (documented in Chapter~\ref{Sec:Ana} are also rejected.
 
-\begin{table}[h]
-\topcaption{Observed and expected combined boosted + semi-boosted limits including rejection of the resolved events (HIG-17-017 selection).}\label{tab:limNoRes}
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
+%\begin{figure}[thb!]
+%\begin{center}
+%\includegraphics[scale=0.5]{nonreslim_noresolved.pdf}
+%\end{center}
+%\caption{Unblinded limits for non-resonant benchmark models and SM pair production, combining merged selection and semi-resolved selection (rejecting merged events), where events passing the resolved selection are also rejected.}
+%\label{fig:1p12p1NRnores}
+%\end{figure}
+
+%%\begin{table}[h]
+%\caption{Observed and expected combined boosted + semi-boosted limits including rejection of the resolved events (HIG-17-017 selection).}\label{tab:limNoRes}
+%\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+%\hline
 %Sample & 2+1 Exp. Rej. Boost. & 2+1 Exp. Rej. Boost/Res. & Comb Exp. & Comb. Exp. Rej. Res. \\
-Sample & Observed & Expected & +1$\sigma$ & -1$\sigma$ & +2$\sigma$ & -2$\sigma$ \\ \hline
-\hline
+%Sample & Observed & Expected & +1$\sigma$ & -1$\sigma$ & +2$\sigma$ & -2$\sigma$ \\ \hline
+%\hline
 %1 & 359.06 & 542.5 & 233.13 & 298.13\\
 %2 & 65.94 & 80.94 & 34.84 & 40.78\\
 %3 & 516.25 & 769.84 & 329.06 & 416.25\\
@@ -443,27 +490,35 @@ Sample & Observed & Expected & +1$\sigma$ & -1$\sigma$ & +2$\sigma$ & -2$\sigma$
 %11 & 348.13 & 416.25 & 188.13 & 205.63 \\
 %12 & 2769.38 & 3946.25 & 1972.5 & 2422.5 \\
 %SM & 1176.76 & 3008.75 & 1205.0 & 1592.5 \\
-1 & 445.7 & 343.75 & 218.93 & 571.2 & 152.4 & 952.7\\
-2 & 42.45 & 47.34 & 29.91 & 79.43 & 20.62 & 131.36\\
-3 & 637.91 & 481.25 & 302.82 & 815.03 & 207.73 & 1367.17\\
-4 & 1970.82 & 1262.5 & 809.55 & 2097.87 & 559.74 & 3471.79\\
-5 & 94.01 & 98.75 & 61.38 & 167.24 & 41.47 & 280.54\\
-6 & 602.4 & 532.5 & 340.49 & 893.34 & 238.17 & 1500.16\\
-7 & 5818.33 & 3112.5 & 2031.08 & 5072.74 & 1434.67 & 8229.43\\
-8 & 242.04 & 225.63 & 141.4 & 378.51 & 96.51 & 626.02\\
-9 & 225.83 & 190.63 & 120.68 & 319.8 & 83.4 & 537.03\\
-10 & 1072.38 & 832.5 & 521.72 & 1396.62 & 356.09 & 2309.85\\
-11 & 272.72 & 231.88 & 142.48 & 396.39 & 96.46 & 673.75\\
-12 & 3878.72 & 2996.25 & 1900.61 & 5026.59 & 1316.71 & 8377.21\\
-SM & 3125.39 & 1767.5 & 1116.68 & 2965.21 & 769.83 & 4979.4\\
-\hline
-\end{tabular}
-\end{table} 
+%1 & 445.7 & 343.75 & 218.93 & 571.2 & 152.4 & 952.7\\
+%2 & 42.45 & 47.34 & 29.91 & 79.43 & 20.62 & 131.36\\
+%3 & 637.91 & 481.25 & 302.82 & 815.03 & 207.73 & 1367.17\\
+%4 & 1970.82 & 1262.5 & 809.55 & 2097.87 & 559.74 & 3471.79\\
+%5 & 94.01 & 98.75 & 61.38 & 167.24 & 41.47 & 280.54\\
+%6 & 602.4 & 532.5 & 340.49 & 893.34 & 238.17 & 1500.16\\
+%7 & 5818.33 & 3112.5 & 2031.08 & 5072.74 & 1434.67 & 8229.43\\
+%8 & 242.04 & 225.63 & 141.4 & 378.51 & 96.51 & 626.02\\
+%9 & 225.83 & 190.63 & 120.68 & 319.8 & 83.4 & 537.03\\
+%10 & 1072.38 & 832.5 & 521.72 & 1396.62 & 356.09 & 2309.85\\
+%11 & 272.72 & 231.88 & 142.48 & 396.39 & 96.46 & 673.75\\
+%12 & 3878.72 & 2996.25 & 1900.61 & 5026.59 & 1316.71 & 8377.21\\
+%SM & 3125.39 & 1767.5 & 1116.68 & 2965.21 & 769.83 & 4979.4\\
+%\hline
+%\end{tabular}
+%\end{table} 
  
-The impact of the resolved (green), semi-boosted (aqua), and boosted (royal blue), where no shared events have been rejected for any of the selections, can be seen in Fig.~\ref{fig:limcompare}, where SM = 0, and the benchmarks are 1-12. The semi-boosted channel does best at five benchmarks, and the resolved does best at the remaining benchmarks. 
+The impact of the resolved (green), semi-resolved (aqua), and boosted (royal blue) analyses, where no shared events have been rejected for any of the selections, can be seen in Fig.~\ref{fig:limcompare}, where SM = 0, and the benchmarks are 1-12. The semi-resolved channel does best at five benchmarks, and the resolved does best at the remaining benchmarks. 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{F5/NRlimits.pdf}
-\caption{Non-resonant limits for all three channels, resolved (green), semi-boosted (aqua), boosted (royal blue), where no channel rejects the events of another channel. SM = 0 and v1 benchmarks are 1-12.}
+\caption{Non-resonant limits for all three channels, resolved (green), semi-resolved (aqua), boosted (royal blue), where no channel rejects the events of another channel. SM = 0 and v1 benchmarks are 1-12.}
 \label{fig:limcompare}
 \end{figure}
+
+\chapter{Conclusion}
+
+The Standard Model of particle physics is comprehensive and well-studied, describing properties and interactions of known elementary particles. However, there are many unresolved problems, such as the nature of quantum gravity and the large difference between the experimentally observed Higgs mass and the mass predicted by theory. Many different theories beyond the Standard Model present solutions to these problems, while also predicting the existence of new TeV scale particles that could be found at the Large Hadron Collider at CERN. In addition to looking for new particles, the properties of the Higgs boson, discovered only six years ago, are also still being studied to better understand the mechanism that breaks electroweak symmetry. The Compact Muon Solenoid detector records the results of proton proton collisions within the Large Hadron Collider, studying these Standard Model properties and searching for new particles.
+
+This thesis presents a search for the pair-production of Standard Model Higgs bosons, both decaying to two b-quarks, using Compact Muon Solenoid data from proton-proton collisions at a center-of-mass energy of 13 TeV, which corresponds to an integrated luminosity of 35.9 $\text{fb}^{-1}$. This analysis is dedicated to the phase-space in which one Higgs boson has enough momentum to collimate decay products into one large jet, while the other Higgs boson does not and is reconstructed as two smaller jets. This search, known as the semi-resolved channel, adds sensitivity to a previous analysis performed looking for two Higgs boson which both have enough momentum to collimate decay products into one large jet, known as the boosted channel. The semi-resolved analysis is designed to be statistically independent from the boosted analysis such that the results can be combined.
+
+Three sets of results are presented: a search for a bulk graviton from a warped-extra dimension theory, a search for a radion from a warped-extra dimension theory, and a probe of both Standard Model and beyond the Standard Model non-resonant production of HH$\rightarrow$bbbb. All searches use the same event selection and background estimation technique. Limits are placed on the production cross section multiplied by the branching ratio of HH$\rightarrow$bbbb for all three different scenarios, where observed limits are within 95\% of expected limits. This analysis, especially in combination with the boosted analysis, provides a critical addition to the fully resolved case in which the event is reconstructed as four small jets. In particular, these are the first results on the limits of the Higgs boson self-couplings using a boosted topology. In the future, with more data and improved analysis techniques, there will be even more opportunities to discover new physics and further probe our understandings of the beginning of the universe and particles at the smallest scale.
