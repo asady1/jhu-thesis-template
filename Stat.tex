@@ -139,12 +139,18 @@ The Barlow-Beeston Lite~\cite{BBLite} method is used to treat this bin-by-bin st
 \section{Limit setting procedure}
 
 There exists a difference between data and the estimated background shown in the figures in the previous chapter. We must understand how to perform this comparison in a meaningful way. In particle physics, this is most often done using confidence levels to quantify the agreement between data and a background-only hypothesis versus a background+signal hypothesis. 
-%We once again examine the comparison between data and the background estimation in $M_{jjj}^{red}$, as well as signal in $M_{jjj}^{red}$ in Figure~\ref{fig:databoost2}.
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.45\textwidth]{F5/HH4b2p1_Plot_NRv1_unB1_boost_dEta1.pdf}
-%\includegraphics[width=0.45\textwidth]{F5/HH4b2p1_Plot_NRv1_unB1_boost_dEta2.pdf}
-%\caption{Signal region in data for a selection rejecting boosted events.}
-%\label{fig:databoost2}
-%\end{figure}
-We use the asymptotic approximation of the modified frequentist approach for confidence levels~\cite{Junk:1999kv, Read:2002hq, Conway:1333496} to determine how likely signal is to be present given the binned distribution of signal, the background estimate, and data. 
+We once again examine the comparison between data and the background estimation in $M_{jjj}^{red}$, as well as signal in $M_{jjj}^{red}$ in Figure~\ref{fig:databoost2}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{F5/HH4b2p1_Plot_NRv1_unB1_boost_dEta1.pdf}
+\includegraphics[width=0.45\textwidth]{F5/HH4b2p1_Plot_NRv1_unB1_boost_dEta2.pdf}
+\caption{Signal region in data for a selection rejecting boosted events.}
+\label{fig:databoost2}
+\end{figure}
+We use the asymptotic approximation of the modified frequentist approach for confidence levels~\cite{Junk:1999kv, Read:2002hq, Conway:1333496} to determine how likely signal is to be present given the binned distribution of signal, the background estimate, and data. We define the likelihood ratio as
+\begin{equation}
+\mathcal{L}(n,x) = \frac{e^{-x}x^{n}}{n!}
+\end{equation}
+Then for each bin, we calculate the ratio of $\mathcal{L}(N_{\text{data}}, \mu N_{\text{sig}} + N_{\text{back}})$ and  $\mathcal{L}(N_{\text{data}}, N_{\text{back}})$, where $N_{\text{data}}$ is the number of data events in a given bin, $\mu$ scales the amount of signal in each bin, $N_{\text{sig}}$ is the amount of signal MC events in a given bin, and $N_{\text{back}}$ is the amount of tt MC events in a given bin added together with the amount of estimated QCD events in a given bin (calculated from the background estimation). This ratio is multiplied for each bin for a combined likelihood, and then fit to calculate $\mu$, or the amount of signal in each bin given $N_{\text{data}}$ and $N_{\text{back}}$. Both $N_{\text{sig}}$ and $N_{\text{back}}$ have nuisance parameters, described in the previous section, that cause these values to fluctuate up and down, and this is taken into account. 
+
+The expected cross section is then calculated from a background-only hypothesis, that is to say what would be observed should no signal exist. This is compared to the observed cross section calculated by including the possibility that signal could exist, while also considering all of the systematic and statistical uncertainties that could cause the observed cross section to fluctuate up or down. This comparison, presented in the next chapter, allows us to determine whether new physics has been found, or whether some amount of phasespace in a particular model has been ruled out. 
